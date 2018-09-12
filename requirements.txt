@@ -1,0 +1,9 @@
+django==1.11.11
+django-allauth==0.35.0
+ethereum==2.3.0
+MySQL-python
+simplejson
+gunicorn
+qrcode
+image
+uuid

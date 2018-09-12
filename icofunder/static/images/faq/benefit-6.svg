@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#A9A2FB;}
+	.st2{fill:none;stroke:#A9A2FB;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st3{fill:none;stroke:#8980FE;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st4{fill:none;}
+</style>
+<g transform="translate(2891 234)">
+	<g transform="translate(1 5)">
+		<path class="st0" d="M-2886-192l11-6h14l11-6l-1-3l-10,2l-13-1l4-5l-1-3l-10,6l-5,6l-5,2L-2886-192z"/>
+		<rect x="-2885" y="-234" class="st0" width="36" height="20"/>
+		<path class="st1" d="M-2849-227v-7h-7L-2849-227z"/>
+		<path class="st1" d="M-2856-214h7v-7L-2856-214z"/>
+		<path class="st1" d="M-2885-221v7h7L-2885-221z"/>
+		<path class="st1" d="M-2885-227v-7h7L-2885-227z"/>
+		<g transform="translate(6)">
+			<line class="st2" x1="-2891" y1="-227" x2="-2884" y2="-234"/>
+			<line class="st2" x1="-2891" y1="-221" x2="-2884" y2="-214"/>
+			<path class="st2" d="M-2884-214h-7v-20h36v20h-16"/>
+			<line class="st2" x1="-2855" y1="-227" x2="-2862" y2="-234"/>
+			<line class="st2" x1="-2855" y1="-221" x2="-2862" y2="-214"/>
+		</g>
+		<g transform="translate(21 4)">
+			<path class="st2" d="M-2886-232h-4l-1,2l1,2h4l1,2l-1,2h-4"/>
+			<line class="st2" x1="-2888" y1="-232" x2="-2888" y2="-234"/>
+			<line class="st2" x1="-2888" y1="-222" x2="-2888" y2="-224"/>
+		</g>
+		<path class="st3" d="M-2886-192l11-6h14l11-6l-1-3l-10,2l-13-1l4-5l-1-3l-10,6l-5,6l-5,2"/>
+	</g>
+	<rect x="-2891" y="-234" class="st4" width="48" height="48"/>
+</g>
+</svg>

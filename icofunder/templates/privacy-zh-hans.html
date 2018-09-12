@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load base_tags %}
+{% block title %}隐私政策 - {% SETTINGS "SITE_DOMAIN" %}{% endblock %}
+{% block description %}您的隐私对我们至关重要。在 {% SETTINGS "SITE_NAME" %}，我们有一些基本原则：
+我们不会与任何人分享您的个人信息，除非遵守法律，开发我们的产品或保护我们的权利。
+我们不会将个人信息存储在我们的服务器上，除非我们的某项服务正在进行中。
+
+以下是我们的隐私政策，其中包含这些目标。
+如果您对删除或更正您的个人资料有任何疑问，请与我们联系。{% endblock %}
+{% block content %}
+	<div class="jumbotron jumbotron-main policy">
+		<div id="particles-js"></div>
+		<div class="container center-vertically-holder">
+			<div class="center-vertically">
+				<div class="col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3 text-center">
+                    <img src="/static/images/icons/privacy.svg">
+                    <h2 class="scaleReveal text-primary"><b>隐私政策</b></h2>
+				</div>
+			</div>
+		</div>
+	</div>
+    <div class="background2 section-padding policy-section border-bottom">
+        <div class="container">
+            <div class="row clear">
+                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                    您的隐私对我们至关重要。在 {% SETTINGS "SITE_NAME" %}，我们有一些基本原则：
+                    <ul>
+                        <li>我们不会与任何人分享您的个人信息，除非遵守法律，开发我们的产品或保护我们的权利。</li>
+                        <li>我们不会将个人信息存储在我们的服务器上，除非我们的某项服务正在进行中。</li>
+                    </ul>
+
+                    <br>以下是我们的隐私政策，其中包含这些目标。
+                    <p class="mb30">如果您对删除或更正您的个人资料有任何疑问，请与我们联系。</p>
+
+                    <h2>网站访问者</h2>
+                    与大多数网站运营商一样，{% SETTINGS "SITE_NAME" %} 收集网络浏览器和服务器通常提供的非个人身份信息，例如浏览器类型，语言偏好，推介网站以及每个访问者请求的日期和时间。{% SETTINGS "SITE_NAME" %} 收集非个人识别信息的目的是为了更好地理解{% SETTINGS "SITE_NAME" %} 的访问者如何使用其网站。{% SETTINGS "SITE_NAME" %} 可能会不定期发布非个人身份信息，例如发布关于其网站使用趋势的报告。
+                    {% SETTINGS "SITE_NAME" %} 还收集潜在的个人识别信息，例如登录用户的互联网协议（IP）地址以及留下评论的用户。除了专家IP地址和电子邮件地址可见并向网站管理员披露之外，{% SETTINGS "SITE_NAME" %} 仅在与下述使用和披露个人识别信息相同的情况下公开登录的用户和评论者IP地址。
+
+                    <h2>收集个人识别信息</h2>
+                    某些 {% SETTINGS "SITE_NAME" %} 网站的访问者选择以 {% SETTINGS "SITE_NAME" %} 收集个人身份信息的方式与 {% SETTINGS "SITE_NAME" %} 互动。{% SETTINGS "SITE_NAME" %} 收集的信息的数量和类型取决于交互的性质。例如，我们要求以专家身份注册的访问者和/或注册新闻简报和/或提交ICO提供电子邮件地址。在每种情况下，{% SETTINGS "SITE_NAME" %} 仅在必要或适当的情况下收集此类信息，以实现访问者与 {% SETTINGS "SITE_NAME" %} 互动的目的。{% SETTINGS "SITE_NAME" %} 不会透露以下描述的个人识别信息。访问者总是可以拒绝提供个人身份信息，但要注意，它可能会阻止他们参与某些与网站相关的活动。
+
+                    <h2>汇总统计</h2>
+                    {% SETTINGS "SITE_NAME" %} 可能会收集有关其网站访问者行为的统计数据。{% SETTINGS "SITE_NAME" %} 可能会公开显示此信息或将其提供给其他人。但是，{% SETTINGS "SITE_NAME" %} 不会披露以下描述的个人身份信息。
+
+                    <h2>保护某些个人识别信息</h2>
+                    {% SETTINGS "SITE_NAME" %} 只向其员工，承包商和附属机构的人员披露潜在的个人身份识别信息和个人身份信息，这些信息（i）需要知道该信息才能代表 {% SETTINGS "SITE_NAME" %} 处理该信息或提供 {% SETTINGS "SITE_NAME" %} 网站提供的服务， ii）同意不向其他人披露。其中一些员工，承包商和附属机构可能位于您的国家之外; 通过使用 {% SETTINGS "SITE_NAME" %} 的网站，您同意将这些信息转让给他们。其中一些服务包括商业可用的再营销服务（例如Facebook Custom Audience）。{% SETTINGS "SITE_NAME" %} 不会向任何人出租或出售潜在的个人识别信息和个人识别信息。除了员工之外，承包商和附属组织，如上所述，{% SETTINGS "SITE_NAME" %} 仅在响应传票，法院命令或其他政府请求时披露潜在的个人身份识别信息和个人身份信息。如果您已经提交了通讯的电子邮件地址，或者您已经在网站上注册为专家，{% SETTINGS "SITE_NAME" %} 可能会偶尔向您发送一封电子邮件，告诉您有关新闻，征求您的反馈意见，或只是让您了解 {% SETTINGS "SITE_NAME" %} 正在发生的事情。如果您向我们发送请求（例如通过支持电子邮件或通过我们的反馈机制之一），我们保留发布该请求的权利，以帮助我们澄清或回应您的请求或帮助我们支持其他用户。{% SETTINGS "SITE_NAME" %} 采取一切合理必要的措施来防止未经授权的访问，使用。
+
+                    <h2>Cookie</h2>
+                    Cookie 是网站存储在访问者计算机上的一串信息，访问者的浏览器每次访问者返回时都会向网站提供该信息。{% SETTINGS "SITE_NAME" %} 使用 Cookie 来帮助 {% SETTINGS "SITE_NAME" %} 识别和跟踪访问者，他们对 {% SETTINGS "SITE_NAME" %} 网站的使用情况以及他们的网站访问偏好。不希望在他们的计算机上放置 cookie 的 {% SETTINGS "SITE_NAME" %} 访问者应该在浏览器使用 {% SETTINGS "SITE_NAME" %} 的网站之前设置他们的浏览器拒绝 cookie，缺点是 {% SETTINGS "SITE_NAME" %} 网站的某些功能可能无法在没有 cookie 帮助的情况下正常运行。
+
+                    <h2>业务转移</h2>
+                    如果 {% SETTINGS "SITE_NAME" %} 的或其基本上全部资产被获取使用用户信息的权利转移给收单行。您承认此类转让可能发生，并且 {% SETTINGS "SITE_NAME" %} 的任何收购方可继续使用本政策中规定的您的个人信息。
+
+                    <h2>广告</h2>
+                    出现在我们任何网站上的广告都可能由广告合作伙伴提供给用户，广告合作伙伴可能会设置 Cookie。这些 Cookie 允许广告服务器在每次向您发送在线广告时识别您的计算机，以编译关于您或其他使用您计算机的信息。这些信息使广告网络能够提供他们认为最令你感兴趣的有针对性的广告。本隐私政策涵盖 {% SETTINGS "SITE_NAME" %} 对 cookies 的使用，不包括任何广告商使用 cookies。
+
+                    <h2>隐私政策变更</h2>
+                    虽然大部分变更可能较小，但 {% SETTINGS "SITE_NAME" %} 可能会不时更改其隐私政策，并且 {% SETTINGS "SITE_NAME" %} 可自行决定更改。{% SETTINGS "SITE_NAME" %} 鼓励访问者经常检查本页面是否对其隐私政策做出任何更改。
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include "footer-min.html" %}
+{% endblock %}

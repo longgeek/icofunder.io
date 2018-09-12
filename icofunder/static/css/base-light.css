@@ -1,0 +1,772 @@
+/* =Table of Contents
+--------------------------------------------------------------
+	=Common Styles
+	=Typography
+	=Buttons
+	=Progress Bars
+    =Tabs
+    =Panels
+    =Thumbnails
+    =Accordion
+	=Call to Action
+	=Navigation
+	=Jumbotron Main
+    =Jumbotron Register
+	=Hello Intro
+	=Our Process
+	=Testimonial
+	=Services
+    =About
+    =Profile
+    =Count
+	=Team
+	=Work
+	=Pricing
+	=Timeline
+	=Contact + Map
+    =Footer
+    =Media Queries
+*/
+
+/* =Common Styles
+-------------------------------------------------------------- */
+.logo {
+    color: #887ffe;
+}
+
+body {
+	background-color: #ffffff;
+	color: #7B7B7B;
+}
+
+.section-title h2 {
+	color: #414141;
+}
+
+.section-divider {
+    background-color: rgba(66, 66, 66, 0.15);
+}
+
+.heading-1 {
+	color: #424242;
+	border-color: #cecece;
+}
+
+.heading-2 {
+	color: #fff;
+	border-bottom: 1px dotted #666;
+}
+
+.heading-3 {
+    color: #424242;
+}
+
+.heading-3-icon {
+	color: #9A9A9A;
+}
+
+.breadcrumb-holder {
+    background: #fff;
+}
+
+.breadcrumb a {
+    color: #414141;
+}
+
+.breadcrumb-home {
+    color: #414141;
+}
+
+.breadcrumb-holder h1 {
+    color: #414141;
+}
+
+.breadcrumb>li+li:before {
+    color: #C1C1C1;
+}
+
+.mini-hr {
+    border-color: #424242;
+}
+
+.background1 { background-color: #f5f5f5; }
+.background2 { background-color: #fff; }
+
+#iconfonts { color: #fff;}
+#iconfonts h2 { color: #fff; }
+
+.demo_changer .form_holder {
+    background-color: #fff;
+    border: 1px solid #E6E6E6;
+}
+
+.demo_changer h4 {
+    color: #424242;
+}
+
+.demo_changer hr {
+    border-color: #E4E4E4;
+}
+
+/* =Typography
+-------------------------------------------------------------- */
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+	color: #414141;
+}
+
+.lead strong {
+	color: #414141;
+}
+
+.text-switch {
+	color: #424242;
+}
+
+/* =Buttons
+-------------------------------------------------------------- */
+.btn-default {
+	color: #424242;
+    border-color: #cecece;
+}
+
+.btn-default.disabled.focus, .btn-default.disabled:focus, .btn-default.disabled:hover, .btn-default[disabled].focus, .btn-default[disabled]:focus, .btn-default[disabled]:hover, fieldset[disabled] .btn-default.focus, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default:hover {
+    color: #fff;
+}
+
+.btn-primary.disabled.focus, .btn-primary.disabled:focus, .btn-primary.disabled:hover, .btn-primary[disabled].focus, .btn-primary[disabled]:focus, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:hover {
+    color: #fff;
+    background-color: #615fde;
+    border-color: #615fde;
+}
+
+.btn-light {
+    color: #757575;
+    border-color: #B1B1B1;
+}
+
+/* =Progress Bars
+-------------------------------------------------------------- */
+.progress {
+    border: 1px solid #cecece;
+}
+
+.progress-meter {
+	border-bottom: 1px solid #cecece;
+}
+
+.progress-meter > .meter {
+	border-color: #cecece;
+}
+
+.progress-meter > .meter > .meter-text {
+	color: #606060;
+}
+
+/* =Tabs
+-------------------------------------------------------------- */
+.nav-tabs {
+    border-bottom: none;
+}
+
+.tab-content.tab-default {
+    border: 1px solid #cecece;
+}
+
+.tab-pane::first-letter {
+    color: #414141;
+}
+
+/* =Panels
+-------------------------------------------------------------- */
+.panel-group .panel-heading+.panel-collapse>.list-group, .panel-group .panel-heading+.panel-collapse>.panel-body {
+    border-top: 1px solid #cecece;
+}
+
+.panel-default>.panel-heading {
+    color: #424242;
+    background-color: transparent;
+    border-color: #E4E4E4;
+}
+
+.panel-default {
+    background-color: transparent;
+    border: 1px solid #cecece;
+}
+
+/* =Thumbnails
+-------------------------------------------------------------- */
+.thumbnail {
+    border: 1px solid #cecece;
+}
+
+/* =Modals
+-------------------------------------------------------------- */
+.modal-content {
+    border-radius: 0 !important;
+}
+
+.modal-body p {
+    color: #737373;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.close {
+    color: #fff;
+}
+
+/* =Navigation
+-------------------------------------------------------------- */
+.navbar-default {
+	background: #fff;
+    border-bottom: 2px solid #E6E6E6;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: #424242;
+}
+
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+    color: rgba(78, 78, 78, 0.5);
+}
+
+.dropdown-menu > li > a {
+    color: #424242;
+}
+
+.dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover {
+    color: rgba(78, 78, 78, 0.5);
+}
+
+.dropdown-menu {
+	background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #EAEAEA;
+}
+
+.language-dropdown {
+    text-transform: none;
+}
+.language-dropdown > .dropdown-menu > li > a {
+    margin: 0;
+    border-radius: 0;
+    padding: 15px 25px;
+}
+
+.language-dropdown > .dropdown-menu > li > a:hover {
+    cursor: pointer;
+    background: #f5f5f5;
+}
+
+.user-dropdown > .dropdown-menu {
+    min-width: 220px;
+    border-color: #e9e9e9;
+    display: none;
+}
+
+.user-dropdown > .dropdown-menu > li > a {
+    margin: 0;
+    border-radius: 0;
+    padding: 15px 25px;
+}
+
+.user-dropdown > .dropdown-menu > li > a:hover {
+    background: #f5f5f5;
+}
+
+.user-dropdown > .dropdown-menu li:nth-child(2) {
+    margin-top: 8px;
+}
+
+.user-dropdown > .dropdown-menu > .userbox {
+    text-align: center;
+    padding: 8px 20px 20px;
+    text-transform: lowercase;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.user-dropdown > .dropdown-menu > .userbox img {
+    width: 80px;
+    height: 80px;
+    margin: auto auto 10px;
+    border: 5px solid #fff;
+    background: #f5f5f5;
+}
+
+.user-dropdown > .dropdown-menu > .userbox img:hover {
+    border-color: #f5f5f5;
+}
+
+.ico-progress {
+    margin-top: 0;
+    margin-bottom: 0
+}
+
+.ico-progress dt {
+    width: 120px;
+    float: left;
+    line-height: 40px;
+    vertical-align: middle;
+    font-size: 12px;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-font-smoothing: auto
+}
+
+.ico-progress dt img {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #f8f8f8;
+    display: inline-block;
+    margin-right: 5px;
+    background: #f8f8f8;
+}
+
+.ico-progress dt a {
+    color: inherit;
+}
+
+.ico-progress dt span.skill-name {
+    background-color: #edeff1;
+    padding: 2px 10px;
+    color: #204056
+}
+
+.ico-progress dd {
+    margin-left: 130px;
+    overflow: hidden
+}
+
+.ico-progress dd .total {
+    display: block;
+    margin: 12px 0;
+    height: 16px;
+    min-width: 150px;
+    width: 95%;
+    border-radius: 2px;
+    background: #f8f8f8;
+    position: relative
+}
+
+.ico-progress dd .total.text-center:hover span.amount {
+    display: inline-block;
+    opacity: 1;
+}
+
+.ico-progress dd .total:hover {
+    cursor: pointer;
+    background: #eee
+}
+
+.ico-progress dd .progress {
+    display: block;
+    height: 16px;
+    width: 0;
+    max-width: 100%;
+    border-radius: 2px 0 0 2px;
+    background: #887ffe;
+    border: none;
+}
+
+.ico-progress dd span.amount {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 5%;
+    font-size: 10px;
+    line-height: 16px;
+    font-family: monospace;
+    color: #4a4a4a;
+    opacity: 0.3;
+}
+
+.ico-progress.time-countdown.ongoing {
+    color: #877efe;
+}
+
+.ico-progress.time-countdown.ongoing dd,
+.ico-progress.time-countdown.upcoming dd {
+    cursor: pointer;
+}
+
+.ico-progress.time-countdown.upcoming a {
+    color: #f8ac59;
+}
+
+.ico-progress.time-countdown.ended a {
+    color: #7B7B7B;
+}
+
+.ico-progress.time-countdown dt {
+    line-height: 40px;
+}
+
+.ico-progress.time-countdown dt a {
+    cursor: pointer;
+}
+
+.ico-progress.time-countdown dt img {
+    width: 26px;
+    height: 26px;
+    border: 2px solid #f8f8f8;
+}
+
+.ico-progress.time-countdown dd .total {
+    height: 28px;
+    margin: 7px 0;
+    text-align: center;
+}
+
+.progress-level {
+    height: 15px;
+    padding: 0;
+    border: none;
+    border-radius: 2px;
+    background: #f8f8f8;
+}
+
+.progress-level .progress-bar {
+    background-color: #8980fe;
+}
+
+.progress-meter {
+    height: 12px;
+}
+
+.progress-meter > .meter {
+    min-height: 12px;
+}
+
+/* =Hello Intro
+-------------------------------------------------------------- */
+#hello-intro h2 {
+	color: #8980fe;
+    font-size: 38px;
+	border-color: #cecece;
+}
+
+#hello-intro h3 {
+	color: #848484;
+}
+
+#hello-intro h3 strong {
+	font-weight: 300;
+}
+
+#hello-intro h4 {
+    line-height: 28px;
+}
+
+/* =Our Process
+-------------------------------------------------------------- */
+#our-process-title {
+	background-color: #f5f5f5;
+}
+
+#our-process-title h4 {
+	color: #414141;
+}
+
+#our-process-title::after {
+    border-top: 14px solid #f5f5f5;
+}
+
+#our-process h2 {
+	color: #414141;
+}
+
+#our-process .process-box {
+	border-right: 1px solid #E8E8E8;
+}
+
+#our-process .process-number {
+	color: #424242;
+	border-color: #cecece;
+}
+
+#our-process .process-content p {
+	color: #7B7B7B;
+}
+
+/* =Testimonial
+-------------------------------------------------------------- */
+.testimonial-carousel {
+    background-color: #FBFBFB;
+}
+
+.fade-quote-carousel blockquote {
+    color: #6a6a6a;
+}
+
+.fade-quote-carousel.carousel p {
+	color: #7b7b7b;
+}
+
+/* =Services
+-------------------------------------------------------------- */
+.services-icon-2 {
+    color: #fff;
+}
+
+.service-title {
+    color: #fff;
+}
+
+.services-box {
+    background-color: #FFFFFF;
+    border: 1px solid #E6E6E6;
+}
+
+.services-box:hover {
+    cursor: pointer;
+}
+
+.services-box .home-ico-countdown {
+    text-align: center;
+    letter-spacing: .5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.services-box .clock-section {
+    display: inline-block;
+    padding: 0 5px;
+    font-size: 12px;
+}
+
+.services-box .clock-section b {
+    font-family: 'Montserrat';
+    font-size: 12px;
+}
+
+.services-box .clock-section span {
+    color: #ccc;
+}
+
+#ongoing-ico .home-ico-countdown b {
+    color: #8980fe;
+}
+
+#upcoming-ico .home-ico-countdown b {
+    color: #f8ac59;
+}
+
+#ended-ico .progress-bar {
+    background: #e9e9e9;
+}
+
+#ended-ico .btn-info,
+#ended-ico .btn-info:hover,
+#ended-ico .btn-info:active {
+    background-color: #ddd;
+    border-color: #e9e9e9;
+}
+
+
+
+#ended-ico .services-box:hover,
+#ongoing-ico .services-box:hover,
+#upcoming-ico .services-box:hover {
+    background: #f5f5f5;
+    cursor: pointer;
+}
+
+.services-badge {
+    color: #DEDEDE;
+    right: 15px;
+    font-weight: 900;
+    font-size: 12px;
+}
+
+.services-badge.text-primary {
+    color: #887ffe;
+}
+
+.services-badge img {
+    width: 13px;
+    height: 13px;
+    margin: -3px 5px 0 0;
+}
+
+/* =About
+-------------------------------------------------------------- */
+.logo-about {
+    color: #424242;
+}
+
+/* =Profile
+-------------------------------------------------------------- */
+.profile-box {
+	background-color: #f5f5f5;
+	outline: 1px solid #cecece;
+}
+
+.profile-box strong {
+	color: #424242;
+}
+
+.profile-box ul li{
+    border-bottom:1px solid #cecece;
+}
+
+/* =Our Count
+-------------------------------------------------------------- */
+#ourcount .item > .circle-hold > i {
+	color: #fff;
+}
+
+#ourcount .section-title h1 {
+    color: #fff
+}
+
+#ourcount h2 {
+    color: #fff
+}
+
+#ourcount .section-title .section-divider {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+#ourcount {
+    color: #A2A2A2;
+}
+
+/* =Team
+-------------------------------------------------------------- */
+.team-member-img {
+	border: 4px solid #d2d2d2;
+}
+
+.team-member-box {
+	background-color: #E6E6E6;
+}
+
+.team-member-box:hover {
+	background-color: #E6E6E6;
+}
+
+.team-image-wrapper .team-image-hover .team-hover-content {
+	border-radius: 100%;
+}
+
+/* =Work
+-------------------------------------------------------------- */
+.btn-category {
+    border: 2px solid #C5C5C5;
+}
+
+.portfolio-image-holder:before {
+    border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+span.portfolio-hover a {
+	color: #fff;
+}
+
+.portfolio-hover h3 {
+	color: #fff;
+}
+
+/* =Pricing
+-------------------------------------------------------------- */
+.plan {
+    background: #fff;
+    border: 1px solid #ECECEC;
+}
+
+.plan li {
+    color: #B5B5B5;
+    border-top: 1px solid #F5F5F5;
+}
+
+.plan li.plan-name {
+    color: #424242;
+    background: #E6E6E6;
+}
+
+.plan.featured li.plan-name {
+	background: #E6E6E6;
+}
+
+.plan.featured:hover li.plan-name {
+	color: #fff;
+}
+
+.plan:hover li.plan-name {
+	background: #D6D6D6;
+}
+
+.pricing-clients {
+	opacity: .1;
+}
+
+/* =Timeline
+-------------------------------------------------------------- */
+.timeline:before {
+	background-color: #E2E2E2;
+}
+
+.timeline > li .timeline-image {
+    background-color: #8870fe;
+    color: #fff;
+    border: 4px solid #e5e4fe;
+}
+
+/* =Contact + Map
+-------------------------------------------------------------- */
+#contact .form-control {
+    color: #a1a1a1;
+    border-bottom: 2px solid #ECECEC;
+}
+
+.has-error .form-control {
+    border-color: #2F2F2F;
+}
+
+.has-error .checkbox, .has-error .checkbox-inline, .has-error .control-label, .has-error .help-block, .has-error .radio, .has-error .radio-inline, .has-error.checkbox label, .has-error.checkbox-inline label, .has-error.radio label, .has-error.radio-inline label {
+    color: #929292;
+}
+
+.has-error .form-control:focus {
+    border-color: #2F2F2F;
+}
+
+/* =Footer
+-------------------------------------------------------------- */
+.theme-title {
+    color: #887ffe;
+}
+
+footer hr {
+    border-top: 1px solid #ddd;
+}
+
+.social-icons-dark-hover {
+    color: #A9A9A9;
+}
+
+.social-icons-dark-hover:hover {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.social-icons-light-hover {
+    color: #DADADA;
+}
+
+.social-icons-light-hover:hover {
+    color: #CACACA;
+}
+
+/* =Media Queries
+-------------------------------------------------------------- */
+@media (max-width:767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a { color:#424242; }
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus, .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover { color:rgba(78, 78, 78, 0.5); }
+}

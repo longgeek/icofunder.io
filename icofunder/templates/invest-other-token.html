@@ -1,0 +1,62 @@
+{% load i18n %}
+{% load base_tags %}
+<div class="modal fade" id="investOtherToken" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-warning">
+                    <div class="modal-image modal-image--warning"></div>
+                </div>
+                <div class="transactions">
+                    {% for t in ethplorer.tokens %}
+                    <div class="Transaction">
+                        {% if t.input == "0x" %}
+                        <div class="item incoming success clear">
+                        {% else %}
+                        <div class="item outgoing success clear">
+                        {% endif %}
+                            <div class="token">
+                            {{ t.tokenInfo.symbol }}
+                            </div>
+                            <div class="token">{% eth_amount t.balance %}</div>
+                            <div class="name">
+                                <div class="title">Name</div>
+                                <div class="value">
+                                    {% if t.tokenInfo.website %}
+                                    <a href="{{ t.tokenInfo.website }}" target="_blank">{{ t.tokenInfo.name }}</a>
+                                    {% else %}
+                                    {{ t.tokenInfo.name }}
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="hold">
+                                <div class="title">Holders</div>
+                                <div class="value">{{ t.tokenInfo.holdersCount }}</div>
+                            </div>
+                            <div class="price">
+                                <div class="title">Price</div>
+                                <div class="value">
+                                    {% if t.tokenInfo.price.rate %}
+                                    ${{ t.tokenInfo.price.rate }}
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="from">
+                                <div class="title">Address</div>
+                                <div class="value">
+                                    <a href="https://etherscan.io/address/{{ t.tokenInfo.address }}" target="_blank" rel="noopener noreferrer">{{ t.tokenInfo.address|slice:":15" }}...</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="modal-footer" data-dismiss="modal" aria-label="Close">
+                <div class="modal-button modal-button--alpha-warning">
+                    <div class="modal-button__title ">{% trans "确认" %}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

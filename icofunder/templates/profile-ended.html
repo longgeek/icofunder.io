@@ -1,0 +1,43 @@
+{% load i18n %}
+<div class="row m-b-md">
+    <div class="col-md-6">
+        {% for k in ICOS.ended|slice:"::2" %}
+        <dl class="ico-progress time-countdown ended">
+            <dt>
+                <img src="/static/images/icos/{{ k.values.0.logo }}" alt="{{ k.values.0.name }}" class="img-responsive img-circle">
+                <a onclick="ico_url_jump('/{{ k.keys.0 }}', '{{ request.LANGUAGE_CODE }}')">{{ k.values.0.name }}</a>
+            </dt>
+            <dd>
+                <a class="total" onclick="ico_url_jump('/{{ k.keys.0 }}', '{{ request.LANGUAGE_CODE }}')">
+                    <div class="clock-countdown">
+                        <div class="clock-section">
+                            <span>{% trans "结束于" %}</span>
+                            <b>{{ k.values.0.ended_at }}</b>
+                        </div>
+                    </div>
+                </a>
+            </dd>
+        </dl>
+        {% endfor %}
+    </div>
+    <div class="col-md-6">
+        {% for k in ICOS.ended|slice:"1::2" %}
+        <dl class="ico-progress time-countdown ended">
+            <dt>
+                <img src="/static/images/icos/{{ k.values.0.logo }}" alt="{{ k.values.0.name }}" class="img-responsive img-circle">
+                <a onclick="ico_url_jump('/{{ k.keys.0 }}', '{{ request.LANGUAGE_CODE }}')">{{ k.values.0.name }}</a>
+            </dt>
+            <dd>
+                <a class="total" onclick="ico_url_jump('/{{ k.keys.0 }}', '{{ request.LANGUAGE_CODE }}')">
+                    <div class="clock-countdown">
+                        <div class="clock-section">
+                            <span>{% trans "结束于" %}</span>
+                            <b>{{ k.values.0.ended_at }}</b>
+                        </div>
+                    </div>
+                </a>
+            </dd>
+        </dl>
+        {% endfor %}
+    </div>
+</div>

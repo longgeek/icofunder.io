@@ -1,0 +1,110 @@
+/*
+ * 所有 iPad Media Queries
+ */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)  {
+    .navbar-header {
+        float: none; }
+    .navbar-toggle {
+        display: block; }
+    .navbar-fixed-top .navbar-collapse,
+    .navbar-static-top .navbar-collapse,
+    .navbar-fixed-bottom .navbar-collapse {
+        padding-right: 15px;
+        padding-left: 15px; }
+    .navbar-collapse.collapse {
+        display: none !important; }
+        .navbar-collapse.collapse.in {
+        display: block!important;
+        margin-top: 0px; }
+    .kyc-upload-example {
+        right: auto;
+    }
+    .token-section .token-pie {
+        margin-bottom: 60px;
+    }
+    .user-dropdown {
+        float: right !important;
+        z-index: 1001;
+    }
+    .project-ico .col-sm-6 {
+        margin-bottom: 40px;
+    }
+    .tp-caption.NotGeneric-Title {
+        font-size: 40px !important;
+    }
+}
+
+/*
+ * 手机
+ */
+@media only screen
+and (max-device-width : 767px) {
+    .project-ico .col-xs-12 {
+        margin-bottom: 40px;
+    }
+    .project-ico .col-xs-12 img {
+        margin-bottom: 0;
+    }
+    .token-section .token-pie {
+        margin-bottom: 60px;
+    }
+    .user-dropdown.open > .dropdown-menu {
+        display: block;
+        border: 1px solid #e6e6e6;
+        margin-left: 15px;
+    }
+    .nav>li {
+        position: relative;
+        display: inline-block;
+    }
+    .language-dropdown {
+        display: block !important;
+    }
+    .language-dropdown .dropdown-menu {
+        width: 100px !important;
+        border: 1px solid #edeff1 !important;
+        margin-left: 15px;
+    }
+    .tp-caption.NotGeneric-Title {
+        font-size: 30px !important;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .project-links .links li {
+        width: 23%;
+        margin-bottom: 30px;
+    }
+    .project-links .links li a {
+        padding: 0!important;
+        font-size: 12px!important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .project-links .links li {
+        margin-bottom: 20px;
+    }
+    .project-links .links li a {
+        padding: 0;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .project-links .links li {
+        margin-bottom: 20px;
+    }
+    .project-links .links li a {
+        font-size: 0;
+        padding: 0;
+        position: relative;
+        padding: 0 30px;
+        display: block;
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 1100px) {
+    .project-links .links li {
+        margin-bottom: 20px;
+    }
+}

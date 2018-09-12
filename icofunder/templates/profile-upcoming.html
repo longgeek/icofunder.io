@@ -1,0 +1,103 @@
+{% load i18n %}
+<div class="row m-b-md">
+    <div class="col-md-6">
+        {% for k in ICOS.upcoming|slice:"::2" %}
+        <dl class="ico-progress time-countdown upcoming">
+            <dt>
+                <img src="/static/images/icos/{{ k.values.0.logo }}" alt="{{ k.values.0.name }}" class="img-responsive img-circle">
+                <a onclick="ico_url_jump('/{{ k.keys.0 }}', '{{ request.LANGUAGE_CODE }}')">{{ k.values.0.name }}</a>
+            </dt>
+            <dd>
+                <a class="total" onclick="ico_url_jump('/{{ k.keys.0 }}', '{{ request.LANGUAGE_CODE }}')">
+                    {% if k.values.0.start_at %}
+                    <div id="upcoming_{{ k.keys.0 }}" class="clock-countdown s"></div>
+                    <div class="clock-countdown n" style="display: none;">
+                        <div class="clock-section">
+                            <b>{{ k.values.0.start_at }}</b>
+                            <span>{% trans "开始" %}</span>
+                        </div>
+                    </div>
+                    {% else %}
+                    <div id="upcoming_{{ k.keys.0 }}" class="clock-countdown s" style="font-size: 12px; line-height: 28px;">{% trans "不确切日期" %}</div>
+                    <div class="clock-countdown n" style="display: block !important;">
+                        <div class="clock-section">
+                            <b>?? : ?? : ??</b>
+                            <span>{% trans "开始" %}</span>
+                        </div>
+                    </div>
+                    {% endif %}
+                </a>
+            </dd>
+        </dl>
+        <script>
+            $(document).ready(function() {
+                /* ---- Countdown ---- */
+                $('#upcoming_{{ k.keys.0 }}').countdown('{{ k.values.0.start_at}}').on('update.countdown', function(event) {
+                  var $this = $(this).html(event.strftime(''
+                      + '<div class="clock-section"> <b>%-w</b> <span>{% trans "周" %}</span> </div>'
+                      + '<div class="clock-section"> <b>%-d</b> <span>{% trans "天" %}</span> </div>'
+                      + '<div class="clock-section"> <b>%H</b> <span>{% trans "时" %}</span> </div>'
+                      + '<div class="clock-section"> <b>%M</b> <span>{% trans "分" %}</span> </div>'
+                      + '<div class="clock-section"> <b>%S</b> <span>{% trans "秒" %}</span> </div>'));
+                });
+            });
+        </script>
+        {% endfor %}
+    </div>
+    <div class="col-md-6">
+        {% for k in ICOS.upcoming|slice:"1::2" %}
+        <dl class="ico-progress time-countdown upcoming">
+            <dt>
+                <img src="/static/images/icos/{{ k.values.0.logo }}" alt="{{ k.values.0.name }}" class="img-responsive img-circle">
+                <a onclick="ico_url_jump('/{{ k.keys.0 }}', '{{ request.LANGUAGE_CODE }}')">{{ k.values.0.name }}</a>
+            </dt>
+            <dd>
+                <a class="total" onclick="ico_url_jump('/{{ k.keys.0 }}', '{{ request.LANGUAGE_CODE }}')">
+                    {% if k.values.0.start_at %}
+                    <div id="upcoming_{{ k.keys.0 }}" class="clock-countdown s"></div>
+                    <div class="clock-countdown n" style="display: none;">
+                        <div class="clock-section">
+                            <b>{{ k.values.0.start_at }}</b>
+                            <span>{% trans "开始" %}</span>
+                        </div>
+                    </div>
+                    {% else %}
+                    <div id="upcoming_{{ k.keys.0 }}" class="clock-countdown s" style="font-size: 12px; line-height: 28px;">{% trans "不确切日期" %}</div>
+                    <div class="clock-countdown n" style="display: block !important;">
+                        <div class="clock-section">
+                            <b>?? : ?? : ??</b>
+                            <span>{% trans "开始" %}</span>
+                        </div>
+                    </div>
+                    {% endif %}
+                </a>
+            </dd>
+        </dl>
+        <script>
+            $(document).ready(function() {
+                /* ---- Countdown ---- */
+                $('#upcoming_{{ k.keys.0 }}').countdown('{{ k.values.0.start_at }}').on('update.countdown', function(event) {
+                  var $this = $(this).html(event.strftime(''
+                      + '<div class="clock-section"> <b>%-w</b> <span>{% trans "周" %}</span> </div>'
+                      + '<div class="clock-section"> <b>%-d</b> <span>{% trans "天" %}</span> </div>'
+                      + '<div class="clock-section"> <b>%H</b> <span>{% trans "时" %}</span> </div>'
+                      + '<div class="clock-section"> <b>%M</b> <span>{% trans "分" %}</span> </div>'
+                      + '<div class="clock-section"> <b>%S</b> <span>{% trans "秒" %}</span> </div>'));
+                });
+            });
+        </script>
+        {% endfor %}
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        $(".time-countdown.upcoming dd").mouseenter(function() {
+            $(this).find(".clock-countdown.n").show();
+            $(this).find(".clock-countdown.s").hide();
+        })
+        $(".time-countdown.upcoming dd").mouseleave(function() {
+            $(this).find(".clock-countdown.n").hide();
+            $(this).find(".clock-countdown.s").show();
+        })
+    })
+</script>

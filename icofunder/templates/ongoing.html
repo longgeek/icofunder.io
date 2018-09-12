@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load base_tags %}
+{% block title %}{% trans "正在进行中的 ICO 项目" %} - {% SETTINGS "SITE_DOMAIN" %}{% endblock %}
+{% block description %}{% trans "正在进行中的 ICO 项目列表。 所有活动的代币销售都按日期排序，并进行评分和分析。" %}{% endblock %}
+{% block content %}
+    <div class="jumbotron jumbotron-main ongoing-list">
+        <div id="particles-js"></div>
+        <div class="container center-vertically-holder">
+            <div class="center-vertically">
+                <div class="col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3 text-center">
+                    <img src="/static/images/icons/check.svg">
+                    <h2 class="scaleReveal text-primary"><b>{% trans "正在进行中的 ICO 项目" %}</b></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+	<section id="ongoing-ico" class="background2 section-padding border-bottom">
+		<div class="container">
+            {% include 'ongoing-list.html' %}
+		</div>
+	</section>
+    {% include "footer-min.html" %}
+{% endblock %}

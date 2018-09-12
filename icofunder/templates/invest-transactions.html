@@ -1,0 +1,50 @@
+{% load i18n %}
+{% load base_tags %}
+<div class="modal fade" id="investTransactions" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-warning">
+                    <div class="modal-image modal-image--warning"></div>
+                </div>
+                <div class="transactions">
+                    {% for tx in txs %}
+                    <div class="Transaction">
+                        {% if tx.input == "0x" %}
+                        <div class="item incoming success clear">
+                        {% else %}
+                        <div class="item outgoing success clear">
+                        {% endif %}
+                            <div class="type"></div>
+                            <div class="token">
+                                {% if tx.input == "0x" %}+{% else %}-{% endif %}
+                                {% eth_amount tx.value %} Ether</div>
+                            <div class="date">
+                                <div class="title">Date</div>
+                                <div class="value">{% convert_date tx.timeStamp request %}</div>
+                            </div>
+                            <div class="from">
+                                <div class="title">From</div>
+                                <div class="value">
+                                    <a href="https://etherscan.io/address/{{ tx.from }}" target="_blank" rel="noopener noreferrer">{{ tx.from|slice:":15" }}...</a>
+                                </div>
+                            </div>
+                            <div class="hash">
+                                <div class="title">TX hash</div>
+                                <div class="value">
+                                    <a href="https://etherscan.io/tx/{{ tx.hash }}" target="_blank" rel="noopener noreferrer">{{ tx.hash|slice:":25" }}...</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="modal-footer" data-dismiss="modal" aria-label="Close">
+                <div class="modal-button modal-button--alpha-warning">
+                    <div class="modal-button__title ">{% trans "确认" %}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

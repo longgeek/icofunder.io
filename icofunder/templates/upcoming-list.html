@@ -1,0 +1,50 @@
+{% load i18n %}
+<div class="row">
+    {% for k in ICOS.upcoming %}
+	<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+        <div class="services-box leftReveal" onclick="ico_url_jump('/{{ k.keys.0 }}', '{{ request.LANGUAGE_CODE }}')">
+            {% if k.values.0.level.rating != "" %}
+                {% if k.values.0.level.rating >= 4 %}
+                <span class="services-badge badge text-primary"><img src="/static/images/icons/hot.png">{{ k.values.0.level.rating }}</span>
+                {% else %}
+                <span class="services-badge badge">{{ k.values.0.level.rating }}</span>
+                {% endif %}
+            {% endif %}
+            <img src="/static/images/icos/{{ k.values.0.logo }}" alt="{{ k.values.0.name }}" class="img-responsive img-circle">
+            <div class="text-center">
+                <h3 class="service-name">{{ k.values.0.name }}</h3>
+            </div>
+            <p class="text-small">{% trans k.values.0.desc %}</p>
+            {% if k.values.0.start_at %}
+            <div class="home-ico-countdown {{ k.keys.0 }}"></div>
+            {% else %}
+            <div class="home-ico-countdown">
+                <div class="clock-countdown">
+                    <div class="clock-section">
+                        <span>{% trans "不确切日期" %}</span>
+                        <b>?? : ?? : ??</b>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            <div class="text-center">
+                <a type="button" class="btn btn-warning mt20">Upcoming</a>
+            </div>
+		</div>
+	</div>
+    {% if k.values.0.start_at %}
+    <script>
+        $(document).ready(function() {
+            $('.home-ico-countdown.{{ k.keys.0 }}').countdown('{{ k.values.0.start_at }}').on('update.countdown', function(event) {
+              var $this = $(this).html(event.strftime(''
+                + '<div class="clock-section"> <b>%-w</b> <span>{% trans "周" %}</span> </div>'
+                + '<div class="clock-section"> <b>%-d</b> <span>{% trans "天" %}</span> </div>'
+                + '<div class="clock-section"> <b>%H</b> <span>{% trans "时" %}</span> </div>'
+                + '<div class="clock-section"> <b>%M</b> <span>{% trans "分" %}</span> </div>'
+                + '<div class="clock-section"> <b>%S</b> <span>{% trans "秒" %}</span> </div>'));
+            });
+        })
+    </script>
+    {% endif %}
+    {% endfor %}
+</div>

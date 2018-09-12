@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load base_tags %}
+{% block title %}{% trans "常见问题" %} - {% SETTINGS "SITE_DOMAIN" %}{% endblock %}
+{% block description %}{% trans "所有你想知道的一般问题，及其ICO 列表，评级等问题。" %}{% endblock %}
+{% block content %}
+	<div class="jumbotron jumbotron-main faq">
+		<div id="particles-js"></div>
+		<div class="container center-vertically-holder">
+			<div class="center-vertically">
+				<div class="col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3 text-center">
+                    <img src="/static/images/icons/faq.svg">
+                    <h2 class="scaleReveal text-primary"><b>{% trans "常见问题" %}</b></h2>
+				</div>
+			</div>
+		</div>
+	</div>
+    <div class="background2 section-padding faq-section border-bottom">
+        <div class="container">
+            <div class="row clear">
+                <div class="col-lg-12">
+                    <h2>{% trans "一般的问题" %}</h2>
+                </div>
+                <div class="col-md-6 icons">
+                    <h3>{% trans "什么是钱包地址？" %}</h3>
+                    <p>{% trans "钱包是用来存放虚拟货币的一个软件程序。每种币都有对应的钱包提供商，它可以是网页端, 也可以是 App 或者桌面应用。钱包地址是用于收币的一串随机代码，一般由数字和字母组成。" %}</p>
+                </div>
+                <div class="col-md-6 icons">
+                    <h3>{% trans "什么是 Hash？" %}</h3>
+                    <p>{% trans 'Hash 或者 tx ID 是区块链上的一笔交易的单号，由一串数字和字母组成，用它可以查询交易当前成交状态。不管是从你的钱包转币到 "币币" 交易平台，还是换币之后汇币到你的钱包，每一笔交易都对应一个不同的 Hash。' %}</p>
+                </div>
+            </div>
+            <div class="row clear">
+                <div class="col-md-6 icons">
+                    <h3>{% trans "什么是网络费？" %}</h3>
+                    <p>{% trans "每一笔区块链上的转币行为，都会被记录在区块链上同时被收取一笔费用，叫做网络费。如果网络费用过低，区块链可能拒绝交易，导致转币无限期延迟。" %}</p>
+                </div>
+                <div class="col-md-6 icons">
+                    <h3>{% trans "我能取消众筹吗？" %}</h3>
+                    <p>{% trans "区块链上的交易是不可逆的。一旦交易发出，则不能取消。" %}</p>
+                </div>
+            </div>
+            <div class="row clear">
+                <div class="col-md-6 icons">
+                    <h3>{% trans "什么是 ICO 众筹？" %}</h3>
+                    <p>{% trans "ICO（是Initial Coin Offering缩写），首次币发行，源自股票市场的首次公开发行（IPO）概念，是区块链项目首次发行代币，募集比特币、以太坊等通用数字货币的行为。" %}</p>
+                </div>
+                <div class="col-md-6 icons">
+                    <h3>{% trans "如何参与 ICO？" %}</h3>
+                    <p>{% SETTINGS "SITE_DOMAIN" %} {% trans "提供一站式 ICO 众筹服务，注册并通过 KYC 认证即可参与经过严密筛选的优质项目。" %}</p>
+                </div>
+            </div>
+            <div class="row clear">
+                <div class="col-md-6 icons">
+                    <h3>{% trans "什么是 PRE，Pre-sale，Pre-ICO？" %}</h3>
+                    <p>{% trans "这是代币的第一次销售。大多数情况下，收集资金用于为主要 ICO 做广告。" %}</p>
+                </div>
+                <div class="col-md-6 icons">
+                    <h3>{% trans "什么是交易所？" %}</h3>
+                    <p>{% trans "交易所是一个平台，其上可以以当前价格为另一个加密货币或代币出售或购买一个加密货币或代币。一些交易所允许使用法定货币（美元，欧元，卢布等）购买或出售加密货币。" %}</p>
+                </div>
+            </div>
+            <div class="row clear">
+                <div class="col-md-6 icons">
+                    <h3>{% trans "什么是代币？" %}</h3>
+                    <p>{% trans "代币是在 ICO 期间发行的加密货币单位。购买一定数量的代币可以让投资者大量筹集项目和 ICO 持有者以筹集资金。每当 ICO 在交易所和/或项目内使用的货币（购买，服务支付等）时，每个 ICO 都会发放固定数量的代币/硬币，以用作潜在的利润来源。" %}</p>
+                </div>
+                <div class="col-md-6 icons">
+                    <h3>{% trans "什么是白皮书？" %}</h3>
+                    <p>{% trans "白皮书是一份总结报告，提供有关该项目的详细信息，其原创性以及它可以给投资者和最终产品用户，技术特征，项目背后的团队，项目背景和未来计划带来的好处。" %}</p>
+                </div>
+            </div>
+            <div class="row mt60 clear">
+                <div class="col-lg-12">
+                    <h2>{% trans "关于评分" %}</h2>
+                </div>
+                <div class="col-md-6 icons">
+                    <h3>{% trans '什么是 “利润级别”？' %}</h3>
+                    <p>
+                    {% url 'disclaimer' as disclaimer %}
+                    {% blocktrans %}“利润级别” 是一个评分系统，旨在告知用户有关值得注意的代币销售。在撰写评分时，只分析特定代币销售的短期条件和参数。“利润级别” 仅供参考，并不构成财务，法律或其他建议。请阅读我们的 <a href="{{ disclaimer }}" target="_blank">免责声明</a> 以了解更多信息。{% endblocktrans %}
+                        <br><br>{% trans '“利润级别” 权衡三个因素：炒作水平，风险水平和投资回报率水平。' %}
+                    </p>
+                </div>
+                <div class="col-md-6 icons">
+                    <h3>{% trans "炒作率" %}</h3>
+                    <p>{% trans '这个因素依赖于对社交网络，聊天和互联网项目感兴趣的真正观众的规模和质量。垃圾邮件和赏金活动已整理出来。然后将剩余的活动与同时运行的其他 ICO 活动以及相关的完成代币销售进行比较。' %}</p>
+                </div>
+            </div>
+            <div class="row clear">
+                <div class="col-md-6 icons">
+                    <h3>{% trans "风险级别" %}</h3>
+                    <p>
+                        {% trans "这个因素反映了参与代币销售的条件（可用于筹款的代币的百分比，硬顶，个人硬顶，预售结果，回购等）。这个因素可能表明，交易价格可能低于或高于 ICO 期间的价格。" %}
+                        <br><br>{% trans "例＃1。一个售价 2000 万美元的项目在预售后获得 1000 万美元。预售包括 40％ 的奖金。在主代币销售期间，其余的 1000 万美元已售完。那些在预售中购买代币的人可以通过立刻抛售代币来获得利润（约40％）。" %}
+                        <br><br>{% trans "例＃2。如果一个项目出售所有代币的一小部分（例如10-15％），他们可以很容易地操纵汇率价格。" %}
+                    </p>
+                </div>
+                <div class="col-md-6 icons">
+                    <h3>{% trans "投资回报率" %}</h3>
+                    <p>
+                        {% trans "这个因素表明在短期和中期内代币价格可能会有多少变化。这个因素取决于 ICO 的条件和回顾性类似项目的表现。" %}
+                        <br><br>{% trans '一旦因素发生变化，“利润级别” 的评级就会更新，例如，最初将广告的炒作级别设置为 “正常”，现在它会更新为 “高”，因为它们推迟了代币销售并积累了大量的忠诚代币买家。' %}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include "footer-min.html" %}
+{% endblock %}

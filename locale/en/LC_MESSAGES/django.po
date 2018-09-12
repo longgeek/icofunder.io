@@ -1,0 +1,1889 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-24 04:34+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: icofunder/apphome/models.py:20
+msgid "邮箱"
+msgstr "E-mail address"
+
+#: icofunder/apphome/models.py:22 icofunder/apphome/models.py:30
+msgid "KYC 状态"
+msgstr "KYC Status"
+
+#: icofunder/apphome/models.py:31
+msgid "ETH 钱包"
+msgstr "ETH wallet"
+
+#: icofunder/apphome/models.py:32
+msgid "投资"
+msgstr "Invest"
+
+#: icofunder/apphome/models.py:33
+msgid "全名"
+msgstr "Fullname"
+
+#: icofunder/apphome/models.py:34
+msgid "密码"
+msgstr "Password"
+
+#: icofunder/apphome/models.py:35
+msgid "邀请码"
+msgstr "invitation code"
+
+#: icofunder/lib/icos.py:15
+msgid ""
+"RightMesh 是一款基于软件的ad hoc 移动网状网络平台和协议，使用区块链技术和MESH"
+"令牌来推动增长。"
+msgstr ""
+"RightMesh is the world’s first software-based, ad hoc mobile mesh networking "
+"platform and protocol using blockchain technology and MESH tokens to power "
+"growth."
+
+#: icofunder/lib/icos.py:31 icofunder/lib/icos.py:32 icofunder/lib/icos.py:84
+#: icofunder/lib/icos.py:85 icofunder/lib/icos.py:136 icofunder/lib/icos.py:137
+#: icofunder/lib/icos.py:192 icofunder/lib/icos.py:193
+#: icofunder/lib/icos.py:248 icofunder/lib/icos.py:249
+#: icofunder/lib/icos.py:300 icofunder/lib/icos.py:301
+#: icofunder/lib/icos.py:354 icofunder/lib/icos.py:355
+#: icofunder/lib/icos.py:410 icofunder/lib/icos.py:466
+#: icofunder/lib/icos.py:520 icofunder/lib/icos.py:521
+msgid "正常"
+msgstr "NORMAL"
+
+#: icofunder/lib/icos.py:34 icofunder/lib/icos.py:87 icofunder/lib/icos.py:139
+#: icofunder/lib/icos.py:195 icofunder/lib/icos.py:357
+#: icofunder/lib/icos.py:412 icofunder/lib/icos.py:523
+msgid "中等利润"
+msgstr "NEUTRAL INTEREST"
+
+#: icofunder/lib/icos.py:67
+msgid ""
+"区块链服务\n"
+"分散式互联网的体验层。Cardstack 是一个开源框架和共识协议，它使区块链可用于大"
+"众市场并扩展，创建了一个分散的软件生态系统，可以挑战当今的数字超级大国。"
+msgstr ""
+"The Experience of the decentralized Internet. \n"
+"The experience layer of the decentralized internet. Cardstack is an open-"
+"source framework and consensus protocol that makes blockchains usable and "
+"scalable for the mass market, creating a decentralized software ecosystem "
+"that can challenge today’s digital superpowers. "
+
+#: icofunder/lib/icos.py:119
+msgid ""
+"开放和透明的科学由区块链支持\n"
+"Orvium 是第一个管理学术刊物的生命周期和相关数据的开源和分散框架。"
+msgstr "Open and Transparent Science Powered By Blockchain\n"
+"Orvium is the first open source and decentralized framework for managing scholarly publications’ life cycles and the associated data."
+
+#: icofunder/lib/icos.py:174 icofunder/lib/icos.py:336
+msgid ""
+"区块链上的技能认证\n"
+"SkillChain 是大学、公司和非学术培训公司永久性认证，可以保证您的技能而制定的权"
+"威性议定书。"
+msgstr ""
+"Your Certified Skills on Blockchain\n"
+"Skillchain is the definitive Protocol where universities, companies and non-"
+"academic training companies meet to certify and guarantee YOUR skills in a "
+"permanent way."
+
+#: icofunder/lib/icos.py:231 icofunder/lib/icos.py:283
+msgid ""
+"GoChain 是一款可扩展，高性能，低成本，分散式的加密货币和区块链，支持智能合约"
+"和分布式应用程序。"
+msgstr ""
+"GoChain is a scalable, high performance, low cost, and decentralized "
+"cryptocurrency and blockchain that supports smart contracts and distributed "
+"applications."
+
+#: icofunder/lib/icos.py:251 icofunder/lib/icos.py:303
+#: icofunder/lib/icos.py:468
+msgid "高等利润"
+msgstr "VERY HIGH INTEREST"
+
+#: icofunder/lib/icos.py:391
+msgid ""
+"全球范围内整合加密货币与移动网络。\n"
+"Telcoin专注于与全球移动网络连接，实现电信移动资金，预付信用和后付费计费平台之"
+"间的轻松转换。"
+msgstr ""
+"A cryptocurrency distributed by your mobile operator and accepted "
+"everywhere.\n"
+"Telcoin is focused on connecting with mobile networks globally, enabling "
+"easy conversion between telecom mobile money, prepaid credit and postpaid "
+"billing platforms."
+
+#: icofunder/lib/icos.py:409 icofunder/lib/icos.py:411
+#: icofunder/lib/icos.py:465 icofunder/lib/icos.py:467
+msgid "高"
+msgstr "HIGH"
+
+#: icofunder/lib/icos.py:447
+msgid ""
+"Zilliqa - 下一代高吞吐量区块链平台。\n"
+"Zilliqa 是一个新的区块链平台，旨在安全地扩展开放，权限较小的分布式网络。 使 "
+"Zilliqa 可扩展的核心功能是分割 - 将网络分割为几个能够并行处理事务的小型组件网"
+"络（称为碎片）。"
+msgstr ""
+"Zilliqa - The Next Generation, High Throughput Blockchain Platform.\n"
+"Zilliqa is a new blockchain platform that is designed to scale in an open, "
+"permission-less distributed network securely. The core feature that makes "
+"Zilliqa scalable is sharding — dividing the network into several smaller "
+"component networks (called shards) capable of processing transactions in "
+"parallel."
+
+#: icofunder/lib/icos.py:502
+msgid ""
+"AidCoin 是 ERC20 令牌，旨在成为通过以太坊区块链透明捐赠的首选方法。\n"
+"AID 令牌将为 AIDChain 提供动力，AIDChain 是一个通过易于使用的界面提供服务生态"
+"系统的平台，连接非营利性社区，同时实现捐赠的完全透明和可追踪性。AIDChain 的服"
+"务包括内部交换，将主要加密货币转换为 AidCoin，一个内置钱包用于存储和捐赠，透"
+"明地跟踪捐赠的投资者，将捐赠者与非营利部门所有参与者以及智能模板连接起来的工"
+"具合同开展筹款活动。"
+msgstr ""
+"The token for the new era of giving.\n"
+"AidCoin is the ERC20 token that aims to become the preferred method to "
+"donate transparently through the Ethereum blockchain. The AID token will "
+"power AIDChain, a platform that provides an ecosystem of services through an "
+"easy-to-use interface, connecting the non-profit community while allowing "
+"full transparency and traceability of donations. AIDChain’s services include "
+"an internal exchange to convert major cryptocurrencies into AidCoin, a built-"
+"in wallet to store and donate easily, an explorer to track donations "
+"transparently, tools to connect donors with all the actors involved in the "
+"non-profit sector and templates of smart contracts to run fundraising "
+"campaigns."
+
+#: icofunder/settings.py:144
+msgid "Chinese"
+msgstr "中文"
+
+#: icofunder/settings.py:145
+msgid "English"
+msgstr "英文"
+
+#: icofunder/templates/404.html:15
+msgid "没有找到该页面，请确认 URL 地址是否输入正确。"
+msgstr "Page not found, confirm URL address please!"
+
+#: icofunder/templates/500.html:15
+msgid "内部服务器出现异常，管理员正在处理，请耐心等待。"
+msgstr "Internal server error, wait for accomplishment by administrator."
+
+#: icofunder/templates/about.html:4 icofunder/templates/base.html:134
+#: icofunder/templates/base.html:137 icofunder/templates/base.html:139
+msgid "关于我们"
+msgstr "About"
+
+#: icofunder/templates/about.html:5 icofunder/templates/about__content.html:13
+msgid "专注于虚拟货币投资服务一站式平台，致力于挖掘早期优质区块链项目。"
+msgstr ""
+"Focus on a one-stop platform of virtual currency's investment, and grub high-"
+"class project of blockchain."
+
+#: icofunder/templates/about.html:5 icofunder/templates/account/login.html:16
+#: icofunder/templates/account/signup.html:16
+msgid ""
+"未来我们将为全球虚拟货币投资用户提供一键换币、去中心交易所币币交易，区块链身"
+"份验证系统，虚拟货币钱包，项目孵化等系列服务。"
+msgstr ""
+"Future, the service will be extended to global users as virtual currency "
+"exchange, decentralized tande, blockchain identification check, virtual "
+"currency wallet, project incubate, etc."
+
+#: icofunder/templates/about__content.html:14
+msgid ""
+"专注于投资区块链技术相关企业的风险投资。为众多的区块链相关初创企业提供支持，"
+"并且推动区块链经济和可编程金融的发展。践行区块链技术在未来将会发挥更加重要的"
+"作用，为全球经济带来更多的透明度、更高的效率和更安全的环境。"
+msgstr ""
+"We exclusively invests in Blockchain-enabled companies. Our mission is to "
+"accelerate the inevitable future of Blockchain economy by supporting as many "
+"companies as possible. We strongly believe Blockchain technology will play "
+"an important role bringing much more transparency, efficiency, and "
+"robustness into the global economy. With our experienced partners in both "
+"traditional finance and the blockchain technology and many startup "
+"companies, we hope to bring this vision into fruition."
+
+#: icofunder/templates/about__content.html:29
+msgid "购买网络令牌、加密货币和参与众筹有很高风险，可能导致您的资金全部流失。"
+msgstr ""
+"Purchase internet token, cryptocurrency and invest ico may be to engender "
+"investment risk."
+
+#: icofunder/templates/about__content.html:30
+msgid ""
+"购买加密货币是高风险投资，可能会导致您得资产受损。各个白皮书中承诺的内容不一"
+"定能够由项目方实现，这就会导致它的代币低价值或者无价值。过去项目的高回报率并"
+"不具有参考性。投资前请慎重思考。"
+msgstr ""
+"The purchase of network tokens and cryptocurrency are particularly risky and "
+"may result in total loss of capital. The roadmap proposed for a network (i."
+"e., 'white paper') is subject to change or implementation failure. An "
+"implemented network may not be adopted, resulting in its tokens having low "
+"or no value. Past performance of a network or a cryptocurrency is not "
+"indicative of similar future patterns. Only sophisticated investors who "
+"understand the risks of speculative investing in new asset classes and have "
+"consulted their own legal and financial advisers may participate on this "
+"platform. "
+
+#: icofunder/templates/account/account_inactive.html:6
+#: icofunder/templates/account/account_inactive.html:9
+msgid "账户无效"
+msgstr "Account invalid!"
+
+#: icofunder/templates/account/account_inactive.html:11
+msgid "该账户无效。"
+msgstr "Account invalid!"
+
+#: icofunder/templates/account/email.html:5
+msgid "账户"
+msgstr "Account"
+
+#: icofunder/templates/account/email.html:8 icofunder/templates/profile.html:33
+msgid "邮箱地址"
+msgstr "E-mail"
+
+#: icofunder/templates/account/email.html:10
+msgid "以下电子邮件地址与您的帐户相关联："
+msgstr "The following e-mail addresses are associated with your account:"
+
+#: icofunder/templates/account/email.html:24
+msgid "已验证"
+msgstr ""
+
+#: icofunder/templates/account/email.html:26
+msgid "未验证"
+msgstr ""
+
+#: icofunder/templates/account/email.html:28
+msgid "Primary"
+msgstr ""
+
+#: icofunder/templates/account/email.html:34
+msgid "Make Primary"
+msgstr ""
+
+#: icofunder/templates/account/email.html:35
+msgid "Re-send Verification"
+msgstr ""
+
+#: icofunder/templates/account/email.html:36
+msgid "Remove"
+msgstr ""
+
+#: icofunder/templates/account/email.html:43
+msgid "Warning:"
+msgstr ""
+
+#: icofunder/templates/account/email.html:43
+msgid ""
+"You currently do not have any e-mail address set up. You should really add "
+"an e-mail address so you can receive notifications, reset your password, etc."
+msgstr ""
+
+#: icofunder/templates/account/email.html:48
+msgid "Add E-mail Address"
+msgstr ""
+
+#: icofunder/templates/account/email.html:53
+msgid "Add E-mail"
+msgstr ""
+
+#: icofunder/templates/account/email.html:62
+msgid "Do you really want to remove the selected e-mail address?"
+msgstr ""
+
+#: icofunder/templates/account/email/email_confirmation_message.txt:1
+#, python-format
+msgid ""
+"Hello from %(site_name)s!\n"
+"\n"
+"You're receiving this e-mail because user %(user_display)s has given yours "
+"as an e-mail address to connect their account.\n"
+"\n"
+"To confirm this is correct, go to %(activate_url)s\n"
+msgstr ""
+
+#: icofunder/templates/account/email/email_confirmation_message.txt:7
+#, python-format
+msgid ""
+"Thank you from %(site_name)s!\n"
+"%(site_domain)s"
+msgstr ""
+
+#: icofunder/templates/account/email/email_confirmation_subject.txt:3
+msgid "Please Confirm Your E-mail Address"
+msgstr ""
+
+#: icofunder/templates/account/email/password_reset_key_message.txt:1
+#, python-format
+msgid ""
+"Hello from %(site_name)s!\n"
+"\n"
+"You're receiving this e-mail because you or someone else has requested a "
+"password for your user account.\n"
+"It can be safely ignored if you did not request a password reset. Click the "
+"link below to reset your password."
+msgstr ""
+
+#: icofunder/templates/account/email/password_reset_key_message.txt:8
+#, python-format
+msgid "In case you forgot, your username is %(username)s."
+msgstr ""
+
+#: icofunder/templates/account/email/password_reset_key_message.txt:10
+#, python-format
+msgid ""
+"Thank you for using %(site_name)s!\n"
+"%(site_domain)s"
+msgstr ""
+
+#: icofunder/templates/account/email/password_reset_key_subject.txt:3
+msgid "Password Reset E-mail"
+msgstr ""
+
+#: icofunder/templates/account/email_confirm.html:7
+msgid "确认邮箱地址"
+msgstr "To confirm E-mail address."
+
+#: icofunder/templates/account/email_confirm.html:16
+msgid "完成邮箱验证"
+msgstr "Check E-mail first."
+
+#: icofunder/templates/account/email_confirm.html:22
+#, python-format
+msgid ""
+"\n"
+"                            请确认&nbsp;\n"
+"                            <b>%(email)s</b>\n"
+"                            &nbsp;是用户&nbsp;\n"
+"                            <b>%(user_display)s</b>\n"
+"                            &nbsp;的邮箱地址。\n"
+"                        "
+msgstr ""
+"\n"
+"                            Please confirm that&nbsp;\n"
+"                            <b>%(email)s</b>\n"
+"                            &nbsp;is an e-mail address for user&nbsp;\n"
+"                            <b>%(user_display)s</b>\n"
+"                            &nbsp;\n"
+"                        "
+
+#: icofunder/templates/account/email_confirm.html:32
+msgid "我已确认以上信息无误，点击完成验证"
+msgstr "Confirm and enter."
+
+#: icofunder/templates/account/email_confirm.html:36
+msgid "此电子邮件确认链接已过期或无效，请发出新的电子邮件确认请求。"
+msgstr "URL expired or invalid, apply a new one please."
+
+#: icofunder/templates/account/email_confirm.html:37
+msgid "使用注册信息登录，将自动发送邮件"
+msgstr "Use register information to sign in, will send a mail to check."
+
+#: icofunder/templates/account/login.html:4 icofunder/templates/base.html:184
+msgid "登录"
+msgstr "Sign In"
+
+#: icofunder/templates/account/login.html:13
+#: icofunder/templates/account/signup.html:13
+msgid "一个 <strong>ICO 众筹平台,</strong><br/> 专注于区块链项目众筹。"
+msgstr ""
+"The <strong>ICO platform</strong> focus on project icoof the blockchain."
+
+#: icofunder/templates/account/login.html:15
+#: icofunder/templates/account/signup.html:15
+msgid " 是一家专注于虚拟货币投资服务一站式平台，致力于挖掘早期优质区块链项目。"
+msgstr ""
+" focus virtual currency trade as a one-stop platform, and grub high-class "
+"project of the blockchian."
+
+#: icofunder/templates/account/login.html:22
+msgid "即刻登录，参与众筹"
+msgstr "Login and join ICO."
+
+#: icofunder/templates/account/login.html:28
+msgid "请阅读"
+msgstr "Please read the"
+
+#: icofunder/templates/account/login.html:28
+msgid "COOKIE 条款"
+msgstr "COOKIE Terms"
+
+#: icofunder/templates/account/login.html:28
+msgid "和"
+msgstr "and"
+
+#: icofunder/templates/account/login.html:28
+msgid "隐私政策"
+msgstr "Privacy Policy"
+
+#: icofunder/templates/account/login.html:28
+msgid "说明"
+msgstr "information"
+
+#: icofunder/templates/account/login.html:31
+#: icofunder/templates/account/password_reset_from_key_done.html:15
+msgid "立即登录"
+msgstr "Sign In"
+
+#: icofunder/templates/account/login.html:34
+#: icofunder/templates/account/password_reset.html:20
+msgid "忘记密码"
+msgstr "Forget password"
+
+#: icofunder/templates/account/login.html:35
+msgid "还没有账户？马上注册"
+msgstr "Register now"
+
+#: icofunder/templates/account/messages/cannot_delete_primary_email.txt:2
+#, python-format
+msgid "You cannot remove your primary e-mail address (%(email)s)."
+msgstr ""
+
+#: icofunder/templates/account/messages/email_confirmation_sent.txt:2
+#, python-format
+msgid "Confirmation e-mail sent to %(email)s."
+msgstr ""
+
+#: icofunder/templates/account/messages/email_confirmed.txt:2
+#, python-format
+msgid "You have confirmed %(email)s."
+msgstr ""
+
+#: icofunder/templates/account/messages/email_deleted.txt:2
+#, python-format
+msgid "Removed e-mail address %(email)s."
+msgstr ""
+
+#: icofunder/templates/account/messages/logged_in.txt:4
+#, python-format
+msgid "Successfully signed in as %(name)s."
+msgstr ""
+
+#: icofunder/templates/account/messages/logged_out.txt:2
+msgid "You have signed out."
+msgstr ""
+
+#: icofunder/templates/account/messages/password_changed.txt:2
+msgid "Password successfully changed."
+msgstr ""
+
+#: icofunder/templates/account/messages/password_set.txt:2
+msgid "Password successfully set."
+msgstr ""
+
+#: icofunder/templates/account/messages/primary_email_set.txt:2
+msgid "Primary e-mail address set."
+msgstr ""
+
+#: icofunder/templates/account/messages/unverified_primary_email.txt:2
+msgid "Your primary e-mail address must be verified."
+msgstr ""
+
+#: icofunder/templates/account/password_change.html:5
+#: icofunder/templates/account/password_change.html:8
+#: icofunder/templates/account/password_change.html:13
+#: icofunder/templates/account/password_reset_from_key.html:5
+#: icofunder/templates/account/password_reset_from_key_done.html:5
+msgid "修改密码"
+msgstr "Change Password"
+
+#: icofunder/templates/account/password_reset.html:7
+#: icofunder/templates/account/password_reset_done.html:7
+#: icofunder/templates/account/password_reset_done.html:15
+msgid "重置密码"
+msgstr "Reset password."
+
+#: icofunder/templates/account/password_reset.html:18
+#: icofunder/templates/account/password_set.html:6
+#: icofunder/templates/account/password_set.html:9
+#: icofunder/templates/account/password_set.html:14
+#: icofunder/templates/profile.html:26
+msgid "设置密码"
+msgstr "Setup password."
+
+#: icofunder/templates/account/password_reset.html:31
+msgid "设置新的密码，"
+msgstr "Setup new password."
+
+#: icofunder/templates/account/password_reset.html:33
+msgid "忘记了你的密码？"
+msgstr "Password forgot?"
+
+#: icofunder/templates/account/password_reset.html:35
+msgid "在下面输入您的电子邮件地址，我们会向您发送一封电子邮件，以便您重置它。"
+msgstr ""
+"Input E-mail address in following, will send a mail and to check in you "
+"mailbox first."
+
+#: icofunder/templates/account/password_reset.html:41
+msgid "发送确认邮件"
+msgstr "Send checked mail."
+
+#: icofunder/templates/account/password_reset_done.html:20
+msgid ""
+"我们已发送电子邮件给您验证。 按照提供的链接完成设置新密码过程。 如果您在几分"
+"钟内未收到，请与我们联系。"
+msgstr ""
+"Checked mail has been sended, setup up your new password in mail. It's "
+"expired by a few minutes."
+
+#: icofunder/templates/account/password_reset_from_key.html:14
+msgid "无效的验证码"
+msgstr "Security code invalid."
+
+#: icofunder/templates/account/password_reset_from_key.html:14
+msgid "设置新密码"
+msgstr "Setup new password."
+
+#: icofunder/templates/account/password_reset_from_key.html:19
+msgid "密码重置链接无效，可能是因为它已被使用。"
+msgstr "Reset link invalid, be used bofore possibly."
+
+#: icofunder/templates/account/password_reset_from_key.html:20
+msgid "重新设置密码"
+msgstr "Reset the password"
+
+#: icofunder/templates/account/password_reset_from_key.html:26
+msgid "确认新密码"
+msgstr "Confirm the new password"
+
+#: icofunder/templates/account/password_reset_from_key.html:29
+msgid "您的密码现在已更改"
+msgstr "Your password has now been changed"
+
+#: icofunder/templates/account/password_reset_from_key_done.html:13
+msgid "设置新密码成功"
+msgstr "Set new password successfully"
+
+#: icofunder/templates/account/signup.html:4 icofunder/templates/base.html:185
+#: icofunder/templates/how-to-ico__content.html:22
+#: icofunder/templates/how-to-ico__content.html:26
+msgid "注册"
+msgstr "Sign up"
+
+#: icofunder/templates/account/signup.html:22
+msgid "注册账号，开始众筹"
+msgstr "Register an account and join ico"
+
+#: icofunder/templates/account/signup.html:27
+msgid "请阅读我们服务条款说明"
+msgstr "Please read our Terms"
+
+#: icofunder/templates/account/signup.html:29 icofunder/templates/index.html:80
+msgid "立即注册"
+msgstr "Sign up now"
+
+#: icofunder/templates/account/signup.html:32
+msgid "我已有账户，立即登录"
+msgstr "I already have an account and login now"
+
+#: icofunder/templates/account/signup_closed.html:5
+msgid "Sign Up Closed"
+msgstr ""
+
+#: icofunder/templates/account/snippets/already_logged_in.html:5
+msgid "Note"
+msgstr ""
+
+#: icofunder/templates/account/snippets/already_logged_in.html:5
+#, python-format
+msgid "you are already logged in as %(user_display)s."
+msgstr ""
+
+#: icofunder/templates/account/verification_sent.html:6
+#: icofunder/templates/account/verified_email_required.html:6
+#: icofunder/templates/account/verified_email_required.html:9
+msgid "验证你的邮箱地址"
+msgstr "Check your E-mail address."
+
+#: icofunder/templates/account/verification_sent.html:14
+msgid "确认你的邮件地址"
+msgstr "Confirm your E-mail address."
+
+#: icofunder/templates/account/verification_sent.html:16
+msgid ""
+"我们已发送电子邮件给您验证。 按照提供的链接完成注册过程。 如果您在几分钟内未"
+"收到，请与我们联系。"
+msgstr ""
+"Checked mail has been sended, check and sign up. It's expired in a few "
+"minutes, and invalid, contact us allodially."
+
+#: icofunder/templates/account/verified_email_required.html:13
+msgid ""
+"This part of the site requires us to verify that\n"
+"you are who you claim to be. For this purpose, we require that you\n"
+"verify ownership of your e-mail address. "
+msgstr ""
+
+#: icofunder/templates/account/verified_email_required.html:17
+msgid ""
+"We have sent an e-mail to you for\n"
+"verification. Please click on the link inside this e-mail. Please\n"
+"contact us if you do not receive it within a few minutes."
+msgstr ""
+
+#: icofunder/templates/account/verified_email_required.html:21
+#, python-format
+msgid ""
+"<strong>Note:</strong> you can still <a href=\"%(email_url)s\">change email "
+"address</a>."
+msgstr ""
+
+#: icofunder/templates/base.html:12
+msgid " - 为每个人提供早期阶段加密货币初创投资 ICO 众筹平台。"
+msgstr " - For everyone early stage invest ICO"
+
+#: icofunder/templates/base.html:13
+msgid ""
+"ICO众筹,ICO代投平台,虚拟货币投资,一键换币,换币,币币交易,虚拟货币兑换,比特币行"
+"情,虚拟货币钱包,数字货币,ETH钱包,行情软件,区块链技术,区块链行情,区块链项目,P"
+"网,比特币兑换,以太坊兑换,多币种兑换,加密货币众筹平台,众筹,投资"
+msgstr ""
+" ICO, ICO agency investment, virtual currency trade, exchange, BTC, wallet."
+
+#: icofunder/templates/base.html:93 icofunder/templates/base.html:95
+#: icofunder/templates/index.html:4
+msgid "首页"
+msgstr "Home"
+
+#: icofunder/templates/base.html:98 icofunder/templates/base.html:101
+#: icofunder/templates/base.html:103
+msgid "如何 ICO ?"
+msgstr "How to join ico?"
+
+#: icofunder/templates/base.html:107 icofunder/templates/base.html:112
+#: icofunder/templates/base.html:114 icofunder/templates/invest.html:74
+#: icofunder/templates/profile.html:96
+msgid "进行中的项目"
+msgstr "Ongoing"
+
+#: icofunder/templates/base.html:108 icofunder/templates/base.html:117
+#: icofunder/templates/base.html:119 icofunder/templates/profile.html:99
+msgid "即将来临的项目"
+msgstr "Upcoming"
+
+#: icofunder/templates/base.html:109 icofunder/templates/base.html:122
+#: icofunder/templates/base.html:124 icofunder/templates/invest.html:77
+#: icofunder/templates/profile.html:102
+msgid "已结束的项目"
+msgstr "Ended"
+
+#: icofunder/templates/base.html:128 icofunder/templates/base.html:130
+#: icofunder/templates/base.html:179 icofunder/templates/faq.html:4
+#: icofunder/templates/faq.html:13
+msgid "常见问题"
+msgstr "FAQs"
+
+#: icofunder/templates/base.html:173 icofunder/templates/profile.html:5
+msgid "个人页面"
+msgstr "My Profile"
+
+#: icofunder/templates/base.html:174 icofunder/templates/invite-poster.html:4
+#: icofunder/templates/invite.html:4
+msgid "邀请好友"
+msgstr "Invite Friends"
+
+#: icofunder/templates/base.html:175 icofunder/templates/invest.html:4
+msgid "众筹记录"
+msgstr "ICO Records"
+
+#: icofunder/templates/base.html:177
+msgid "KYC 审核"
+msgstr "KYC Audit"
+
+#: icofunder/templates/base.html:180
+msgid "退出登录"
+msgstr "Logout"
+
+#: icofunder/templates/base.html:213
+msgid "回到顶部"
+msgstr "UP"
+
+#: icofunder/templates/base.html:265
+msgid "未进行 KYC 认证"
+msgstr "Requires KYC"
+
+#: icofunder/templates/base.html:267
+msgid "已提交 KYC 信息，正在审核中"
+msgstr "KYC has been applied, wait for verification finished"
+
+#: icofunder/templates/base.html:269
+msgid "恭喜，您已通过 KYC 认证"
+msgstr "Congratulation, KYC identification has been passed"
+
+#: icofunder/templates/ended-list.html:21
+#: icofunder/templates/profile-ended.html:14
+#: icofunder/templates/profile-ended.html:34
+#: icofunder/templates/project-details.html:16
+msgid "结束于"
+msgstr "Ended by"
+
+#: icofunder/templates/ended.html:4 icofunder/templates/ended.html:13
+#: icofunder/templates/index.html:61
+msgid "已结束的 ICO 项目"
+msgstr "ICO project expired."
+
+#: icofunder/templates/ended.html:5
+msgid ""
+"已结束的 ICO 项目列表。所有结束代币销售都按日期排序，进行我们的评级和分析。"
+msgstr ""
+"Ended ICOs (Initial Coin Offering) list. All ended token sales are sorted by "
+"date, have our rating and analysis."
+
+#: icofunder/templates/faq.html:5
+msgid "所有你想知道的一般问题，及其ICO 列表，评级等问题。"
+msgstr "All you want to know about general questions, ICO listing, ratings."
+
+#: icofunder/templates/faq.html:22
+msgid "一般的问题"
+msgstr "General questions"
+
+#: icofunder/templates/faq.html:25
+msgid "什么是钱包地址？"
+msgstr "What's wallet address?"
+
+#: icofunder/templates/faq.html:26
+msgid ""
+"钱包是用来存放虚拟货币的一个软件程序。每种币都有对应的钱包提供商，它可以是网"
+"页端, 也可以是 App 或者桌面应用。钱包地址是用于收币的一串随机代码，一般由数字"
+"和字母组成。"
+msgstr ""
+"Wallet is a software program used to store virtual currency. Each currency "
+"has a corresponding wallet provider, which can be a web page, an App or a "
+"desktop application. Wallet address is a string of random codes used to "
+"collect money, usually consisting of numbers and letters. "
+
+#: icofunder/templates/faq.html:29
+msgid "什么是 Hash？"
+msgstr "What's Hash?"
+
+#: icofunder/templates/faq.html:30
+msgid ""
+"Hash 或者 tx ID 是区块链上的一笔交易的单号，由一串数字和字母组成，用它可以查"
+"询交易当前成交状态。不管是从你的钱包转币到 \"币币\" 交易平台，还是换币之后汇"
+"币到你的钱包，每一笔交易都对应一个不同的 Hash。"
+msgstr ""
+"Hash or tx ID is a blockchain trade serial number, construct by number and "
+"string, be used to check current trade status. Every trade has a unique hash."
+
+#: icofunder/templates/faq.html:35
+msgid "什么是网络费？"
+msgstr "What's internet fee?"
+
+#: icofunder/templates/faq.html:36
+msgid ""
+"每一笔区块链上的转币行为，都会被记录在区块链上同时被收取一笔费用，叫做网络"
+"费。如果网络费用过低，区块链可能拒绝交易，导致转币无限期延迟。"
+msgstr ""
+"Every coin trade in blockchain, must be recorded in blockchian and charge "
+"fee as service cost. The blockchain may reject the trade, if the fee is low."
+
+#: icofunder/templates/faq.html:39
+msgid "我能取消众筹吗？"
+msgstr "Can i cancel ico?"
+
+#: icofunder/templates/faq.html:40
+msgid "区块链上的交易是不可逆的。一旦交易发出，则不能取消。"
+msgstr ""
+"The trade is irreversible. It can not be canceled after transfer finished."
+
+#: icofunder/templates/faq.html:45
+msgid "什么是 ICO 众筹？"
+msgstr "What is an ICO?"
+
+#: icofunder/templates/faq.html:46
+msgid ""
+"ICO（是Initial Coin Offering缩写），首次币发行，源自股票市场的首次公开发行"
+"（IPO）概念，是区块链项目首次发行代币，募集比特币、以太坊等通用数字货币的行"
+"为。"
+msgstr ""
+"ICO (shortened for Initial Coin Offering), first publish, and derived from "
+"IPO conception, used for a blockchain project to raise BTC, ETH, etc in "
+"exchange for the project tokens."
+
+#: icofunder/templates/faq.html:49 icofunder/templates/index.html:20
+msgid "如何参与 ICO？"
+msgstr "How to join ICO?"
+
+#: icofunder/templates/faq.html:50
+msgid ""
+"提供一站式 ICO 众筹服务，注册并通过 KYC 认证即可参与经过严密筛选的优质项目。"
+msgstr ""
+"Use our service, sign up and pass KYC indentification, then you can join any "
+"project which has been strictly reviewed."
+
+#: icofunder/templates/faq.html:55
+msgid "什么是 PRE，Pre-sale，Pre-ICO？"
+msgstr "What is PRE, Pre-sale, Pre-ICO?"
+
+#: icofunder/templates/faq.html:56
+msgid "这是代币的第一次销售。大多数情况下，收集资金用于为主要 ICO 做广告。"
+msgstr ""
+"It’s the first sale of tokens. Most often, money is collected for "
+"advertising the main ICO. "
+
+#: icofunder/templates/faq.html:59
+msgid "什么是交易所？"
+msgstr "What are exchanges?"
+
+#: icofunder/templates/faq.html:60
+msgid ""
+"交易所是一个平台，其上可以以当前价格为另一个加密货币或代币出售或购买一个加密"
+"货币或代币。一些交易所允许使用法定货币（美元，欧元，卢布等）购买或出售加密货"
+"币。"
+msgstr ""
+"An exchange is a platform on which one cryptocurrency or token can be sold "
+"or bought for another cryptocurrency or token at current price. Some of "
+"exchanges allow buying or selling cryptocurrencies using fiat money (USD, "
+"EUR, RUB, etc)."
+
+#: icofunder/templates/faq.html:65
+msgid "什么是代币？"
+msgstr "What is a token?"
+
+#: icofunder/templates/faq.html:66
+msgid ""
+"代币是在 ICO 期间发行的加密货币单位。购买一定数量的代币可以让投资者大量筹集项"
+"目和 ICO 持有者以筹集资金。每当 ICO 在交易所和/或项目内使用的货币（购买，服务"
+"支付等）时，每个 ICO 都会发放固定数量的代币/硬币，以用作潜在的利润来源。"
+msgstr ""
+"A token or a coin is a cryptocurrency unit issued during an ICO. Buying "
+"certain amount of tokens allows the investors to crowdfund the project and "
+"ICO holders to raise funds. Every ICO issues a fixed amount of tokens/coins "
+"meant to be used as a potential source of profit once it goes on exchanges "
+"and/or as the currency used inside the project (purchases, service payments, "
+"etc)."
+
+#: icofunder/templates/faq.html:69
+msgid "什么是白皮书？"
+msgstr "What is a white paper?"
+
+#: icofunder/templates/faq.html:70
+msgid ""
+"白皮书是一份总结报告，提供有关该项目的详细信息，其原创性以及它可以给投资者和"
+"最终产品用户，技术特征，项目背后的团队，项目背景和未来计划带来的好处。"
+msgstr ""
+"A white paper is a summary report that provides detailed information about "
+"the project, its originality and the benefits it can give to the investors "
+"and the users of the final product, technological features, team behind the "
+"project, project's background and future plans. "
+
+#: icofunder/templates/faq.html:75
+msgid "关于评分"
+msgstr "Interest Level"
+
+#: icofunder/templates/faq.html:78
+msgid "什么是 “利润级别”？"
+msgstr "What is ‘Interest Level’?"
+
+#: icofunder/templates/faq.html:81
+#, python-format
+msgid ""
+"“利润级别” 是一个评分系统，旨在告知用户有关值得注意的代币销售。在撰写评分时，"
+"只分析特定代币销售的短期条件和参数。“利润级别” 仅供参考，并不构成财务，法律或"
+"其他建议。请阅读我们的 <a href=\"%(disclaimer)s\" target=\"_blank\">免责声明"
+"</a> 以了解更多信息。"
+msgstr ""
+"'Interest Level' is a rating system designed to inform users about "
+"noteworthy token sales. When composing the rating only short-term conditions "
+"and parameters of the particular token sale are analyzed. 'Interest Level' "
+"is provided merely in informational purposes and does not constitute "
+"financial, legal or other advice. Please, read our <a href=\"%(disclaimer)s"
+"\" target=\"_blank\">Disclaimer</a> for more information."
+
+#: icofunder/templates/faq.html:82
+msgid "“利润级别” 权衡三个因素：炒作水平，风险水平和投资回报率水平。"
+msgstr ""
+"'Interest Level' weighs three factors: Hype Level, Risk Level and ROI Level."
+
+#: icofunder/templates/faq.html:86 icofunder/templates/project-details.html:54
+msgid "炒作率"
+msgstr "Hype rate"
+
+#: icofunder/templates/faq.html:87
+msgid ""
+"这个因素依赖于对社交网络，聊天和互联网项目感兴趣的真正观众的规模和质量。垃圾"
+"邮件和赏金活动已整理出来。然后将剩余的活动与同时运行的其他 ICO 活动以及相关的"
+"完成代币销售进行比较。"
+msgstr ""
+"This factor relies on the size and quality of the genuine audience "
+"interested in the project in social networks, chats and on the internet. "
+"Spam and bounty activity is sorted out. Then the remaining activity is "
+"compared with other ICO campaigns running at the same time and relevant "
+"completed token sales."
+
+#: icofunder/templates/faq.html:92
+msgid "风险级别"
+msgstr "RISK LEVEL"
+
+#: icofunder/templates/faq.html:94
+msgid ""
+"这个因素反映了参与代币销售的条件（可用于筹款的代币的百分比，硬顶，个人硬顶，"
+"预售结果，回购等）。这个因素可能表明，交易价格可能低于或高于 ICO 期间的价格。"
+msgstr ""
+"s factor reflects the conditions of participation in the token sale (% of "
+"tokens available for fundraising, hard cap, personal hard cap, pre-sale "
+"results, buyback and etc). This factor may suggest that the exchange price "
+"could be lower or higher than the price during the ICO."
+
+#: icofunder/templates/faq.html:95
+msgid ""
+"例＃1。一个售价 2000 万美元的项目在预售后获得 1000 万美元。预售包括 40％ 的奖"
+"金。在主代币销售期间，其余的 1000 万美元已售完。那些在预售中购买代币的人可以"
+"通过立刻抛售代币来获得利润（约40％）。"
+msgstr ""
+"Example #1. A project with a $20M cap receives $10M after pre-sale. The pre-"
+"sale went with a 40% bonus. During the main token sale the rest of $10M is "
+"sold out. Those who bought the tokens on the pre-sale could fix the profit "
+"(about 40%) by dumping their tokens right away."
+
+#: icofunder/templates/faq.html:96
+msgid ""
+"例＃2。如果一个项目出售所有代币的一小部分（例如10-15％），他们可以很容易地操"
+"纵汇率价格。"
+msgstr ""
+"Example #2. If a project puts up for sale a small percentage of all tokens "
+"(e.g. 10-15%), they can easily manipulate the exchange price."
+
+#: icofunder/templates/faq.html:100 icofunder/templates/project-details.html:66
+msgid "投资回报率"
+msgstr "ROI rate"
+
+#: icofunder/templates/faq.html:102
+msgid ""
+"这个因素表明在短期和中期内代币价格可能会有多少变化。这个因素取决于 ICO 的条件"
+"和回顾性类似项目的表现。"
+msgstr ""
+"This factor shows how much token price could change over the short- and mid-"
+"term. The factor depends on the ICO conditions and performance of similar "
+"projects in retrospective."
+
+#: icofunder/templates/faq.html:103
+msgid ""
+"一旦因素发生变化，“利润级别” 的评级就会更新，例如，最初将广告的炒作级别设置"
+"为 “正常”，现在它会更新为 “高”，因为它们推迟了代币销售并积累了大量的忠诚代币"
+"买家。"
+msgstr ""
+"The 'Interest Level' rating is updated once the factors have changed, for "
+"example, Wanchain was initially assigned hype level ‘normal’, now it is "
+"updated to ‘high’ since they postponed the token sale and have accumulated a "
+"large base of loyal token buyers."
+
+#: icofunder/templates/how-to-ico.html:4
+msgid "如何 ICO？"
+msgstr "How to join ICO?"
+
+#: icofunder/templates/how-to-ico.html:12
+msgid "如何参与 ICO?"
+msgstr "How to join ICO?"
+
+#: icofunder/templates/how-to-ico__content.html:8
+msgid "如何参与 ICO 项目？"
+msgstr "How to join ICO?"
+
+#: icofunder/templates/how-to-ico__content.html:22
+#: icofunder/templates/how-to-ico__content.html:26
+msgid "完成 KYC 认证"
+msgstr "Pass KYC identification"
+
+#: icofunder/templates/how-to-ico__content.html:27
+msgid ""
+" 实行严格的 KYC 审核制度，目的是为了预防身份盗窃、金融诈骗、洗钱及恐怖主义融"
+"资。"
+msgstr ""
+" make strictly identify, to prevent indeitification steal, financial fraud, "
+"money laundering and terrorist financing"
+
+#: icofunder/templates/how-to-ico__content.html:36
+#: icofunder/templates/how-to-ico__content.html:40
+msgid "选择"
+msgstr "Pick up a project"
+
+#: icofunder/templates/how-to-ico__content.html:36
+#: icofunder/templates/how-to-ico__content.html:40
+msgid "优质 ICO 项目"
+msgstr "High grade ICO projects"
+
+#: icofunder/templates/how-to-ico__content.html:41
+msgid ""
+"在众多 ICO 项目中选择要投资的项目，确保已了解项目详细信息以及投资所要承担的风"
+"险。"
+msgstr "Join a project from all ICO projects, and check details before invest."
+
+#: icofunder/templates/how-to-ico__content.html:50
+#: icofunder/templates/how-to-ico__content.html:54
+#: icofunder/templates/project-details.html:86
+msgid "参与"
+msgstr "Join"
+
+#: icofunder/templates/how-to-ico__content.html:50
+#: icofunder/templates/how-to-ico__content.html:54
+msgid "项目众筹"
+msgstr "Enjoy"
+
+#: icofunder/templates/how-to-ico__content.html:55
+msgid ""
+"根据相关项目详情页面获取众筹钱包地址，从交易所、钱包转币到众筹地址即可。"
+msgstr ""
+"Get exclusive wallet address in detail page, deposit from wallet or exchage."
+
+#: icofunder/templates/how-to-ico__content.html:68
+msgid "注意事项"
+msgstr "Precautions"
+
+#: icofunder/templates/how-to-ico__content.html:78
+msgid "\"购买网络令牌和加密货币尤其有风险，可能导致资金全部流失。\""
+msgstr ""
+"Purchase internet token, cryptocurrency and invest ico may be to engender "
+"investment risk."
+
+#: icofunder/templates/how-to-ico__content.html:83
+msgid "\"接受代币钱包地址需要支持 ERC-20 协议，请勿使用交易所地址。\""
+msgstr ""
+"\"The wallet address to receive tokens must support ERC-20 technical "
+"stardard, do not use exchange address.\""
+
+#: icofunder/templates/how-to-ico__content.html:88
+#, python-format
+msgid "\"平台代投每笔费用为 2%%，我们将直接从众筹代币中扣除 2%% 代币。\""
+msgstr ""
+"\"2%% fee for every trade, take off by your virtual coin in your ico project "
+"by agency coin.\""
+
+#: icofunder/templates/index.html:14
+msgid "为每个人提供"
+msgstr "For everyone"
+
+#: icofunder/templates/index.html:15
+msgid "早期阶段"
+msgstr "Early stage"
+
+#: icofunder/templates/index.html:16
+msgid "初创投资 ICO"
+msgstr "Invest ICO"
+
+#: icofunder/templates/index.html:19
+msgid "我们经过严密审查、筛选出最佳投资的区块链项目。"
+msgstr "Strictly reviewed, potential excellent projects"
+
+#: icofunder/templates/index.html:34 icofunder/templates/ongoing.html:4
+#: icofunder/templates/ongoing.html:13
+msgid "正在进行中的 ICO 项目"
+msgstr "Ongoing ICOs"
+
+#: icofunder/templates/index.html:47 icofunder/templates/upcoming.html:4
+#: icofunder/templates/upcoming.html:13
+msgid "即将来临的 ICO 项目"
+msgstr "ICOs coming soon"
+
+#: icofunder/templates/index.html:76
+msgid "立即加入我们，成为一个 Funder"
+msgstr "Join us, become a member."
+
+#: icofunder/templates/index.html:77
+msgid "参与众筹"
+msgstr "Join the ico"
+
+#: icofunder/templates/invest-other-token.html:57
+#: icofunder/templates/invest-transactions.html:45
+msgid "确认"
+msgstr "Got it"
+
+#: icofunder/templates/invest.html:17
+msgid "众筹统计信息"
+msgstr "ico statistics"
+
+#: icofunder/templates/invest.html:22
+msgid "个"
+msgstr "times"
+
+#: icofunder/templates/invest.html:24
+msgid "共参与项目数"
+msgstr "Joined icos"
+
+#: icofunder/templates/invest.html:31
+msgid "参与众筹总金额"
+msgstr "Total assets in icos"
+
+#: icofunder/templates/invest.html:36
+msgid "ETH 钱包信息"
+msgstr "ETH wallet information"
+
+#: icofunder/templates/invest.html:40
+msgid ""
+"没有设置钱包地址，请前往 <a href='/accounts/profile/'>个人主页</a> 设置。"
+msgstr ""
+"Setup ethereum wallet address, enter <a href=\"/accounts/profile\">Profile</"
+"a> to configure."
+
+#: icofunder/templates/invest.html:44
+msgid "次"
+msgstr "time"
+
+#: icofunder/templates/invest.html:44
+msgid "总交易次数"
+msgstr "Transaction times"
+
+#: icofunder/templates/invest.html:47
+msgid "总支出"
+msgstr "Total withdraw"
+
+#: icofunder/templates/invest.html:50
+msgid "总收入"
+msgstr "Total deposit"
+
+#: icofunder/templates/invest.html:57 icofunder/templates/invest.html:60
+msgid "种"
+msgstr "types"
+
+#: icofunder/templates/invest.html:58 icofunder/templates/invest.html:60
+msgid "持有其它令牌"
+msgstr "Other tokens"
+
+#: icofunder/templates/invest.html:66
+msgid "当前钱包余额"
+msgstr "ETH wallet balance"
+
+#: icofunder/templates/invite-poster-modal.html:11
+msgid "下载图片"
+msgstr "Download Picture"
+
+#: icofunder/templates/invite-poster-modal.html:14
+msgid "关闭窗口"
+msgstr "Close The Window"
+
+#: icofunder/templates/invite.html:12
+msgid "邀请用户，即送奖励"
+msgstr "Get reward by user invitation."
+
+#: icofunder/templates/invite.html:13
+msgid "邀请用户注册送 200 IOF，完成 KYC 认证，再送 300 IOF"
+msgstr ""
+"Reward 200 IOF tokens per invitation, you can get another 300 IOF tokens if "
+"the invited friend passed KYC"
+
+#: icofunder/templates/invite.html:15
+msgid "复制邀请码"
+msgstr "Copy invitation link"
+
+#: icofunder/templates/invite.html:16
+msgid "邀请海报"
+msgstr "Invitation poster"
+
+#: icofunder/templates/invite.html:35
+msgid "人"
+msgstr "Persons"
+
+#: icofunder/templates/invite.html:37
+msgid "已邀请 | 完成 KYC"
+msgstr "Invited | KYC finished"
+
+#: icofunder/templates/invite.html:48
+msgid "共获取奖励"
+msgstr "Rewarded"
+
+#: icofunder/templates/invite.html:59
+msgid "预估价值"
+msgstr "Estimated value"
+
+#: icofunder/templates/invite.html:73
+msgid "邀请用户 | 完成 KYC 奖励"
+msgstr "Invite | KYC profits"
+
+#: icofunder/templates/invite.html:82
+msgid "IOF 是以太坊区块链上的标准 ERC-20 代币，了解更多信息，请点击下面按钮"
+msgstr ""
+"IOF is an ethereum ERC-20 stardard token, click the button if you want to "
+"learn more."
+
+#: icofunder/templates/invite.html:85
+msgid "了解 IOF Token"
+msgstr "About IOF"
+
+#: icofunder/templates/invite.html:96
+#: icofunder/templates/project-details-ico.html:41
+msgid "已复制"
+msgstr "Copied!"
+
+#: icofunder/templates/kyc.html:4 icofunder/templates/kyc.html:32
+#: icofunder/templates/profile.html:44
+msgid "KYC 认证"
+msgstr "KYC indentification"
+
+#: icofunder/templates/kyc.html:5 icofunder/templates/kyc.html:13
+msgid " 实行严格的 KYC 审核制度"
+msgstr " make strictly varification-system."
+
+#: icofunder/templates/kyc.html:5 icofunder/templates/kyc.html:122
+msgid "用于验证用户身份以及预防身份盗窃、金融诈骗、洗钱及恐怖主义融资。"
+msgstr ""
+"Be used to check user authentication to prevent indeitification steal, "
+"financial fraud, money laundering and terrorist Financing."
+
+#: icofunder/templates/kyc.html:22
+msgid "什么是 KYC ?"
+msgstr "What's KYC?"
+
+#: icofunder/templates/kyc.html:23
+msgid ""
+"认识你的客户（Know your customer）也称为了解你的客户，简称KYC，是企业确认客户"
+"身份的程序。此一词语也用在银行监管。“认识你的客户”程序也适用在不同规模的公"
+"司，以确认其可能的客户、顾问或经销商符合反贿赂标准（anti-bribery "
+"compliant）。越来越多的银行、保险公司会要求客户提供具体的反腐败尽职调查资讯，"
+"以确认客户的诚实和正直。“认识你的客户” 程序目的是为了预防身份盗窃、金融诈骗、"
+"洗钱及恐怖主义融资，在全球都日益重要。"
+msgstr ""
+
+#: icofunder/templates/kyc.html:24
+msgid "视频介绍"
+msgstr "Video"
+
+#: icofunder/templates/kyc.html:39
+msgid "KYC 身份认证已提交"
+msgstr "KYC indeitification has been applied"
+
+#: icofunder/templates/kyc.html:40
+msgid "我们将会在 24 小时内审核完毕。"
+msgstr "Identify in 24 hours."
+
+#: icofunder/templates/kyc.html:46
+msgid "恭喜，您已通过 KYC 审核。"
+msgstr "Congratulation, KYC identification has been passed."
+
+#: icofunder/templates/kyc.html:53
+msgid "* 真实姓名"
+msgstr "* Full Name"
+
+#: icofunder/templates/kyc.html:54
+msgid "输入你的真实姓名"
+msgstr "Enter your full name"
+
+#: icofunder/templates/kyc.html:55
+msgid "* 身份证正面 | 护照封面"
+msgstr "* ID | passport"
+
+#: icofunder/templates/kyc.html:70
+msgid "* 身份证反面 | 护照个人信息页"
+msgstr "* ID back | passport"
+
+#: icofunder/templates/kyc.html:85
+msgid "* 手持身份证 | 手持护照个人信息页"
+msgstr "* ID | passport in hands"
+
+#: icofunder/templates/kyc.html:101
+msgid "请阅读我们的隐私政策"
+msgstr "Please read our privacy policy"
+
+#: icofunder/templates/kyc.html:103
+msgid "提交审核"
+msgstr "Submit verification"
+
+#: icofunder/templates/kyc.html:109
+msgid "已完成 KYC 审核"
+msgstr "KYC identification has been passed"
+
+#: icofunder/templates/kyc.html:110
+#, python-format
+msgid ""
+"您已完成 KYC 审核，当前共有 <b class=\"text-primary\">%(ongoing_length)s</b> "
+"个项目正在进行 ICO，具体细节请查看项目详情。"
+msgstr ""
+"KYC indentification has been passed, you have <b class=\"text-primary\">"
+"%(ongoing_length)s</b> projects in ICO, get more information in project "
+"detail."
+
+#: icofunder/templates/kyc.html:112
+msgid "查看正在进行的 ICO 项目"
+msgstr "Get ICO project list."
+
+#: icofunder/templates/kyc.html:121
+msgid "KYC 身份资料验证"
+msgstr "KYC authentication check."
+
+#: icofunder/templates/kyc.html:124
+msgid "立即登录验证"
+msgstr "Sign in to verify KYC"
+
+#: icofunder/templates/modal-loading.html:9
+msgid "正在加载"
+msgstr "Loading"
+
+#: icofunder/templates/modal-notfound.html:9
+msgid "没有找到记录"
+msgstr "Not found"
+
+#: icofunder/templates/modal-success.html:9
+msgid "设置成功"
+msgstr "Success"
+
+#: icofunder/templates/ongoing-list.html:28
+#: icofunder/templates/profile-ongoing.html:27
+#: icofunder/templates/profile-ongoing.html:61
+#: icofunder/templates/profile-upcoming.html:37
+#: icofunder/templates/profile-upcoming.html:81
+#: icofunder/templates/project-details.html:276
+#: icofunder/templates/upcoming-list.html:40
+msgid "周"
+msgstr "weeks"
+
+#: icofunder/templates/ongoing-list.html:29
+#: icofunder/templates/profile-ongoing.html:28
+#: icofunder/templates/profile-ongoing.html:62
+#: icofunder/templates/profile-upcoming.html:38
+#: icofunder/templates/profile-upcoming.html:82
+#: icofunder/templates/project-details.html:277
+#: icofunder/templates/upcoming-list.html:41
+msgid "天"
+msgstr "days"
+
+#: icofunder/templates/ongoing-list.html:30
+#: icofunder/templates/profile-ongoing.html:29
+#: icofunder/templates/profile-ongoing.html:63
+#: icofunder/templates/profile-upcoming.html:39
+#: icofunder/templates/profile-upcoming.html:83
+#: icofunder/templates/project-details.html:278
+#: icofunder/templates/upcoming-list.html:42
+msgid "时"
+msgstr "hours"
+
+#: icofunder/templates/ongoing-list.html:31
+#: icofunder/templates/profile-ongoing.html:30
+#: icofunder/templates/profile-ongoing.html:64
+#: icofunder/templates/profile-upcoming.html:40
+#: icofunder/templates/profile-upcoming.html:84
+#: icofunder/templates/project-details.html:279
+#: icofunder/templates/upcoming-list.html:43
+msgid "分"
+msgstr "min"
+
+#: icofunder/templates/ongoing-list.html:32
+#: icofunder/templates/profile-ongoing.html:31
+#: icofunder/templates/profile-ongoing.html:65
+#: icofunder/templates/profile-upcoming.html:41
+#: icofunder/templates/profile-upcoming.html:85
+#: icofunder/templates/project-details.html:280
+#: icofunder/templates/upcoming-list.html:44
+msgid "秒"
+msgstr "sec"
+
+#: icofunder/templates/ongoing.html:5
+msgid ""
+"正在进行中的 ICO 项目列表。 所有活动的代币销售都按日期排序，并进行评分和分"
+"析。"
+msgstr ""
+"Ongoing ICOs (Initial Coin Offering) list. All active token sales are sorted "
+"by date, have our rating and analysis."
+
+#: icofunder/templates/profile-ongoing.html:16
+#: icofunder/templates/profile-ongoing.html:50
+msgid "结束"
+msgstr "End"
+
+#: icofunder/templates/profile-upcoming.html:17
+#: icofunder/templates/profile-upcoming.html:25
+#: icofunder/templates/profile-upcoming.html:61
+#: icofunder/templates/profile-upcoming.html:69
+msgid "开始"
+msgstr "Start"
+
+#: icofunder/templates/profile-upcoming.html:21
+#: icofunder/templates/profile-upcoming.html:65
+#: icofunder/templates/project-details.html:19
+#: icofunder/templates/project-details.html:242
+#: icofunder/templates/upcoming-list.html:24
+msgid "不确切日期"
+msgstr "No Exact Dates"
+
+#: icofunder/templates/profile.html:30
+msgid "基本信息"
+msgstr "Basic information"
+
+#: icofunder/templates/profile.html:36
+msgid "最后登录"
+msgstr "Last login"
+
+#: icofunder/templates/profile.html:39
+msgid "注册时间"
+msgstr "Register date"
+
+#: icofunder/templates/profile.html:46
+msgid "未提交 KYC 认证，只有通过 KYC 认证才可参与众筹。"
+msgstr "KYC authentication needed, before joining ICO."
+
+#: icofunder/templates/profile.html:47
+msgid "立即进行 KYC 认证"
+msgstr "KYC identification"
+
+#: icofunder/templates/profile.html:49
+msgid "已提交 KYC 信息，正在审核中。"
+msgstr "KYC has been applied, pending for verification."
+
+#: icofunder/templates/profile.html:51
+msgid "KYC 身份资料认证失败，点击重新认证。"
+msgstr "KYC authentication failed, resubmit please."
+
+#: icofunder/templates/profile.html:55
+msgid "恭喜，您已通过 KYC 审核"
+msgstr "Congratulation, KYC identification has been passed"
+
+#: icofunder/templates/profile.html:60
+msgid "ETH ERC-20 钱包地址"
+msgstr "ETH ERC-20 wallet address"
+
+#: icofunder/templates/profile.html:62
+msgid "未设置 ETH 钱包地址，请设置用于接收代币 ETH 钱包地址。"
+msgstr ""
+"ETH wallet address not set, please setup the ETH wallet address to receive "
+"tokens."
+
+#: icofunder/templates/profile.html:63
+msgid "立即设置钱包地址"
+msgstr "Setup wallet address"
+
+#: icofunder/templates/profile.html:65
+msgid "用于接收代币，请勿频繁修改。"
+msgstr "Used to recieve tokens, do not modify frequently."
+
+#: icofunder/templates/profile.html:67
+msgid "修改钱包地址"
+msgstr "Change wallet address."
+
+#: icofunder/templates/profile.html:76
+msgid "请小心！ 您的ETH钱包必须支持 ERC-20。"
+msgstr "Careful! Your ETH Wallet must support ERC-20."
+
+#: icofunder/templates/profile.html:77
+msgid "你的 ETH 钱包地址"
+msgstr "Your ETH wallet address."
+
+#: icofunder/templates/profile.html:80
+msgid "请输入你的 ETH 钱包地址，请勿使用交易所钱包地址，否则将无法接收代币。"
+msgstr ""
+"Input your ETH wallet address to receive tokens, do not use exchange wallet "
+"address!"
+
+#: icofunder/templates/profile.html:86
+msgid "立即设置"
+msgstr "Setup"
+
+#: icofunder/templates/project-details-ico.html:11
+#: icofunder/templates/project-details.html:88
+#, python-format
+msgid ""
+"ICO 投资可能导致全部资产损失，并且可能无法转售。您应该充分了解您打算资助的任"
+"何产品或业务项目的功能，并在购买前仔细权衡风险与回报。<br><br>请仔细阅读我们"
+"的 <a href='%(disclaimer_url)s' target='_blank'>免责声明</a>。"
+msgstr ""
+"ICO investment may result in loss of all assets and may not be resold. You "
+"should fully understand the features of any products or business projects "
+"you intend to fund, and carefully weigh the risks against the return before "
+"making a purchase.<br><br>Please read our <a href='%(disclaimer_url)s' "
+"target='_blank'>disclaimer</a> carefully."
+
+#: icofunder/templates/project-details-ico.html:13
+msgid "接收代币地址"
+msgstr "Receive token address"
+
+#: icofunder/templates/project-details-ico.html:15
+#, python-format
+msgid ""
+"未设置接收代币地址，请前往 <a href=\"%(profile_url)s\">个人主页</a> 进行设"
+"置。"
+msgstr ""
+"Setup coin address, enter <a href=\"%(profile_url)s\">Home</a> to config."
+
+#: icofunder/templates/project-details-ico.html:20
+msgid "众筹钱包地址"
+msgstr "Wallet address for joining ICO"
+
+#: icofunder/templates/project-details-ico.html:21
+msgid "此地址为您个人专有参与该项目的 ICO 地址。"
+msgstr ""
+"This address is your private ICO address for this project.Please do not "
+"share it with anyone else."
+
+#: icofunder/templates/project-details-ico.html:26
+msgid "复制地址"
+msgstr "Copy ICO address"
+
+#: icofunder/templates/project-details-ico.html:29
+msgid "我已了解"
+msgstr "Got it"
+
+#: icofunder/templates/project-details.html:22
+msgid "访问官方网站"
+msgstr "website"
+
+#: icofunder/templates/project-details.html:24
+msgid "查看白皮书"
+msgstr "whitepaper"
+
+#: icofunder/templates/project-details.html:34
+msgid "什么是"
+msgstr "What's?"
+
+#: icofunder/templates/project-details.html:37
+msgid "相关视频"
+msgstr "Video"
+
+#: icofunder/templates/project-details.html:37
+msgid "相关图片"
+msgstr "Image"
+
+#: icofunder/templates/project-details.html:49
+msgid "我们的评级：利润级别"
+msgstr "OUR RATING"
+
+#: icofunder/templates/project-details.html:60
+msgid "风险率"
+msgstr "Risk rate"
+
+#: icofunder/templates/project-details.html:71
+msgid "没有评分"
+msgstr "NOT RATED"
+
+#: icofunder/templates/project-details.html:80
+msgid "评价"
+msgstr "score"
+
+#: icofunder/templates/project-details.html:93
+msgid "已结束"
+msgstr "End"
+
+#: icofunder/templates/project-details.html:95
+msgid "我已了解该项目及其风险，立即参与"
+msgstr "JOIN ICO"
+
+#: icofunder/templates/project-details.html:98
+msgid "请先完成 KYC 资料认证"
+msgstr "Confirm KYC information first."
+
+#: icofunder/templates/project-details.html:101
+msgid "立即登录，参与众筹"
+msgstr "Login and JOIN ICO."
+
+#: icofunder/templates/project-details.html:108
+msgid "评分"
+msgstr "Ratings"
+
+#: icofunder/templates/project-details.html:120
+msgid "ICO 简介"
+msgstr "ICO PROFILE"
+
+#: icofunder/templates/project-details.html:124
+#: icofunder/templates/token.html:43 icofunder/templates/token.html:72
+msgid "团队"
+msgstr "Team"
+
+#: icofunder/templates/project-details.html:128
+msgid "市场"
+msgstr "Vision"
+
+#: icofunder/templates/project-details.html:132
+msgid "产品"
+msgstr "Product"
+
+#: icofunder/templates/project-details.html:135
+msgid "查看评级规则"
+msgstr "View rating distribution"
+
+#: icofunder/templates/project-details.html:139
+msgid "代币信息"
+msgstr "Token information"
+
+#: icofunder/templates/project-details.html:145
+msgid "代币名称"
+msgstr "Ticker"
+
+#: icofunder/templates/project-details.html:148
+msgid "代币类型"
+msgstr "Token type"
+
+#: icofunder/templates/project-details.html:151
+#: icofunder/templates/token.html:27
+msgid "代币总量"
+msgstr "Total Tokens"
+
+#: icofunder/templates/project-details.html:154
+msgid "可用于令牌销售"
+msgstr "Available for Token Sale"
+
+#: icofunder/templates/project-details.html:157
+msgid "硬顶"
+msgstr "GOAL"
+
+#: icofunder/templates/project-details.html:160
+msgid "白名单"
+msgstr "Whitelist"
+
+#: icofunder/templates/project-details.html:176
+#: icofunder/templates/project-details.html:222
+msgid "未公布"
+msgstr "Unpublished"
+
+#: icofunder/templates/project-details.html:179
+msgid "价格"
+msgstr "ICO Token Price"
+
+#: icofunder/templates/project-details.html:182
+msgid "奖励"
+msgstr "Bonus"
+
+#: icofunder/templates/project-details.html:185
+msgid "接受代币"
+msgstr "Accepted currencies"
+
+#: icofunder/templates/project-details.html:188
+msgid "最小/最大个人上限"
+msgstr "Min/Max Personal Cap"
+
+#: icofunder/templates/project-details.html:196
+msgid "不确定的时间"
+msgstr "No Exact Dates"
+
+#: icofunder/templates/project-details.html:199
+msgid "发币时间"
+msgstr "Accept token time"
+
+#: icofunder/templates/project-details.html:203
+#, python-format
+msgid ""
+"更多信息请访问 %(name)s 的 <a href='%(website)s' target='_blank'>官网网址</"
+"a> 或 <a href='%(whitepaper)s' target='_blank'>白皮书</a> 查询。"
+msgstr ""
+"For more information, visit %(name)s official <a href='%(website)s' "
+"target='_blank'>website</a> or <a href='%(whitepaper)s' "
+"target='_blank'>whitepaper</a>."
+
+#: icofunder/templates/project-details.html:225
+msgid "Token 价格"
+msgstr "ICO Token Price"
+
+#: icofunder/templates/project-details.html:232
+msgid "接受的货币"
+msgstr "Accepted currencies"
+
+#: icofunder/templates/project-details.html:245
+#: icofunder/templates/token.html:238
+msgid "交易所上市"
+msgstr "listed on exchanges"
+
+#: icofunder/templates/project-details.html:252
+msgid "限制司法辖区"
+msgstr "Restricted Jurisdictions"
+
+#: icofunder/templates/token.html:12
+msgid "IOF Token Distribution"
+msgstr ""
+
+#: icofunder/templates/token.html:31 icofunder/templates/token.html:73
+msgid "令牌预售"
+msgstr "Token Presale"
+
+#: icofunder/templates/token.html:37 icofunder/templates/token.html:71
+msgid "令牌主要销售"
+msgstr "Token Main Sale"
+
+#: icofunder/templates/token.html:49 icofunder/templates/token.html:74
+msgid "顾问和合作伙伴"
+msgstr "Advisors and Partners"
+
+#: icofunder/templates/token.html:55 icofunder/templates/token.html:75
+msgid "市场运营"
+msgstr "Market Operation"
+
+#: icofunder/templates/token.html:97
+msgid "什么是 IOF Token？"
+msgstr "What's IOF Token?"
+
+#: icofunder/templates/token.html:99
+#, python-format
+msgid ""
+" %(site_domain)s 将发行总量为 2 亿 的 %(site_domain)s Coin，简称 IOF。该代币"
+"是基于以太坊智能合约 ERC-20 标准的代币，%(site_domain)s 团队将承诺永不增发。"
+msgstr ""
+"%(site_domain)s publish two hundred million coin, named IOF. IOF has based "
+"on ETH with ERC-20 technical standard. %(site_domain)s team promise never "
+"extend the dimensions of the IOF coin."
+
+#: icofunder/templates/token.html:102
+msgid "IOF Token 有什么用？"
+msgstr "Usage of IOF Token?"
+
+#: icofunder/templates/token.html:103
+#, python-format
+msgid ""
+"IOF 将会成为 %(site_domain)s 换币系统、去中心化交易所的基准货币。可以参与 "
+"ICO 众筹、抵扣手续费、去中心化交易所燃料、商家保证金、创新企业孵化基金等，持"
+"有 IOF 代币的用户将会不定期赠送去中心化交易所上线的新币，同时将永久享有每日利"
+"润的 20%% 分红权。\" "
+msgstr ""
+"IOF will be the base coin of decentralized exchange system of "
+"%(site_domain)s. It can be used to join ICO, on charge of fee, agency "
+"guarantee, sell margin, innovation incubation, etc. IOF have the rights of "
+"getting 20%% of our decentralized exchange fee profits forever."
+
+#: icofunder/templates/token.html:108
+msgid "IOF Token 的长期价值体现？"
+msgstr "IOF Token's long-term value?"
+
+#: icofunder/templates/token.html:110
+#, python-format
+msgid ""
+"为保证 IOF Token 价格增长，%(site_domain)s 团队将会在交易所上线后，用每个季度"
+"净利润的 50%% 回购 、销毁 IOF Token。回购的 IOF 直接销毁，回购记录将会第一时"
+"间公布，用户可通过区块链浏览器查询，确保公开透明，直至销毁到总量为 1 亿个 "
+"IOF 币为止。"
+msgstr ""
+"For raising value of IOF Token, %(site_domain)s team will upload to exchange "
+"agency, and 50%% profit used to repurchase and burn IOF token. Information "
+"publish in time, you can check it in any blockchain explorer, until half IOF "
+"tokens vanished."
+
+#: icofunder/templates/token.html:113
+msgid "什么是换币系统？"
+msgstr "What's the exchange system?"
+
+#: icofunder/templates/token.html:114
+#, python-format
+msgid ""
+"传统的币币交易往往有很多局限，%(site_domain)s 将提供根据当前虚拟货币按市场最"
+"优汇率来换取其它代币。"
+msgstr ""
+"Due to traditional exchange have many limits, %(site_domain)s will supply "
+"the best exchange rate in current virtual coin trade rate."
+
+#: icofunder/templates/token.html:119
+msgid "什么是去中心化交易所？"
+msgstr "What's the decentralized exchange?"
+
+#: icofunder/templates/token.html:120
+#, python-format
+msgid ""
+"%(site_domain)s 团队将在 EOS 正式落地后，开发基于 EOS 的去中心化交易所。IOF "
+"代币也将是去中心化交易所的燃料。"
+msgstr ""
+"%(site_domain)s team will start developing an open decentralized exchange "
+"based on EOSwhen EOS mainnet launched. IOF token is the fuel of of our "
+"decentralized exchange."
+
+#: icofunder/templates/token.html:122
+msgid "如何参与 IOF Token ICO？"
+msgstr "How to join IOF Token ICO?"
+
+#: icofunder/templates/token.html:123
+msgid ""
+"IOF Token 目前并未开始 ICO 众筹，我们将会在换币系统以及钱包产品上线后，正式开"
+"始 ICO。"
+msgstr ""
+"IOF Token has not started ICO yet. We will officially start ICO after the "
+"token exchange system and wallet software launched."
+
+#: icofunder/templates/token.html:134
+msgid "路线图"
+msgstr "Roadmap"
+
+#: icofunder/templates/token.html:144
+msgid "换币系统上线"
+msgstr "Exchange system online."
+
+#: icofunder/templates/token.html:146
+msgid "将虚拟货币按市场最优汇率兑换成其他币"
+msgstr "Support exchange to other token pairs by the best exchange rate."
+
+#: icofunder/templates/token.html:155
+msgid "ERC-20 钱包发布"
+msgstr "Wallet release"
+
+#: icofunder/templates/token.html:156
+#, python-format
+msgid " %(site_domain)s 钱包发布，内部集成换币系统 "
+msgstr ""
+"%(site_domain)s wallet released, including virtual currency exchange system."
+
+#: icofunder/templates/token.html:164
+msgid "公开发售 & IOF 上线交易"
+msgstr "Public sale & IOF online trading."
+
+#: icofunder/templates/token.html:166
+msgid "IOF 众筹推出、公开发售, 在完成众筹后将会对接主流交易所上线交易 IOF"
+msgstr ""
+"IOF ICO, public sale, will land to mainstream trading platform after "
+"crowdsale."
+
+#: icofunder/templates/token.html:175
+msgid "IOS、Android APP 推出"
+msgstr "IOS, Android APP release"
+
+#: icofunder/templates/token.html:176
+#, python-format
+msgid "%(site_domain)s 众筹 IOS 及 Android APP 同时上线 "
+msgstr "%(site_domain)s ico, IOS and Android APP released together."
+
+#: icofunder/templates/token.html:184
+msgid "区块链身份验证系统"
+msgstr "Blockchain based identify authentication system."
+
+#: icofunder/templates/token.html:186
+msgid ""
+"可以验证用户身份以及防止欺诈行为的服务。基于区块链技术，保护及验证互联网用户"
+"个人信息的工具"
+msgstr "Use blockchain identify authentication technology to prevent schemes."
+
+#: icofunder/templates/token.html:195 icofunder/templates/token.html:231
+msgid "去中心化交易所"
+msgstr "Decentralized exchange."
+
+#: icofunder/templates/token.html:196
+msgid "基于 EOS 的去中心化交易所，IOF 代币也将是去中心化交易所的燃料。"
+msgstr ""
+"open decentralized exchange based on EOSwhen EOS mainnet launched, IOF token "
+"is the fuel of of our decentralized exchange."
+
+#: icofunder/templates/token.html:205
+msgid "全球化运营"
+msgstr "Global operation."
+
+#: icofunder/templates/token.html:206
+msgid ""
+"为全球服务商提供完善的 KYC 认证服务，为全球用户提供专业的 ICO 众筹、换币服"
+"务、去中心化交易服务。"
+msgstr ""
+"Serve globally for KYC authentication, launching an ICO, token exchange "
+"service, etc. "
+
+#: icofunder/templates/token.html:224
+msgid "IOF 每日分红"
+msgstr "IOF daily profit sharing."
+
+#: icofunder/templates/token.html:244
+msgid "未开始"
+msgstr "Not started yet."
+
+#: icofunder/templates/token.html:245
+msgid "公开发售"
+msgstr "Public sale."
+
+#: icofunder/templates/upcoming.html:5
+msgid ""
+"即将到来的ICO 项目列表。 所有即将到来的代币销售都按日期排序，进行我们的评级和"
+"分析。"
+msgstr ""
+"Upcoming ICOs (Initial Coin Offering) list. All upcoming token sales are "
+"sorted by date, have our rating and analysis."

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load base_tags %}
+{% block title %}404 - {% SETTINGS "SITE_DOMAIN" %}{% endblock %}
+{% block content %}
+	<div class="jumbotron jumbotron-main" id="home">
+		<div id="particles-js"></div>
+		<div class="container center-vertically-holder">
+			<div class="center-vertically">
+				<div class="col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3 text-center">
+					<h1 class="scaleReveal">
+                        <strong>HTTP 404</strong>.
+					</h1>
+                    <hr class="bottomReveal">
+                    <p class="bottomReveal">{% trans "没有找到该页面，请确认 URL 地址是否输入正确。" %}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

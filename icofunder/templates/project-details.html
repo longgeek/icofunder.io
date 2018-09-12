@@ -1,0 +1,285 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load base_tags %}
+{% block title %}{{ detail.name }} - {% SETTINGS "SITE_DOMAIN" %}{% endblock %}
+{% block description %}{{ detail.desc }}{% endblock %}
+{% block content %}
+	<div class="jumbotron jumbotron-main project">
+		<div id="particles-js"></div>
+		<div class="container center-vertically-holder">
+			<div class="center-vertically">
+				<div class="col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3 text-center">
+                    <img class="img-circle mb20" src="/static/images/icos/{{ detail.logo }}" width="100px" height="100px">
+                    <h2 class="scaleReveal text-primary"><b>{{ detail.name }}</b></h2>
+                    <div class="scaleReveal project-clock">
+                        {% if status == "ended" %}
+                        {% trans "结束于" %}: {{ detail.ended_at }}
+                        {% endif %}
+                        {% if not detail.ended_at %}
+                        {% trans "不确切日期" %}: ?? : ?? : ??
+                        {% endif %}
+                    </div>
+                    <a href="{{ detail.website }}" class="btn btn-primary" target="_blank">{% trans "访问官方网站" %}</a>
+                    &nbsp;&nbsp;
+                    <a href="/static/whitepaper/{{ detail.whitepaper }}" type="button" class="btn btn-default" target="_blank">{% trans "查看白皮书" %}</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section class="background2 section-padding project-info">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8">
+                    <h5 class="heading-1 mb20">{% trans "什么是" %} {{ detail.name }} ?</h5>
+                    <pre class="project-desc">{% trans detail.desc %}</pre>
+                    <h5 class="heading-1 mt20 mb20">{{ detail.name }}&nbsp;
+                        {% if detail.video != "" %} {% trans "相关视频" %} {% else %} {% trans "相关图片" %} {% endif %}
+                    </h5>
+					<div class="embed-responsive embed-responsive-16by9">
+                        {% if detail.video != "" %}
+                        <video class="embed-responsive-item" controls="controls" autoplay="autoplay">
+                            <source src="/static/videos/{{ detail.video }}" type="video/mp4" />
+                        </video>
+                        {% else %}
+                        <img class="img-responsive" src="/static/images/icos/images/{{ detail.image }}">
+                        {% endif %}
+					</div>
+                    {% if detail.ratings %}
+                    <h5 class="heading-1 mt40 mb20">{% trans "我们的评级：利润级别" %}</h5>
+		            <div class="project-ratings-other">
+                        <div class="items">
+		            	    <div class="item">
+		            	    	<div class="box">
+                                    <div class="title">{% trans "炒作率" %}</div>
+                                    <div class="value">{% trans detail.ratings.hype %}</div>
+		            	    	</div>
+		            	    </div>
+		            	    <div class="item">
+		            	    	<div class="box">
+                                    <div class="title">{% trans "风险率" %}</div>
+                                    <div class="value">{% trans detail.ratings.risk %}</div>
+		            	    	</div>
+		            	    </div>
+		            	    <div class="item">
+		            	    	<div class="box">
+                                    <div class="title">{% trans "投资回报率" %}</div>
+                                    <div class="value">
+                                        {% if detail.ratings.roi %}
+                                        {% trans detail.ratings.roi %}
+                                        {% else %}
+                                        {% trans "没有评分" %}
+                                        {% endif %}
+                                    </div>
+		            	    	</div>
+		            	    </div>
+		            	</div>
+
+		                <div class="result">
+		                	<div class="box">
+                                <div class="title">{% SETTINGS "SITE_NAME" %}&nbsp;{% trans "评价" %}</div>
+                                <div class="value">{% trans detail.ratings.score %}</div>
+		                	</div>
+		                </div>
+		            </div>
+                    {% endif %}
+                    <h5 class="heading-1 mt40 mb20">{% trans "参与" %} {{ detail.name }} ICO</h5>
+                    {% url 'disclaimer' as disclaimer_url %}
+                    <p>{% blocktrans %}ICO 投资可能导致全部资产损失，并且可能无法转售。您应该充分了解您打算资助的任何产品或业务项目的功能，并在购买前仔细权衡风险与回报。<br><br>请仔细阅读我们的 <a href='{{ disclaimer_url }}' target='_blank'>免责声明</a>。{% endblocktrans %}</p>
+                    <div style="min-width: 220px; max-width: 50%;">
+                    {% if request.user.is_authenticated %}
+                        {% if user_extra.is_kyc == "true" %}
+                            {% if status == "ended" %}
+                            <button class="btn btn-primary mt20 mb20 btn-block btn-lg" disabled="disabled">{% trans "已结束" %}</button>
+                            {% else %}
+                            <button class="btn btn-primary mt20 mb20 btn-block btn-lg auto-fadein"  data-toggle="modal" data-target="#icoModal">{% trans "我已了解该项目及其风险，立即参与" %}</button>
+                            {% endif %}
+                        {% else %}
+                        <a href="{% url 'kyc' %}" type="button" class="btn btn-primary btn-block btn-lg mt20 mb20">{% trans "请先完成 KYC 资料认证" %}</a>
+                        {% endif %}
+                    {% else %}
+                    <a href="{% url 'account_login' %}" type="button" class="btn btn-primary btn-block btn-lg mt20 mb20">{% trans "立即登录，参与众筹" %}</a>
+                    {% endif %}
+                    </div>
+				</div>
+
+				<div class="col-sm-4 mt30-xs">
+                    {% if detail.level.rating %}
+                    <h5 class="heading-1 mb20">{{ detail.name }} {% trans "评分" %}</h5>
+                    <div class="profile-left mb30">
+                        <div class="profile-left-box project-ratings">
+                            {% if detail.level.rating >= 4 %}
+                            <div class="rate high">
+                            {% else %}
+                            <div class="rate">
+                            {% endif %}
+                                {{ detail.level.rating }}</div>
+                            <div class="distribution">
+								<div class="col_4">
+                                    {{ detail.level.profile }}
+                                    <label>{% trans "ICO 简介" %}</label>
+								</div>
+								<div class="col_4">
+                                    {{ detail.level.team }}
+                                    <label>{% trans "团队" %}</label>
+								</div>
+								<div class="col_4">
+                                    {{ detail.level.vision }}
+                                    <label>{% trans "市场" %}</label>
+								</div>
+								<div class="col_4">
+                                    {{ detail.level.product }}
+                                    <label>{% trans "产品" %}</label>
+								</div>
+							</div>
+                            <a href="{% url 'ratings' %}" target="_blank" title="{% trans '查看评级规则' %}">{% trans "查看评级规则" %}</a>
+                        </div>
+                    </div>
+                    {% endif %}
+                    <h5 class="heading-1 mb20">{{ detail.name }} {% trans "代币信息" %}</h5>
+                    <div class="profile-left">
+                        <div class="profile-left-box">
+                            <img class="mt15 mb15" src="/static/images/icons/token-info.png" width="28px" height="28px">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span class="pull-right"><b class="text-primary">{{ detail.token.name }} </b></span> {% trans "代币名称" %}
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="pull-right"><b class="text-primary">{{ detail.token.type }}</b></span> {% trans "代币类型" %}
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="pull-right"><b class="text-primary">{{ detail.token.total }}</b></span> {% trans "代币总量" %}
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="pull-right"><b class="text-primary">{{ detail.token.sale }}</b></span> {% trans "可用于令牌销售" %}
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="pull-right"><b class="text-primary">{{ detail.token.goal }}</b></span> {% trans "硬顶" %}
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="pull-right"><b class="text-primary">{{ detail.token.whitelist }}</b></span> {% trans "白名单" %}
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="pull-right"><b class="text-primary">{{ detail.token.kyc }}</b></span> Know Your Customer (KYC)
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="profile-left-box">
+                            <img class="mt15 mb15" src="/static/images/icons/token-sale.png" width="32px" height="32px">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span class="pull-right">
+                                        <b class="text-primary">
+                                            {% if detail.token.price %}
+                                            {{ detail.token.price }}
+                                            {% else %}
+                                            {% trans "未公布" %}
+                                            {% endif %}
+                                        </b>
+                                    </span> {% trans "价格" %}
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="pull-right"><b class="text-primary">{{ detail.token.bonus }}</b></span> {% trans "奖励" %}
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="pull-right"><b class="text-primary">{{ detail.token.accepts }}</b></span> {% trans "接受代币" %}
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="pull-right"><b class="text-primary">{{ detail.token.limit }}</b></span> {% trans "最小/最大个人上限" %}
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="pull-right">
+                                        <b class="text-primary">
+                                            {% if detail.token.cash_at %}
+                                            {{ detail.token.cash_at }}
+                                            {% else %}
+                                            {% trans "不确定的时间" %}
+                                            {% endif %}
+                                        </b>
+                                    </span> {% trans "发币时间" %}
+                                </li>
+                            </ul>
+                            <div class="mt30 mb10">
+                                {% blocktrans with detail.name as name and detail.website as website and detail.whitepaper as whitepaper %}更多信息请访问 {{ name }} 的 <a href='{{ website }}' target='_blank'>官网网址</a> 或 <a href='{{ whitepaper }}' target='_blank'>白皮书</a> 查询。{% endblocktrans %}
+                            </div>
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="background2 section-padding project-ico">
+		<div class="container">
+			<div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                    <div class="img">
+                        <img class="img-responsive" src="/static/images/icons/benefit-1.svg" alt="">
+                    </div>
+                    <h3>
+                        {% if detail.token.price %}
+                        {{ detail.token.price }}
+                        {% else %}
+                        {% trans "未公布" %}
+                        {% endif %}
+                    </h3>
+                    <p>{% trans "Token 价格" %}</p>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                    <div class="img">
+                        <img class="img-responsive" src="/static/images/icons/benefit-2.svg" alt="">
+                    </div>
+                    <h3>{{ detail.token.accepts }}</h3>
+                    <p>{% trans "接受的货币" %}</p>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                    <div class="img">
+                        <img class="img-responsive" src="/static/images/icons/benefit-3.svg" alt="">
+                    </div>
+                    <h3>
+                        {% if detail.token.exchange_at %}
+                        {{ detail.token.exchange_at }}
+                        {% else %}
+                        {% trans "不确切日期" %}
+                        {% endif %}
+                    </h3>
+                    <p>{% trans "交易所上市" %}</p>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 text-center restricted">
+                    <div class="img">
+                        <img class="img-responsive" src="/static/images/icons/benefit-4.svg" alt="">
+                    </div>
+                    <h3>{{ detail.token.participate }}</h3>
+                    <p>{% trans "限制司法辖区" %}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+	<section class="background2 section-padding project-links">
+		<div class="container">
+			<div class="row">
+                <ul class="links">
+                    {% for k,v in detail.socials.items %}
+                    <li><a class="icons big icon-big-{{ k }}" href="{{ v }}" target="_blank">{{ k }}</a></li>
+                    {% endfor %}
+                </ul>
+                <p class="copy">© 2018 {% SETTINGS "SITE_DOMAIN" %}. All Rights Reserved.</p>
+            </div>
+        </div>
+    </section>
+
+    {% include "project-details-ico.html" %}
+    {% if status == "upcoming" or status == "ongoing" %}
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.project .project-clock').countdown('{{ detail.ended_at }}').on('update.countdown', function(event) {
+              var $this = $(this).html(event.strftime(''
+                + '<div class="clock-section"> <b>%-w</b> <span>{% trans "周" %}</span> </div>'
+                + '<div class="clock-section"> <b>%-d</b> <span>{% trans "天" %}</span> </div>'
+                + '<div class="clock-section"> <b>%H</b> <span>{% trans "时" %}</span> </div>'
+                + '<div class="clock-section"> <b>%M</b> <span>{% trans "分" %}</span> </div>'
+                + '<div class="clock-section"> <b>%S</b> <span>{% trans "秒" %}</span> </div>'));
+            });
+        })
+    {% endif %}
+    </script>
+{% endblock %}

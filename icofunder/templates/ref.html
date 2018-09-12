@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if request.user.is_authenticated %}
+    <script>
+        $(document).ready(function() {
+            url = window.location.protocol + "//" + window.location.host;
+            window.location.href = url;
+        });
+    </script>
+{% else %}
+    <script>
+        $(document).ready(function() {
+            url = window.location.protocol + "//" + window.location.host + "/accounts/signup/";
+            $.cookie('ref', {{ ref }}, {expires: 365, path: '/'});
+            window.location.href = url;
+        });
+    </script>
+{% endif %}
+{% endblock %}

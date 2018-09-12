@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+{% load base_tags %}
+
+{% block title %}KYC 审核 - Admin{% endblock %}
+{% block content %}
+	<section id="profile" class="background2 section-padding">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+                    <div class="profile-left">
+                        <div class="profile-left-header">
+                            <div class="left">
+                                <img alt="" src="{% gen_gravatar_url user.email '100' %}" class="img-responsive img-circle">
+                            </div>
+                            <div class="right">
+                                <p class="text-primary" style="font-size: 16px;">{{ user }}
+                                    {% if user.id == request.user.id %}
+                                    &nbsp;-&nbsp;【Admin】
+                                    {% endif %}
+                                </p>
+                                <p>KYC Name: {{ user_extra.fullname }}</p>
+                                <p>Invite Code: {{ user_extra.invite_code }}</p>
+                            </div>
+                        </div>
+                        <div class="profile-left-box">
+                            <h4>基本信息</h4>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span class="pull-right">{{ user_invites.invited_user_id }}</span> 邀请人 ID
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="pull-right">{{ user.email }}</span> 邮箱地址
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="pull-right">{{ user }}</span> 用户名
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="pull-right">{{ user_extra.password }}</span> 账户密码
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="pull-right">{{ user.last_login }}</span> 最后登录
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="pull-right">{{ user.date_joined }}</span> 注册时间
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="profile-left-box">
+                            <h4>KYC 认证</h4>
+                            {% if user_extra.is_kyc is None or user_extra.is_kyc == "None" %}
+                            <p class="mb20">未提交 KYC 认证</p>
+                            {% elif user_extra.is_kyc == 'progress' %}
+                            <p class="text-primary mb20">已提交 KYC 信息</p>
+                            {% elif user_extra.is_kyc == 'false' %}
+                            <p class="text-primary mb20">KYC 身份资料认证失败</p>
+                            {% else %}
+                            <div class="text-center">
+                                <img src="/static/images/kyc/pass.svg" style="width: 50px; margin-bottom: 10px;">
+                                <p class="text-primary text-center">已通过 KYC 审核</p>
+                            </div>
+                            {% endif %}
+                            <button class="btn btn-primary btn-block" data-toggle="modal" data-target="#kycStatusModal">设置 KYC 状态</button>
+					        <div class="modal fade" id="kycStatusModal" tabindex="-1" role="dialog">
+					            <div class="modal-dialog">
+					                <div class="modal-content">
+					                    <div class="modal-body">
+                                            <div class="modal-warning">
+                                                <div class="modal-image modal-image--warning"></div>
+                                            </div>
+					                        <p class="text-center">设置用户的 KYC 审核结果。</p>
+					                        <h5 class="heading-1 modal-heading mb20 mt20">审核结果状态码</h5>
+                                            <form role="form" id="kyc_form">
+                                                {% csrf_token %}
+                                                <p><code>true</code>: 通过，<code>false</code>: 审核失败，<code>None</code>: 未上传。</p>
+                                                <input type="text" name="kyc_status" class="control-form" required placeholder="true or false" value="{{ user_extra.is_kyc }}" data-user-id="{{ user.id }}">
+                                            </form>
+					                    </div>
+                                        <div class="modal-footer" onclick="kyc_status_submit()">
+                                            <div class="modal-button modal-button--disabled modal-button--alpha-warning">
+                                                <div class="modal-button__title ">立即设置</div>
+                                            </div>
+                                        </div>
+					                </div>
+					            </div>
+					        </div>
+                        </div>
+                        <div class="profile-left-box eth">
+                            <h4>ETH ERC-20 钱包地址</h4>
+                            {% if user_extra.eth_wallet is None %}
+                            <p class="mb20">未设置 ETH 钱包地址</p>
+                            {% else %}
+                            <p>已设置钱包地址</p>
+                            <input value="{{ user_extra.eth_wallet }}" class="mb20" disabled>
+                            {% endif %}
+                        </div>
+                        <div class="profile-left-box eth">
+                            <h4>ETH 打币钱包地址</h4>
+                            {% if user_extra.eth_wallet_scan is None %}
+                            <p class="mb20">未设置 ETH 钱包地址</p>
+                            {% else %}
+                            <p>已设置钱包地址</p>
+                            <input value="{{ user_extra.eth_wallet_scan }}" class="mb20" disabled>
+                            {% endif %}
+                        </div>
+                    </div>
+				</div>
+				<div class="col-sm-8 mt30-xs">
+                    <h5 class="heading-1 mb30">KYC 身份图像资料</h5>
+                    <div id="thework">
+                    {% for img in kyc_images %}
+			            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 portfolio-box no-padding mix graphics" data-my-order="3" style="display: inline-block;" data-bound="">
+			            	<div class="portfolio-image-holder">
+                                <img src="data:image;base64,{{ img }}" alt="1" class="img-responsive portfolio-image">
+                            </div>
+			            </div>
+                    {% endfor %}
+			        </div>
+				</div>
+			</div>
+		</div>
+	</section>
+    <script type="text/javascript" src="/static/js/kyc-status.js"></script>
+{% endblock %}

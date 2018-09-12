@@ -1,0 +1,16 @@
+{% load i18n %}
+<div class="modal fade" id="modalNotFound" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-warning">
+                    <div class="modal-image modal-image--warning"></div>
+                </div>
+                <p class="text-center">{% trans "没有找到记录" %}</p>
+                <div class="text-center">
+                    <button class="btn btn-default" data-dismiss="modal" aria-label="Close">Got it!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,1 @@
+0 0 1 * * /opt/icofunder/etc/renew_cert.sh 2>> /var/log/acme_tiny.log

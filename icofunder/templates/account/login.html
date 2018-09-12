@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load base_tags %}
+{% block title %}{% trans "登录" %} - {% SETTINGS "SITE_DOMAIN" %}{% endblock %}
+
+{% block content %}
+	<div id="home" class="jumbotron jumbotron-register">
+		<div id="particles-js"></div>
+		<div class="container center-vertically-holder">
+			<div class="center-vertically">
+				<div class="col-sm-7 col-lg-6 mt40-xs">
+					<h1 class="mb30 no-margin-top scaleReveal">
+                        {% trans "一个 <strong>ICO 众筹平台,</strong><br/> 专注于区块链项目众筹。" %}
+					</h1>
+                    <p class="bottomReveal">{% SETTINGS "SITE_DOMAIN" %}{% trans " 是一家专注于虚拟货币投资服务一站式平台，致力于挖掘早期优质区块链项目。" %}</p>
+                    <p class="mb30 bottomReveal">{% trans "未来我们将为全球虚拟货币投资用户提供一键换币、去中心交易所币币交易，区块链身份验证系统，虚拟货币钱包，项目孵化等系列服务。" %}</p>
+				</div>
+
+				<div class="col-sm-5 col-lg-5 col-lg-offset-1 mt40-xs">
+                    <form role="form" id="register_form" class="register-form mb40-xs" method="POST" action="{% url 'account_login' %}">
+                        {% csrf_token %}
+                        <h3 class="no-margin-top mb40">{% trans "即刻登录，参与众筹" %}</h3>
+                        {{ form.as_p }}
+                        {% if redirect_field_value %}
+                        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                        {% endif %}
+                        <div style="font-size: 13px;">
+                            {% trans "请阅读" %} <a href="{% url 'cookie' %}" target="_blank">"{% trans "COOKIE 条款" %}"</a> {% trans "和" %} <a href="{% url 'privacy' %}" target="_blank">"{% trans "隐私政策" %}"</a> {% trans "说明" %}
+                        <div>
+                        <div class="form-group no-margin-bottom mt20">
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">{% trans "立即登录" %}</button>
+                        </div>
+                        <div class="form-group no-margin-bottom mt20">
+                            <a href="{% url 'account_reset_password' %}">{% trans "忘记密码" %}</a>
+                            <a href="{{ signup_url }}" class="pull-right">{% trans "还没有账户？马上注册" %}</a>
+                        </div>
+                    </form>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

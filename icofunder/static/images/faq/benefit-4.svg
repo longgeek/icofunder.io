@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 48 48.6" style="enable-background:new 0 0 48 48.6;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#A9A2FB;}
+	.st2{fill:none;stroke:#8980FE;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#8980FE;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st4{fill:none;}
+</style>
+<g transform="translate(2891 26)">
+	<g transform="translate(3 1)">
+		<path class="st0" d="M-2871-25.8l-10,5.2V-9l6,3.2v8h8v-8l6-3.2v-11.6L-2871-25.8z"/>
+		<path class="st0" d="M-2851,20.2v-5l-20-6l-20,6v5H-2851z"/>
+		<path class="st1" d="M-2871,2.2h4v-8l6-3.2v-11.6l-10-5.2V2.2z"/>
+		<path class="st1" d="M-2871,20.2h0.2l3-4.6l-3.2-6.4l-3.2,6.2L-2871,20.2z"/>
+		<line class="st2" x1="-2875" y1="-1.8" x2="-2867" y2="-1.8"/>
+		<line class="st3" x1="-2871" y1="2.2" x2="-2871" y2="4.2"/>
+		<line class="st3" x1="-2855" y1="-15.8" x2="-2851" y2="-15.8"/>
+		<line class="st3" x1="-2856.8" y1="-8.8" x2="-2854" y2="-6.8"/>
+		<line class="st3" x1="-2856.8" y1="-23.8" x2="-2854" y2="-25.6"/>
+		<line class="st3" x1="-2887" y1="-15.8" x2="-2891" y2="-15.8"/>
+		<line class="st3" x1="-2885.2" y1="-8.8" x2="-2888" y2="-6.8"/>
+		<line class="st3" x1="-2885" y1="-23.8" x2="-2887.8" y2="-25.6"/>
+		<path class="st3" d="M-2882,12.6l-2,4.6l6,3"/>
+		<path class="st3" d="M-2859.8,12.6l2,4.6l-6,3"/>
+		<path class="st3" d="M-2871-5.8v-8l3-3"/>
+		<line class="st3" x1="-2871" y1="-13.8" x2="-2874" y2="-16.8"/>
+		<path class="st3" d="M-2851,20.2v-5l-20-6l-20,6v5"/>
+		<rect x="-2875" y="-5.8" class="st2" width="8" height="8"/>
+		<path class="st3" d="M-2875-5.8l-6-3.2v-11.6l10-5.2l10,5.2V-9l-6,3.2"/>
+		<line class="st3" x1="-2871" y1="20.2" x2="-2877" y2="11"/>
+		<line class="st3" x1="-2870.8" y1="20.2" x2="-2864.8" y2="11"/>
+		<path class="st2" d="M-2874.2,15.4l3.2-6.2l3.2,6.4"/>
+	</g>
+	<rect x="-2891" y="-25.8" class="st4" width="48" height="48"/>
+</g>
+</svg>

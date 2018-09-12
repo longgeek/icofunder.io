@@ -1,0 +1,321 @@
+{% load i18n %}
+{% load base_tags %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="google-site-verification" content="lRlO8JiARAv-GucksBN-_wwTjOmtmcVUY0ngHC9PfAQ" />
+    <meta name="author" content="{% SETTINGS "SITE_DOMAIN" %}" />
+    <title>{% block title %}{% SETTINGS "SITE_DOMAIN" %}{% endblock %}</title>
+    <meta name="description" content="{% block description %}{% SETTINGS "SITE_DOMAIN" %}{% trans ' - 为每个人提供早期阶段加密货币初创投资 ICO 众筹平台。' %}{% endblock %}">
+    <meta name="keywords" content="{% block keywords %}{% SETTINGS "SITE_NAME" %},{% SETTINGS "SITE_DOMAIN" %},{% trans 'ICO众筹,ICO代投平台,虚拟货币投资,一键换币,换币,币币交易,虚拟货币兑换,比特币行情,虚拟货币钱包,数字货币,ETH钱包,行情软件,区块链技术,区块链行情,区块链项目,P网,比特币兑换,以太坊兑换,多币种兑换,加密货币众筹平台,众筹,投资' %}{% endblock %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="shortcut icon" href="/static/favicon.ico">
+
+    <!-- Royal Preloader CSS -->
+    <link type="text/css" href="/static/css/royal_preloader.css" rel="stylesheet">
+
+    <!-- jQuery Files -->
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+
+    <!-- Parallax File -->
+    <script type="text/javascript" src="/static/js/parallax.min.js"></script>
+
+    <!-- Royal Preloader -->
+    <script type="text/javascript" src="/static/js/royal_preloader.min.js"></script>
+    <script type="text/javascript">
+        Royal_Preloader.config({
+            mode:           'text',
+            text:           '{% SETTINGS "SITE_DOMAIN" %}',
+            showProgress:   false,
+            text_colour:    '#8980fe',
+            background:     '#ffffff'
+        });
+    </script>
+
+    <!-- Stylesheets -->
+    <link type="text/css" rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="/static/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="/static/css/pe-icon-7-stroke.css">
+    <link type="text/css" rel="stylesheet" href="/static/css/magnific-popup.css">
+    <link type="text/css" rel="stylesheet" href="/static/css/logo.css">
+    <link type="text/css" rel="stylesheet" href="/static/css/style.css">
+    <link type="text/css" rel="stylesheet" href="/static/css/policy.css">
+    <link type="text/css" rel="stylesheet" href="/static/css/base-light.css">
+    <link type="text/css" rel="stylesheet" href="/static/css/customize.css">
+    <link type="text/css" rel="stylesheet" href="/static/css/modal.css">
+    <link type="text/css" rel="stylesheet" href="/static/css/media.css">
+    <link type="text/css" rel="stylesheet" href="/static/css/animations.css">
+
+    <!-- Style Switcher / remove for production -->
+    <link href="/static/css/style-switcher.css" rel="stylesheet">
+
+    <!-- Alternate Stylesheets / choose what color and base you want and include the 2 files regularly AFTER style.css above -->
+    <link type="text/css" href="/static/css/base-light.css" title="base-light">
+</head>
+<body class="royal_preloader" data-spy="scroll" data-target=".navbar" data-offset="70">
+    <div id="royal_preloader"></div>
+
+    <!-- Begin Header -->
+    <header>
+        <!-- Begin Navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top" style="border-bottom: 1px solid #E6E6E6;">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="{% url 'home' %}">
+                            <img src="/static/images/icons/logo.svg" class="logo">
+                            <span class="logo-name">{% SETTINGS "SITE_DOMAIN" %}</span>
+                        </a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            {% url 'home' as home_url %}
+                            {% url 'ico_ongoing' as ico_ongoing_url %}
+                            {% url 'ico_upcoming' as ico_upcoming_url %}
+                            {% url 'ico_ended' as ico_ended_url %}
+                            {% url 'how' as how_url %}
+                            {% url 'faq' as faq_url %}
+                            {% url 'about' as about_url %}
+                            {% if request.path == home_url %}
+                            <li><a href="#home" data-id="home" class="scroll-link">{% trans "首页" %}</a></li>
+                            {% else %}
+                            <li><a href="{% url 'home' %}">{% trans "首页" %}</a></li>
+                            {% endif %}
+                            {% if request.path == home_url %}
+                            <li><a href="#ico" data-id="ico" class="scroll-link">{% trans "如何 ICO ?" %}</a></li>
+                            {% else %}
+                                {% if request.path != how_url %}
+                                <li><a href="{% url 'how' %}">{% trans "如何 ICO ?" %}</a></li>
+                                {% else %}
+                                <li class="active"><a href="{% url 'how' %}">{% trans "如何 ICO ?" %}</a></li>
+                                {% endif %}
+                            {% endif %}
+                            {% if request.path == home_url %}
+                            <li><a href="#ongoing-ico" data-id="ongoing-ico" class="scroll-link">{% trans "进行中的项目" %}</a></li>
+                            <li><a href="#upcoming-ico" data-id="upcoming-ico" class="scroll-link">{% trans "即将来临的项目" %}</a></li>
+                            <li><a href="#ended-ico" data-id="ended-ico" class="scroll-link">{% trans "已结束的项目" %}</a></li>
+                            {% else %}
+                                {% if request.path != ico_ongoing_url %}
+                                <li><a href="{% url 'ico-ongoing' %}">{% trans "进行中的项目" %}</a></li>
+                                {% else %}
+                                <li class="active"><a href="{% url 'ico-ongoing' %}">{% trans "进行中的项目" %}</a></li>
+                                {% endif %}
+                                {% if request.path != ico_upcoming_url %}
+                                <li><a href="{% url 'ico-upcoming' %}">{% trans "即将来临的项目" %}</a></li>
+                                {% else %}
+                                <li class="active"><a href="{% url 'ico-upcoming' %}">{% trans "即将来临的项目" %}</a></li>
+                                {% endif %}
+                                {% if request.path != ico_ended_url %}
+                                <li><a href="{% url 'ico-ended' %}">{% trans "已结束的项目" %}</a></li>
+                                {% else %}
+                                <li class="active"><a href="{% url 'ico-ended' %}">{% trans "已结束的项目" %}</a></li>
+                                {% endif %}
+                            {% endif %}
+                            {% if request.path != faq_url %}
+                            <li><a href="{% url 'faq' %}">{% trans "常见问题" %}</a></li>
+                            {% else %}
+                            <li class="active"><a href="{% url 'faq' %}">{% trans "常见问题" %}</a></li>
+                            {% endif %}
+
+                            {% if request.path == home_url %}
+                            <li><a href="#our" data-id="our" class="scroll-link">{% trans "关于我们" %}</a></li>
+                            {% else %}
+                                {% if request.path != about_url %}
+                                <li><a href="{% url 'about' %}">{% trans "关于我们" %}</a></li>
+                                {% else %}
+                                <li class="active"><a href="{% url 'about' %}">{% trans "关于我们" %}</a></li>
+                                {% endif %}
+                            {% endif %}
+                            <li class="dropdown language-dropdown">
+                                <a href="#" class="dropdown-toggle user-gravatar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    {% if request.LANGUAGE_CODE == 'en' %}
+                                    ENGLISH
+                                    {% else %}
+                                    简体中文
+                                    {% endif %}
+                                    &nbsp;&nbsp;<span class="glyphicon glyphicon-menu-down"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <!-- li><a onclick="change_lang('zh-hans')">简体中文</a></li>
+                                    <li><a onclick="change_lang('en')">ENGLISH</a></li -->
+                                    <!-- li><a href="{% switch_lang request 'zh-hans' %}">简体中文</a></li>
+                                    <li><a href="{% switch_lang request 'en' %}">ENGLISH</a></li -->
+                                    <li><a onclick="switch_lang('{{ request.get_full_path }}', 'zh-hans')">简体中文</a></li>
+                                    <li><a onclick="switch_lang('{{ request.get_full_path }}', 'en')">ENGLISH</a></li>
+                                </ul>
+                            </li>
+                            {% if request.user.is_authenticated %}
+                            <li class="dropdown user-dropdown">
+                                <a href="#" class="dropdown-toggle user-gravatar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <img src="{% gen_gravatar_url request.user.email '40' %}" alt="" class="img-responsive img-circle">
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <div class="userbox">
+                                        <a href="{% url 'profile' %}">
+                                            <img src="{% gen_gravatar_url request.user.email '80' %}" alt="" class="img-responsive img-circle">
+                                        </a>
+                                        <a href="{% url 'profile' %}">{{ request.user }}</a>
+                                        <a class="kyc-status mt10 small" href="{% url 'kyc' %}" style="display: block;"><b></b></a>
+                                    </div>
+                                    <li><a href="{% url 'profile' %}">{% trans "个人页面" %}</a></li>
+                                    <li><a href="{% url 'invite' %}">{% trans "邀请好友" %}</a></li>
+                                    <li><a href="{% url 'invest' %}">{% trans "众筹记录" %}</a></li>
+                                    {% if request.user.id == 1 %}
+                                    <li><a href="/kyc/status/1/">{% trans "KYC 审核" %}</a></li>
+                                    {% endif %}
+                                    <li><a href="{% url 'faq' %}">{% trans "常见问题" %}</a></li>
+                                    <li><a href="{% url 'account_logout' %}">{% trans "退出登录" %}</a></li>
+                                </ul>
+                            </li>
+                            {% else %}
+                            <a href="{% url 'account_login' %}" class="btn btn-default btn-sm btn-signin">{% trans "登录" %}</a>
+                            <a href="{% url 'account_signup' %}" class="btn btn-primary btn-sm btn-signup">{% trans "注册" %}</a>
+                            {% endif %}
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div>
+            </div><!-- /.container-fluid -->
+        </nav>
+        <!-- End Navigation -->
+    </header>
+    <!-- End Header -->
+
+    {% block content %} {% endblock %}
+    {% include "modal-loading.html" %}
+    {% include "modal-success.html" %}
+
+    {% if request.path  == home_url %}
+    <!-- Begin Footer -->
+    <footer class="background2 footer-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 text-center">
+                    <img src="/static/images/icons/logo.svg" class="logo">
+                    <h2 class="theme-title">{% SETTINGS "SITE_DOMAIN" %}</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 text-small text-center">
+                    <hr>
+                    <button type="button" class="btn btn-primary btn-up-footer btn-lg scroll-top">{% trans "回到顶部" %}</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Begin Footer -->
+    {% endif %}
+
+    <!-- Javascript Files -->
+    <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/js/particles.min.js"></script>
+    <script type="text/javascript" src="/static/js/particlesRun.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.mixitup.js"></script>
+    <script type="text/javascript" src="/static/js/form-validator.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.inview.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.cookie.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="/static/js/scrollreveal.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.countdown.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.countTo.js"></script>
+    <script type="text/javascript" src="/static/js/main.js"></script>
+    <script type="text/javascript" src="/static/js/clipboard.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            change_lang = function(lang) {
+                $.ajax({
+                    url: "/i18n/setlang/",
+                    type: "POST",
+                    cache: false,
+                    data: {"language": lang},
+                    success : function(result) {
+                        location.reload();
+                    }
+                });
+            }
+
+            ico_url_jump = function(url, lang) {
+                if (lang == 'en') {
+                    url = '/en' + url
+                }
+                window.location.href = window.location.protocol + "//" + window.location.host + url;
+            }
+
+
+            $(".user-dropdown").mouseenter(function(e) {
+                e.stopPropagation();
+                $.ajax({
+                    url: "/accounts/user/extra/",
+                    type: "GET",
+                    cache: false,
+                    success : function(result) {
+                        if (result === "None") {
+                            $(".kyc-status b").html("{% trans '未进行 KYC 认证' %}");
+                        } else if (result === "progress") {
+                            $(".kyc-status b").html("{% trans '已提交 KYC 信息，正在审核中' %}");
+                        } else {
+                            $(".kyc-status b").html("{% trans '恭喜，您已通过 KYC 认证' %}");
+                        }
+                    }
+                });
+            });
+
+
+            lang = $.cookie('lang');
+            if (lang == undefined && !window.location.pathname.startsWith('/en')) {
+                $.cookie('lang', 'en', { path: '/' })
+                window.location.href = window.location.protocol + "//" + window.location.host + "/en" + window.location.pathname;
+            } else if (lang == 'en' && !window.location.pathname.startsWith('/en')) {
+                window.location.href = window.location.protocol + "//" + window.location.host + "/en" + window.location.pathname;
+            }
+
+            switch_lang = function(url, lang) {
+                if (lang == 'zh-hans' && url.startsWith('/en')) {
+                    url = url.substring(3, url.length)
+                    $.cookie('lang', 'zh-hans', { path: '/' })
+                } else if (lang = 'en' && !url.startsWith('/en')) {
+                    url = '/en' + url
+                    $.cookie('lang', 'en', { path: '/' })
+                }
+                window.location.href = window.location.protocol + "//" + window.location.host + url;
+            }
+        })
+    </script>
+    <!-- Start of Async Drift Code -->
+    <script>
+    !function() {
+      var t;
+      if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0,
+      t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
+      t.factory = function(e) {
+        return function() {
+          var n;
+          return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
+        };
+      }, t.methods.forEach(function(e) {
+        t[e] = t.factory(e);
+      }), t.load = function(t) {
+        var e, n, o, i;
+        e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"),
+        o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js",
+        n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
+      });
+    }();
+    drift.SNIPPET_VERSION = '0.3.1';
+    drift.load('pbzpudgrev9n');
+    </script>
+    <!-- End of Async Drift Code -->
+</body>
+</html>

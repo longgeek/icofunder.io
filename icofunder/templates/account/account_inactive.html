@@ -1,0 +1,12 @@
+{% extends "account/base.html" %}
+
+{% load i18n %}
+{% load base_tags %}
+
+{% block title %}{% trans "账户无效" %} - {% SETTINGS "SITE_DOMAIN" %}{% endblock %}
+
+{% block content %}
+<h1>{% trans "账户无效" %}</h1>
+
+<p>{% trans "该账户无效。" %}</p>
+{% endblock %}

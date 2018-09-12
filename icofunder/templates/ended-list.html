@@ -1,0 +1,32 @@
+{% load i18n %}
+<div class="row">
+    {% for k in ICOS.ended %}
+	<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+        <div class="services-box leftReveal" onclick="ico_url_jump('/{{ k.keys.0 }}', '{{ request.LANGUAGE_CODE }}')">
+            {% if k.values.0.level.rating != "" %}
+                {% if k.values.0.level.rating >= 4 %}
+                <span class="services-badge badge text-primary"><img src="/static/images/icons/hot.png">{{ k.values.0.level.rating }}</span>
+                {% else %}
+                <span class="services-badge badge">{{ k.values.0.level.rating }}</span>
+                {% endif %}
+            {% endif %}
+            <img src="/static/images/icos/{{ k.values.0.logo }}" alt="{{ k.values.0.name }}" class="img-responsive img-circle">
+            <div class="text-center">
+                <h3 class="service-name">{{ k.values.0.name }}</h3>
+            </div>
+            <p class="text-small">{% trans k.values.0.desc %}</p>
+            <div class="home-ico-countdown">
+                <div class="clock-countdown">
+                    <div class="clock-section">
+                        <span>{% trans "结束于" %}</span>
+                        <b>{{ k.values.0.ended_at }}</b>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <a type="button" class="btn btn-info mt20">ENDED</a>
+            </div>
+		</div>
+	</div>
+    {% endfor %}
+</div>

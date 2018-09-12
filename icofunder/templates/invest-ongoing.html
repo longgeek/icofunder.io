@@ -1,0 +1,59 @@
+<div class="row m-b-md">
+    <div class="col-md-6">
+        {% for k in ICOS.ongoing|slice:"::2" %}
+        <dl class="ico-progress">
+            <dt>
+                <img src="/static/images/icos/{{ k.values.0.logo }}" alt="{{ k.values.0.name }}" class="img-responsive img-circle">
+                {% if k.values.0.AMOUNT %}
+                    <a onclick="ico_url_jump('/{{ k.keys.0 }}', '{{ request.LANGUAGE_CODE }}')" style="color: #8980fe;">{{ k.values.0.name }}</a>
+                {% else %}
+                    <a onclick="ico_url_jump('/{{ k.keys.0 }}', '{{ request.LANGUAGE_CODE }}')">{{ k.values.0.name }}</a>
+                {% endif %}
+            </dt>
+            <dd data-address="{{ k.values.0.ADDRESS }}" data-amount="{{ k.values.0.AMOUNT }}">
+                <span class="total text-center">
+                    <span class="progress" style="width: {{ k.values.0.AMOUNT }}%;"></span>
+                    {% if k.values.0.AMOUNT %}
+                    <span class="amount show">{{ k.values.0.AMOUNT }} Ether </span>
+                    {% else %}
+                    <span class="amount">0 Ether</span>
+                    {% endif %}
+                </span>
+            </dd>
+        </dl>
+        <div class="profile-box" style="display: none;">
+        	<ul class="list-unstyled">
+        		<li><strong>Name:</strong> Denis Samardjiev</li>
+        		<li><strong>Nationality:</strong> Bulgaria</li>
+        		<li><strong>Position:</strong> Top Dog</li>
+        		<li><strong>Phone:</strong> (000) 1234 5678</li>
+        		<li><strong>Email:</strong> yourmail@iamx.com</li>
+        	</ul>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="col-md-6">
+        {% for k in ICOS.ongoing|slice:"1::2" %}
+        <dl class="ico-progress">
+            <dt>
+                <img src="/static/images/icos/{{ k.values.0.logo }}" alt="{{ k.values.0.name }}" class="img-responsive img-circle">
+                {% if k.values.0.AMOUNT %}
+                    <a onclick="ico_url_jump('/{{ k.keys.0 }}', '{{ request.LANGUAGE_CODE }}')" style="color: #8980fe;">{{ k.values.0.name }}</a>
+                {% else %}
+                    <a onclick="ico_url_jump('/{{ k.keys.0 }}', '{{ request.LANGUAGE_CODE }}')">{{ k.values.0.name }}</a>
+                {% endif %}
+            </dt>
+            <dd data-address="{{ k.values.0.ADDRESS }}" data-amount="{{ k.values.0.AMOUNT }}">
+                <span class="total text-center">
+                    <span class="progress" style="width: {{ k.values.0.AMOUNT }}%;"></span>
+                    {% if k.values.0.AMOUNT %}
+                    <span class="amount show">{{ k.values.0.AMOUNT }} Ether </span>
+                    {% else %}
+                    <span class="amount">0 Ether</span>
+                    {% endif %}
+                </span>
+            </dd>
+        </dl>
+        {% endfor %}
+    </div>
+</div>

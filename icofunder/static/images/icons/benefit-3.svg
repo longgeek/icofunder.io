@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 72 72" style="enable-background:new 0 0 72 72;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{opacity:0.3;fill:#A9A2FB;enable-background:new    ;}
+	.st2{fill:none;stroke:#1078FF;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#8980FE;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#8980FE;stroke-width:2;stroke-linecap:round;}
+	.st5{fill:none;}
+</style>
+<g transform="translate(4871 -459)">
+	<g transform="translate(3 6)">
+		<path class="st0" d="M-4820,501v-25.5l-18-12l-18,12V501l-9,9h21v6l6,3l6-3v-6h21L-4820,501z"/>
+		<path class="st1" d="M-4838,463.5l18,12V501l9,9h-27V463.5z"/>
+		<line class="st2" x1="-4838" y1="463.5" x2="-4838" y2="459"/>
+		<path class="st3" d="M-4844,510v6l6,3l6-3v-6"/>
+		<path class="st3" d="M-4871,477v-12l9-6"/>
+		<path class="st3" d="M-4865,477v-9l7.5-4.8"/>
+		<path class="st3" d="M-4805,477v-12l-9-6"/>
+		<path class="st3" d="M-4811,477v-9l-7.5-4.8"/>
+		<path class="st4" d="M-4838,463.5V459"/>
+		<path class="st3" d="M-4820,475.5V501l9,9h-54l9-9v-25.5l18-12L-4820,475.5z"/>
+	</g>
+	<rect x="-4871" y="459" class="st5" width="72" height="72"/>
+</g>
+</svg>

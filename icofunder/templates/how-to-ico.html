@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load base_tags %}
+{% block title %}{% trans "如何 ICO？" %} - {% SETTINGS "SITE_DOMAIN" %}{% endblock %}
+{% block content %}
+    <div class="jumbotron jumbotron-main ongoing-list">
+        <div id="particles-js"></div>
+        <div class="container center-vertically-holder">
+            <div class="center-vertically">
+                <div class="col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3 text-center">
+                    <img src="/static/images/icons/benefit-1.svg">
+                    <h2 class="scaleReveal text-primary"><b>{% trans "如何参与 ICO?" %}</b></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'how-to-ico__content.html' %}
+    {% include 'footer-min.html' %}
+{% endblock %}

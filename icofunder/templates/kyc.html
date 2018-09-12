@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load base_tags %}
+{% block title %}{% trans "KYC 认证" %} - {% SETTINGS "SITE_DOMAIN" %}{% endblock %}
+{% block description %}{% SETTINGS "SITE_NAME" %}{% trans " 实行严格的 KYC 审核制度" %}, {% trans "用于验证用户身份以及预防身份盗窃、金融诈骗、洗钱及恐怖主义融资。" %}{% endblock %}
+{% block content %}
+	<div class="jumbotron jumbotron-main kyc">
+		<div id="particles-js"></div>
+		<div class="container center-vertically-holder">
+			<div class="center-vertically">
+				<div class="col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3 text-center">
+                    <img src="/static/images/icons/kyc.png">
+                    <h2 class="scaleReveal text-primary"><b>{% SETTINGS "SITE_NAME" %}{% trans " 实行严格的 KYC 审核制度" %}</b></h2>
+				</div>
+			</div>
+		</div>
+	</div>
+    <div class="background2 section-padding kyc-section">
+        <div class="container">
+            <div class="row">
+				<div class="col-sm-8">
+                    <h5 class="heading-1 mb20">{% trans "什么是 KYC ?" %}</h5>
+                    <p class="mb20">{% trans "认识你的客户（Know your customer）也称为了解你的客户，简称KYC，是企业确认客户身份的程序。此一词语也用在银行监管。“认识你的客户”程序也适用在不同规模的公司，以确认其可能的客户、顾问或经销商符合反贿赂标准（anti-bribery compliant）。越来越多的银行、保险公司会要求客户提供具体的反腐败尽职调查资讯，以确认客户的诚实和正直。“认识你的客户” 程序目的是为了预防身份盗窃、金融诈骗、洗钱及恐怖主义融资，在全球都日益重要。" %}</p>
+                    <h5 class="heading-1 mt20 mb20">KYC {% trans "视频介绍" %}</h5>
+					<div class="embed-responsive embed-responsive-16by9">
+                        <video class="embed-responsive-item" controls="controls" autoplay="autoplay">
+                            <source src="/static/videos/kyc.mp4" type="video/mp4" />
+                        </video>
+					</div>
+				</div>
+				<div class="col-sm-4 mt30-xs">
+                    <h5 class="heading-1 mb20">{% trans "KYC 认证" %}</h5>
+                    {% if request.user.is_authenticated %}
+                    <div class="profile-left">
+                        <div class="profile-left-box">
+                            {% if user_extra.is_kyc == "progress" %}
+                                <div class="text-center">
+                                    <img src="/static/images/kyc/progress.svg" style="width: 80px; margin-bottom: 20px;">
+                                    <h4>{% trans "KYC 身份认证已提交" %}</h4>
+                                    <p>{% trans "我们将会在 24 小时内审核完毕。" %}</p>
+                                </div>
+                            {% endif %}
+                            {% if user_extra.is_kyc == "true" %}
+                                <div class="text-center">
+                                    <img src="/static/images/kyc/pass.svg" style="width: 80px; margin-bottom: 20px;">
+                                    <h4 class="text-primary">{% trans "恭喜，您已通过 KYC 审核。" %}</h4>
+                                </div>
+                            {% endif %}
+
+                            {% if user_extra.is_kyc == "false" or user_extra.is_kyc == None or user_extra.is_kyc == "None" %}
+                            <form role="form" id="kyc_form" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                <h4>{% trans "* 真实姓名" %}</h4>
+                                <input type="text" name="fullname" class="control-form" required placeholder="{% trans '输入你的真实姓名' %}">
+                                <h4 class="mt30">{% trans "* 身份证正面 | 护照封面" %}</h4>
+                                <label class="kyc-upload">
+                                    <div class="kyc-upload-action one">
+                                        +
+                                        <input type="file" name="image1" class="control-form" accept="image/*" required onchange="kyc_one()">
+                                    </div>
+                                </label>
+                                <div class="kyc-upload-example">
+                                    <div class="inner">
+                                        <img src="/static/images/kyc/1.svg">
+                                    </div>
+                                    <div class="inner">
+                                        <img src="/static/images/kyc/11.svg">
+                                    </div>
+                                </div>
+                                <h4 class="mt30">{% trans "* 身份证反面 | 护照个人信息页" %}</h4>
+                                <label class="kyc-upload">
+                                    <div class="kyc-upload-action two">
+                                        +
+                                        <input type="file" name="image2" class="control-form" accept="image/*" required onchange="kyc_two()">
+                                    </div>
+                                </label>
+                                <div class="kyc-upload-example">
+                                    <div class="inner">
+                                        <img src="/static/images/kyc/2.svg">
+                                    </div>
+                                    <div class="inner">
+                                        <img src="/static/images/kyc/22.svg" style="width: 60px;">
+                                    </div>
+                                </div>
+                                <h4 class="mt30">{% trans "* 手持身份证 | 手持护照个人信息页" %}</h4>
+                                <label class="kyc-upload">
+                                    <div class="kyc-upload-action three">
+                                        +
+                                        <input type="file" name="image3" class="control-form" accept="image/*" required onchange="kyc_three()">
+                                    </div>
+                                </label>
+                                <div class="kyc-upload-example">
+                                    <div class="inner">
+                                        <img src="/static/images/kyc/3.svg" style="width: 55px;">
+                                    </div>
+                                    <div class="inner">
+                                        <img src="/static/images/kyc/33.svg" style="width: 55px;">
+                                    </div>
+                                </div>
+                                <div class="text-center mt30">
+                                    <a href="{% url 'privacy' %}" target="_blank">{% trans "请阅读我们的隐私政策" %}</a>
+                                </div>
+                                <button type="button" class="btn btn-primary btn-block mt30" onclick="kyc_submit()" disabled>{% trans "提交审核" %}</button>
+                            </form>
+                            {% endif %}
+                        </div>
+                        {% if user_extra.is_kyc == "true" %}
+                        <div class="profile-left-box text-center">
+                            <h4>{% trans "已完成 KYC 审核" %}</h4>
+                            <p>{% blocktrans with ICOS.ongoing|length as ongoing_length %}您已完成 KYC 审核，当前共有 <b class="text-primary">{{ ongoing_length }}</b> 个项目正在进行 ICO，具体细节请查看项目详情。{% endblocktrans %}</p>
+                            <div class="mt20">
+                                <a href="{% url 'ico_ongoing' %}" type="button" class="btn btn-primary btn-block">{% trans "查看正在进行的 ICO 项目" %}</a>
+                            </div>
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% else %}
+                    <div class="profile-left">
+                        <div class="profile-left-box text-center">
+                            <img src="/static/images/icons/benefit-4.svg" style="width: 80px; margin-bottom: 20px;">
+                            <h4>{% trans "KYC 身份资料验证" %}</h4>
+                            <p>{% trans "用于验证用户身份以及预防身份盗窃、金融诈骗、洗钱及恐怖主义融资。" %}</p>
+                            <div class="mt20">
+                                <a href="{% url 'account_login' %}" type="button" class="btn btn-primary btn-block">{% trans "立即登录验证" %}</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+				</div>
+            </div>
+        </div>
+    </div>
+
+    {% include "footer-min.html" %}
+    {% include "modal-notfound.html" %}
+    <script src="{% url 'jsi18n' %}"></script>
+    <script type="text/javascript" src="/static/js/kyc.js"></script>
+{% endblock %}

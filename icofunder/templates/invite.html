@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load base_tags %}
+{% block title %}{% trans "邀请好友" %} - {% SETTINGS "SITE_DOMAIN" %}{% endblock %}
+{% block content %}
+	<div class="jumbotron jumbotron-main invite-header">
+		<div id="particles-js"></div>
+		<div class="container center-vertically-holder">
+			<div class="center-vertically">
+				<div class="col-sm-8 col-sm-offset-2 text-center">
+                    <img src="/static/images/icons/invite.svg">
+                    <h2 class="scaleReveal text-primary"><b>{% trans "邀请用户，即送奖励" %}</b></h2>
+                    <p class="scaleReveal">{% trans "邀请用户注册送 200 IOF，完成 KYC 认证，再送 300 IOF" %} </p>
+                    <p class="scaleReveal invite-code">{{ invite_code }}</p>
+                    <button type="button" id="invite_copy" class="btn btn-primary btn-lg mt20 mr8" data-clipboard-text="{{ invite_code }}">{% trans "复制邀请码" %}</button>
+                    <button type="button" id="invite_poster" class="btn btn-default btn-lg mt20">{% trans "邀请海报" %}</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section id="ourcount" class="section-padding parallax-window invite-dashboard">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-md-3 item mt30-xs mt30-sm leftReveal">
+					<div class="circle-hold">
+                        <i class="ion-android-share-alt"></i>
+                    </div>
+                    <h2 class="timer">
+                        <span data-from="0" data-to="{{ invites | length }}" data-refresh-interval="20">
+                            {{ invites | length }}
+                        </span>
+                        &nbsp;|&nbsp;
+                        <span data-from="0" data-to="{{ invites_kyc | length }}" data-refresh-interval="20">{{ invites_kyc | length }}</span>
+                        &nbsp;{% trans "人" %}
+                    </h2>
+                    <p class="no-margin">{% trans "已邀请 | 完成 KYC" %}</p>
+				</div>
+				<div class="col-sm-6 col-md-3 item leftReveal">
+					<div class="circle-hold">
+                        <i class="ion-ios-calculator"></i>
+                    </div>
+                    <h2 class="timer">
+                        <span data-from="0" data-to="{% invites_candy invites invites_kyc %}" data-refresh-interval="20">
+                            {% invites_candy invites invites_kyc %}
+                        </span> IOF
+                    </h2>
+                    <p class="no-margin">{% trans "共获取奖励" %}</p>
+				</div>
+				<div class="col-sm-6 col-md-3 item leftReveal">
+					<div class="circle-hold">
+                        <i class="ion-cash"></i>
+                    </div>
+                    <h2 class="timer">
+                        $ <span data-from="0" data-to="{% invites_price invites invites_kyc %}" data-refresh-interval="20" data-decimals="4">
+                            {% invites_price invites invites_kyc %}
+                        </span>
+                    </h2>
+                    <p class="no-margin">{% trans "预估价值" %}</p>
+				</div>
+				<div class="col-sm-6 col-md-3 item mt30-xs rightReveal">
+					<div class="circle-hold">
+                        <i class="ion-person-add"></i>
+                    </div>
+                    <h2 class="timer">
+                        <span data-from="0" data-to="200" data-refresh-interval="20">
+                            200
+                        </span>&nbsp;|&nbsp;
+                        <span data-from="0" data-to="300" data-refresh-interval="20">
+                            300
+                        </span> IOF
+                    </h2>
+                    <p class="no-margin">{% trans "邀请用户 | 完成 KYC 奖励" %}</p>
+				</div>
+			</div>
+		</div>
+	</section>
+    <div class="background2 section-padding border-bottom">
+		<div class="container">
+			<div class="row text-center">
+                <div class="col-md-8 col-md-offset-2">
+                    <p class="mb30 text-primary">{% trans "IOF 是以太坊区块链上的标准 ERC-20 代币，了解更多信息，请点击下面按钮" %}</p>
+                </div>
+				<div class="col-md-4 col-md-offset-4">
+                    <a type="button" href="{% url 'token' %}" class="btn btn-default btn-lg btn-block">{% trans "了解 IOF Token" %}</a>
+                </div>
+            </div>
+		</div>
+	</div>
+    {% include "footer-min.html" %}
+    <div class="invite-poster-modal"></div>
+    <script>
+        $(document).ready(function() {
+            var clipboard = new ClipboardJS('#invite_copy');
+            clipboard.on('success', function(e) {
+                $("#invite_copy").text('{% trans "已复制" %}');
+                e.clearSelection();
+            });
+
+            $('#ourcount').one('inview', function(event, isInView) {
+                if (isInView) {
+                    $('.timer span').countTo({speed: 3000});
+                }
+            });
+
+            $("#invite_poster").on("click", function() {
+                url = "/accounts/invite/poster/";
+                lang = "{{ request.LANGUAGE_CODE }}";
+                if (lang == 'en') { url = "/en" + url; }
+                $("#modalLoading").modal('show');
+                $.ajax({
+                    url: url,
+                    type: "POST",
+                    cache: false,
+                    data: {"invite_code": "{{ invite_code }}", "lang": lang},
+                    success : function(result) {
+                        $(".invite-poster-modal").html(result);
+                        $("#invitePoster").modal('show');
+                        $("#modalLoading").modal('hide');
+                    }
+                });
+            })
+        });
+    </script>
+{% endblock %}

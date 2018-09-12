@@ -1,0 +1,251 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load base_tags %}
+{% block title %}IOF TOKEN - {% SETTINGS "SITE_DOMAIN" %}{% endblock %}
+{% block content %}
+    <div class="jumbotron jumbotron-main token-header">
+        <div id="particles-js"></div>
+        <div class="container center-vertically-holder">
+            <div class="center-vertically">
+                <div class="col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3 text-center">
+                    <img src="/static/images/icons/token.svg">
+                    <h2 class="scaleReveal text-primary"><b>{% trans "IOF Token Distribution" %}</b></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="background2 section-padding token-section">
+		<div class="container">
+            <div class="row">
+				<div class="col-xs-12 section-title text-center">
+					<h2>IOF Token</h2>
+				</div>
+			</div>
+			<div class="row">
+                <div class="col-md-4 text-center scaleReveal token-pie">
+                    <div id="token-donut-chart"></div>
+                    <p>{% trans "代币总量" %}:&nbsp;&nbsp;200,000,000</p>
+                </div>
+                <div class="col-md-8 scaleReveal">
+                    <div class="item item-1">
+                        <div class="title">{% trans "令牌预售" %}</div>
+                        <div class="percents">10%</div>
+                        <div class="bar bar-1"></div>
+                        <div class="money">20,000,000 <span>IOF</span></div>
+                    </div>
+                    <div class="item item-2">
+                        <div class="title">{% trans "令牌主要销售" %}</div>
+                        <div class="percents">40%</div>
+                        <div class="bar bar-2"></div>
+                        <div class="money">80,000,000 <span>IOF</span></div>
+                    </div>
+                    <div class="item item-3">
+                        <div class="title">{% trans "团队" %}</div>
+                        <div class="percents">15%</div>
+                        <div class="bar bar-3"></div>
+                        <div class="money">30,000,000 <span>IOF</span></div>
+                    </div>
+                    <div class="item item-4">
+                        <div class="title">{% trans "顾问和合作伙伴" %}</div>
+                        <div class="percents">10%</div>
+                        <div class="bar bar-4"></div>
+                        <div class="money">20,000,000 <span>IOF</span></div>
+                    </div>
+                    <div class="item item-5">
+                        <div class="title">{% trans "市场运营" %}</div>
+                        <div class="percents">25%</div>
+                        <div class="bar bar-5"></div>
+                        <div class="money">50,000,000 <span>IOF</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <link type="text/css" rel="stylesheet" href="/static/css/morris.css">
+    <script type="text/javascript" src="/static/js/raphael-min.js"></script>
+    <script type="text/javascript" src="/static/js/morris.min.js"></script>
+    <script>
+        Morris.Donut({
+            element: 'token-donut-chart',
+            data: [
+                { label: '{% trans "令牌主要销售" %}', value: 80000000 },
+                { label: '{% trans "团队" %}', value: 30000000 },
+                { label: '{% trans "令牌预售" %}', value: 20000000 },
+                { label: '{% trans "顾问和合作伙伴" %}', value: 20000000 },
+                { label: '{% trans "市场运营" %}', value: 50000000 },
+            ],
+            resize: true,
+            colors: [
+                '#8980fe',
+                '#e91e63',
+                '#a9a2fb',
+                '#0189ff',
+                '#54cdb4',
+            ],
+        });
+    </script>
+
+    <div class="background2 section-padding faq-section border-bottom">
+        <div class="container">
+            <div class="row">
+				<div class="col-xs-12 section-title text-center">
+                    <h2>What's IOF?</h2>
+				</div>
+			</div>
+            <div class="row clear">
+                <div class="col-lg-6 icons icon-benefit-1 scaleReveal">
+                    <h3>{% trans "什么是 IOF Token？" %}</h3>
+                    {% SETTINGS "SITE_DOMAIN" as site_domain %}
+                    <p>{% blocktrans %} {{ site_domain }} 将发行总量为 2 亿 的 {{ site_domain }} Coin，简称 IOF。该代币是基于以太坊智能合约 ERC-20 标准的代币，{{ site_domain }} 团队将承诺永不增发。{% endblocktrans %}</p>
+                </div>
+                <div class="col-lg-6 icons icon-benefit-3 scaleReveal">
+                    <h3>{% trans "IOF Token 有什么用？" %}</h3>
+                    <p>{% blocktrans %}IOF 将会成为 {{ site_domain }} 换币系统、去中心化交易所的基准货币。可以参与 ICO 众筹、抵扣手续费、去中心化交易所燃料、商家保证金、创新企业孵化基金等，持有 IOF 代币的用户将会不定期赠送去中心化交易所上线的新币，同时将永久享有每日利润的 20% 分红权。" {% endblocktrans %}</p>
+                </div>
+            </div>
+            <div class="row clear">
+                <div class="col-lg-6 icons icon-benefit-4 scaleReveal">
+                    <h3>{% trans "IOF Token 的长期价值体现？" %}</h3>
+                    <p>
+                    {% blocktrans %}为保证 IOF Token 价格增长，{{ site_domain }} 团队将会在交易所上线后，用每个季度净利润的 50% 回购 、销毁 IOF Token。回购的 IOF 直接销毁，回购记录将会第一时间公布，用户可通过区块链浏览器查询，确保公开透明，直至销毁到总量为 1 亿个 IOF 币为止。{% endblocktrans %}
+                    </p>
+                </div><div class="col-lg-6 icons icon-benefit-2 scaleReveal">
+                    <h3>{% trans "什么是换币系统？" %}</h3>
+                    <p>{% blocktrans %}传统的币币交易往往有很多局限，{{ site_domain }} 将提供根据当前虚拟货币按市场最优汇率来换取其它代币。{% endblocktrans %}</p>
+                </div>
+            </div>
+            <div class="row clear">
+                <div class="col-lg-6 icons icon-benefit-5 scaleReveal">
+                    <h3>{% trans "什么是去中心化交易所？" %}</h3>
+                    <p>{% blocktrans %}{{ site_domain }} 团队将在 EOS 正式落地后，开发基于 EOS 的去中心化交易所。IOF 代币也将是去中心化交易所的燃料。{% endblocktrans %}</p>
+                </div><div class="col-lg-6 icons icon-benefit-6 scaleReveal">
+                    <h3>{% trans "如何参与 IOF Token ICO？" %}</h3>
+                    <p>{% trans "IOF Token 目前并未开始 ICO 众筹，我们将会在换币系统以及钱包产品上线后，正式开始 ICO。" %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+	<section id="timeline" class="section-padding-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 section-title text-center">
+                    <h2>{% trans "路线图" %}</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<ul class="timeline pb80">
+						<li>
+							<div class="timeline-image scaleReveal"></div>
+							<div class="timeline-panel leftReveal">
+								<div class="timeline-heading">
+                                    <h4 class="subheading heading-1">{% trans "换币系统上线" %}</h4>
+                                    <h5 class="heading-1 mb15">2018 Q3</h5>
+                                    <h4 class="subheading desc">{% trans "将虚拟货币按市场最优汇率兑换成其他币" %}</h4>
+								</div>
+							</div>
+						</li>
+						<li class="timeline-inverted">
+							<div class="timeline-image scaleReveal"></div>
+							<div class="timeline-panel rightReveal">
+								<div class="timeline-heading">
+                                    <h5 class="heading-1 mb15">Q4 2018</h5>
+                                    <h4 class="subheading heading-1">{% trans "ERC-20 钱包发布" %}</h4>
+                                    <h4 class="subheading desc">{% blocktrans %} {{ site_domain }} 钱包发布，内部集成换币系统 {% endblocktrans %}</h4>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div  class="timeline-image scaleReveal"></div>
+							<div class="timeline-panel rightReveal">
+								<div class="timeline-heading">
+                                    <h4 class="subheading heading-1">{% trans "公开发售 & IOF 上线交易" %}</h4>
+                                    <h5 class="heading-1 mb15">2019 Q1</h5>
+                                    <h4 class="subheading desc">{% trans "IOF 众筹推出、公开发售, 在完成众筹后将会对接主流交易所上线交易 IOF" %}</h4>
+								</div>
+							</div>
+						</li>
+						<li class="timeline-inverted">
+							<div class="timeline-image scaleReveal"></div>
+							<div class="timeline-panel leftReveal">
+								<div class="timeline-heading">
+                                    <h5 class="heading-1 mb15">Q1 2019</h5>
+                                    <h4 class="subheading heading-1">{% trans "IOS、Android APP 推出" %}</h4>
+                                    <h4 class="subheading desc">{% blocktrans %}{{ site_domain }} 众筹 IOS 及 Android APP 同时上线 {% endblocktrans %}</h4>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div  class="timeline-image scaleReveal"></div>
+							<div class="timeline-panel leftReveal">
+								<div class="timeline-heading">
+                                    <h4 class="subheading heading-1">{% trans "区块链身份验证系统" %}</h4>
+                                    <h5 class="heading-1 mb15">2019 Q2</h5>
+                                    <h4 class="subheading desc">{% trans "可以验证用户身份以及防止欺诈行为的服务。基于区块链技术，保护及验证互联网用户个人信息的工具" %}</h4>
+								</div>
+							</div>
+						</li>
+						<li class="timeline-inverted">
+							<div class="timeline-image scaleReveal"></div>
+							<div class="timeline-panel leftReveal">
+								<div class="timeline-heading">
+                                    <h5 class="heading-1 mb15">Q3 2019</h5>
+                                    <h4 class="subheading heading-1">{% trans "去中心化交易所" %}</h4>
+                                    <h4 class="subheading desc">{% trans "基于 EOS 的去中心化交易所，IOF 代币也将是去中心化交易所的燃料。" %}</h4>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div  class="timeline-image scaleReveal"></div>
+							<div class="timeline-panel leftReveal">
+								<div class="timeline-heading">
+                                    <h5 class="heading-1 mb15">2019 Q4</h5>
+                                    <h4 class="subheading heading-1">{% trans "全球化运营" %}</h4>
+                                    <h4 class="subheading desc">{% trans "为全球服务商提供完善的 KYC 认证服务，为全球用户提供专业的 ICO 众筹、换币服务、去中心化交易服务。" %}</h4>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="background2 section-padding project-ico border-top">
+		<div class="container">
+			<div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12 text-center scaleReveal">
+                    <div class="img">
+                        <img class="img-responsive" src="/static/images/icons/benefit-1.svg" alt="">
+                    </div>
+                    <h3>20%</h3>
+                    <p>{% trans "IOF 每日分红" %}</p>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 text-center scaleReveal">
+                    <div class="img">
+                        <img class="img-responsive" src="/static/images/icons/benefit-2.svg" alt="">
+                    </div>
+                    <h3>EOS-Based</h3>
+                    <p>{% trans "去中心化交易所" %}</p>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 text-center scaleReveal">
+                    <div class="img">
+                        <img class="img-responsive" src="/static/images/icons/benefit-3.svg" alt="">
+                    </div>
+                    <h3>2019.Q1</h3>
+                    <p>{% trans "交易所上市" %}</p>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 text-center restricted scaleReveal">
+                    <div class="img">
+                        <img class="img-responsive" src="/static/images/icons/benefit-4.svg" alt="">
+                    </div>
+                    <h3>{% trans "未开始" %}</h3>
+                    <p>{% trans "公开发售" %}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include "footer-min.html" %}
+{% endblock %}

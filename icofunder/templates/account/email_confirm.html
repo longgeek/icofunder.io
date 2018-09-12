@@ -1,0 +1,43 @@
+{% extends "account/base.html" %}
+
+{% load i18n %}
+{% load account %}
+{% load base_tags %}
+
+{% block title %}{% trans "确认邮箱地址" %} - {% SETTINGS "SITE_DOMAIN" %}{% endblock %}
+
+
+{% block content %}
+	<div class="jumbotron jumbotron-main" id="home">
+		<div id="particles-js"></div>
+		<div class="container center-vertically-holder">
+			<div class="center-vertically">
+				<div class="col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3 text-center">
+                    <h2 class="scaleReveal text-primary"><b>{% trans "完成邮箱验证" %}</b></h2>
+					<hr class="bottomReveal">
+
+                    {% if confirmation %}
+                    {% user_display confirmation.email_address.user as user_display %}
+                    <p class="bottomReveal">
+                        {% blocktrans with confirmation.email_address.email as email %}
+                            请确认&nbsp;
+                            <b>{{ email }}</b>
+                            &nbsp;是用户&nbsp;
+                            <b>{{ user_display }}</b>
+                            &nbsp;的邮箱地址。
+                        {% endblocktrans %}
+                    </p>
+                    <form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-primary btn-lg mt20">{% trans "我已确认以上信息无误，点击完成验证" %}</button>
+                    </form>
+                    {% else %}
+                    {% url 'account_email' as email_url %}
+                    <p class="bottomReveal">{% blocktrans %}此电子邮件确认链接已过期或无效，请发出新的电子邮件确认请求。{% endblocktrans %}</p>
+                    <a type="button" href="{{ email_url }}" class="btn btn-primary btn-lg mt20">{% trans "使用注册信息登录，将自动发送邮件" %}</a>
+                    {% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

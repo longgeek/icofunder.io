@@ -1,0 +1,32 @@
+.logo {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+
+.logo-big {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 30px;
+    -moz-animation: bubble;
+    -webkit-animation: bubble;
+    animation-duration: 5s;
+    -webkit-animation-duration: 5s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-user-select: none;
+}
+
+.navbar-brand .logo-name {
+    color: #887ffe;
+    position: absolute;
+    top: 25px;
+    left: 65px;
+    font-size: 14px;
+    font-family: monospace;
+    letter-spacing: .5px;
+}
+.royal_preloader_loader {
+    font-family: monospace;
+    letter-spacing: .5px;
+}

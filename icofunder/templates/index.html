@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load base_tags %}
+{% block title %}{% trans "首页" %} - {% SETTINGS "SITE_DOMAIN" %}{% endblock %}
+{% block content %}
+	<!-- Begin Jumbotron -->
+	<div class="jumbotron jumbotron-main" id="home">
+		<div id="particles-js"></div>
+		<div class="container center-vertically-holder">
+			<div class="center-vertically">
+				<div id="scaleReveal" class="col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3 text-center">
+                    <img src="/static/images/icons/rocket.svg" class="logo logo-big">
+					<div class="ticker">
+                        <h1>{% trans "为每个人提供" %}</h1>
+                        <h1>{% trans "早期阶段" %}</h1>
+                        <h1>{% trans "初创投资 ICO" %}</h1>
+					</div>
+                    <br>
+                    <p class="main-desc">{% trans "我们经过严密审查、筛选出最佳投资的区块链项目。" %}</p>
+                    <a href="#ico" data-id="ico" class="scroll-link btn btn-primary btn-lg mt15">{% trans "如何参与 ICO？" %} <span class="ion-android-arrow-down"></span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Jumbotron -->
+
+    {% include 'how-to-ico__content.html' %}
+
+	<!-- Begin Ongoing ICO -->
+	<section id="ongoing-ico" class="background2 section-padding border-bottom">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 section-title text-center">
+                    <h2>{% trans "正在进行中的 ICO 项目" %}</h2>
+				</div>
+			</div>
+            {% include 'ongoing-list.html' %}
+		</div>
+	</section>
+	<!-- End Ongoing ICO -->
+
+	<!-- Begin Upcoming ICO -->
+	<section id="upcoming-ico" class="background2 section-padding border-bottom">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 section-title text-center">
+                    <h2>{% trans "即将来临的 ICO 项目" %}</h2>
+				</div>
+			</div>
+            {% include 'upcoming-list.html' %}
+		</div>
+	</section>
+	<!-- End Upcoming ICO -->
+
+
+	<!-- Begin Ended ICO -->
+	<section id="ended-ico" class="background2 section-padding border-bottom">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 section-title text-center">
+                    <h2>{% trans "已结束的 ICO 项目" %}</h2>
+				</div>
+			</div>
+            {% include 'ended-list.html' %}
+		</div>
+	</section>
+	<!-- End Ended ICO -->
+
+    {% include 'about__content.html' %}
+
+	<div class="background1 section-padding">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 text-center">
+                    {% if request.user.is_authenticated %}
+                    <p class="mb20">{% trans "立即加入我们，成为一个 Funder" %}</p>
+                    <a href="{% url 'profile' %}" class="btn btn-primary btn-lg">{% trans "参与众筹" %}</a>
+                    {% else %}
+					<p class="mb20">立即加入我们，成为一个 Funder</p>
+                    <a href="{% url 'account_signup' %}" class="btn btn-primary btn-lg">{% trans "立即注册" %}</a>
+                    {% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

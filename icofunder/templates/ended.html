@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load base_tags %}
+{% block title %}{% trans "已结束的 ICO 项目" %} - {% SETTINGS "SITE_DOMAIN" %}{% endblock %}
+{% block description %}{% trans "已结束的 ICO 项目列表。所有结束代币销售都按日期排序，进行我们的评级和分析。" %}{% endblock %}
+{% block content %}
+    <div class="jumbotron jumbotron-main ended-list">
+        <div id="particles-js"></div>
+        <div class="container center-vertically-holder">
+            <div class="center-vertically">
+                <div class="col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3 text-center">
+                    <img src="/static/images/icons/benefit-4.svg">
+                    <h2 class="scaleReveal text-primary"><b>{% trans "已结束的 ICO 项目" %}</b></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+	<section id="ongoing-ico" class="background2 section-padding border-bottom">
+		<div class="container">
+            {% include 'ended-list.html' %}
+		</div>
+	</section>
+    {% include 'footer-min.html' %}
+{% endblock %}

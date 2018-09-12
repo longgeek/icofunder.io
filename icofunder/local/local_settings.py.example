@@ -1,0 +1,69 @@
+# -*- coding: utf-8 -*-
+
+import os
+from django.utils.translation import ugettext_lazy as _
+from django.core.urlresolvers import reverse_lazy
+
+# Quick-start development settings - unsuitable for production
+# See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = '43y0(bqaf0&*^@aitry9!a_&&q*@3p3w1z+w-q9d8%xjw8+s!5'
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+
+ALLOWED_HOSTS = ['127.0.0.1', '192.168.0.102', '138.197.157.173', 'icoinfo.one', 'www.icoinfo.one']
+
+# Database
+# https://docs.djangoproject.com/en/1.11/ref/settings/#databases
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'icofunder',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': '127.0.0.1',
+        'PORT': '3306'
+    }
+}
+
+# Site settings
+SITE_ID = 1
+SITE_NAME = "TEST"
+SITE_DOMAIN = "TEST.ONE"
+
+#
+# django-allauth settings
+#
+LOGIN_REDIRECT_URL = reverse_lazy("profile")
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = "mandatory"
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+ACCOUNT_EMAIL_SUBJECT_PREFIX = "[%s]" % SITE_DOMAIN
+ACCOUNT_LOGOUT_ON_GET = True
+ACCOUNT_LOGOUT_REDIRECT_URL = reverse_lazy("account_login")
+ACCOUNT_LOGOUT_ON_PASSWORD_CHANGE = True
+ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
+ACCOUNT_USERNAME_MIN_LENGTH = 3
+
+# Email
+EMAIL_HOST = 'mail.gandi.net'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = 'no-reply@icoinfo.one'
+EMAIL_HOST_PASSWORD = 'Asdfg12345..123711'
+EMAIL_SUBJECT_PREFIX = u'[%s]' % SITE_DOMAIN
+EMAIL_USE_SSL = True
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+NOTIFI_EMAIL = 'no-reply@icoinfo.one'
+
+# Etherscan AIP
+ETHERSCAN_API_KEY = 'SX63EZQIGM8CWA8NHVWHZXIZ5HABRK4S9X'

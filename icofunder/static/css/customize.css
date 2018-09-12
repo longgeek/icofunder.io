@@ -1,0 +1,132 @@
+.auto-fadein {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    animation-duration: 3s;
+    -webkit-animation-iteration-count:infinite;
+    animation-iteration-count: infinite;
+}
+
+.mr8 {
+    margin-right: 8px;
+}
+
+#icoModal .modal-image--warning {
+    background-image: url("/static/images/icons/wait.svg");
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.border-top {
+    border-top: 1px solid #e6e6e6;
+}
+
+.errorlist {
+    list-style-type: none;
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.btn-signin, .btn-signup {
+    position: relative;
+    float: left;
+    margin: 20px 5px;
+}
+
+
+/* ETHEREUM TRANSACTIONS */
+.transactions .item {
+    border: 1px solid #e4ebf3;
+    box-shadow: 0 3px 6px rgba(0,0,0,.05);
+    background-color: #fff;
+    margin-bottom: 15px;
+    padding: 30px;
+    position: relative;
+    font-size: 12px;
+}
+.transactions .item:before {
+    content: "";
+    height: 100%;
+    width: 1px;
+    background-color: #ebeef3;
+    opacity: .5;
+    left: 104px;
+    top: 0;
+    position: absolute;
+}
+.transactions .item.outgoing .type {
+    background-image: url('/static/images/icons/outgoing.svg');
+}
+.transactions .item.incoming .type {
+    background-image: url('/static/images/icons/incoming.svg');
+}
+.transactions .item .type {
+    width: 47px;
+    height: 42px;
+    background-size: 47px 42px;
+    margin-right: 60px;
+}
+.transactions .item>div {
+    float: left;
+    margin-right: 20px;
+}
+.transactions .item .token {
+    width: 122.5px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.transactions .item .hold {
+    position: relative;
+    width: 50px;
+}
+.transactions .item .name {
+    position: relative;
+    width: 100px;
+}
+.transactions .item .address {
+    position: relative;
+    width: 100px;
+}
+.transactions .item .price {
+    position: relative;
+    width: 100px;
+}
+.transactions .item .from {
+    position: relative;
+    width: 140px;
+}
+.transactions .item .amount {
+    position: relative;
+    width: 140px;
+}
+.transactions .item .title {
+    opacity: .5;
+    margin-bottom: 10px;
+}
+.transactions .item .value {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.transactions .item .date {
+    width: 120px;
+}
+
+.transactions .item .hash {
+    position: relative;
+    margin-right: 0;
+}
+.transactions .clear:after {
+    display: block;
+    height: 0;
+    clear: both;
+    content: "";
+}
+/* ETHEREUM TRANSACTIONS */

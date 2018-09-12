@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load base_tags %}
+{% block title %}Rating Methodology - {% SETTINGS "SITE_DOMAIN" %}{% endblock %}
+{% block description %}Ratings on {% SETTINGS "SITE_NAME" %} are conducted by independent experts and are public. The rating from 1 to 5 is assigned to the ICO based on a number of factors.{% endblock %}
+{% block content %}
+	<div class="jumbotron jumbotron-main policy">
+		<div id="particles-js"></div>
+		<div class="container center-vertically-holder">
+			<div class="center-vertically">
+				<div class="col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3 text-center">
+                    <img src="/static/images/icons/ratings.svg">
+                    <h2 class="scaleReveal text-primary"><b>Rating Methodology</b></h2>
+				</div>
+			</div>
+		</div>
+	</div>
+    <div class="background2 section-padding policy-section border-bottom">
+        <div class="container">
+            <div class="row clear">
+                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                    Rating is given in combination of:
+                    <ul>
+                        <li>our assessment algorithm that uses more than 20 different criteria on which each ICO can earn more than 30 points and</li>
+                        <li>the rating the independent experts give to the ICO following our rating methodology suggestions.</li>
+                    </ul>
+
+                    <p class="mb30">Rating is not permanent - we are monitoring the ICOs on daily basis and every day new experts are joining and rating the ICOs. If none of the experts rated the ICO yet, only the assessment algorithm is used.</p>
+
+                    <h2>1. Assessment algorithm</h2>
+                    In our assessment algorithm we divide evaluation on 4 different groups. An ICO can be evaluated multiple times in a day and the rating cannot be manually changed. All ICOs are rated under the same condition, by the same assessment algorithm. Hence, we consider this part of the rating the objective part.
+                    <br>It is up to ICO teams, their activity, their self-initiative, and their responsiveness to our editor’s requests if their profile is up to date and has the potential to be well rated.
+                    <br>Every visitor, user, or ICO team member can check the ICO profile results with our ICO analyzer tool that is available here. The tool was released to help ICO teams to become better, more transparent, and active on their ICO campaigns.
+
+                    <h2 class="vice">TEAM</h2>
+                    Having a good team is one of the keys to success. Investors tend to research each team member and more ICO-experienced members are an added value.
+                    <br>We check the number of team members, photos, full names, and social media links. There is additional plus for having members with ICO success score on the team. These are team members that are or were participating in two or more ICOs (either as an advisor or team member) and are because of that considered more trustworthy.
+
+                    <h2 class="vice">ICO INFORMATION</h2>
+                    Providing all necessary information is very important for potential investors. Not showing all the information or lack of them can be perceived as an insecurity or uncertainty.
+                    <br>There are several ICO information that we take into account in this group - everything from ICO start and end dates to the token ticker.
+
+                    <h2 class="vice">PRODUCT PRESENTATION</h2>
+                    Potential investors want to understand the product and know about post-ICO plans and goals for the future. No plans equal no interest.
+                    <br>In product presentation we take a look into whitepaper, milestones, and video presentation. We aren’t evaluating the content and its originality, but rather the availability of the information.
+
+                    <h2 class="vice">MARKETING & SOCIAL MEDIA</h2>
+                    Reaching out to the potential investors and keeping an open communication with them is one of the most important keys of an ICO campaign.
+                    <br>We are monitoring activity on different social networks, which provides us a better outlook to how in touch the ICO team is with their potential investors. Even if the ICO industry isn’t strongly connected to the audience on specific social network, it is important to be present everywhere, so that all types of investors can have a say on the project.
+
+                    <h2>2. Experts</h2>
+                    We encourage our experts to follow the following rating methodology. Each expert can rate any ICO he or she wants and can later also change this rate. Experts are rating independently and we usually don’t question their decisions and opinions. The only case where we would interfere with questions is in the cases where an expert would rate the ICO of which he or she is a part of. We also don’t allow experts to give bad rates to their competitors just because they are higher on the leaderboard. Each expert’s rate is weighted in regard to his or her expertise, years of experience in the field, and possible available publications. We consider this part of the rating the subjective part.
+                    <br>The rating from 1 to 5 is assigned to the ICO for team, vision, and product.
+                    <br>The experts should think about the next guidelines when evaluating the ICO.
+
+                    <h2 class="vice">TEAM</h2>
+                    Teams with strong and trustworthy members that can show time-commitment and past projects.
+                    <br>Codebase on various platforms and the commits.
+                    <br>Community and the consistent information flow, keeping updated with project progress.
+
+                    <h2 class="vice">PRODUCT</h2>
+                    Product maturity level. Working products are easier to judge than concepts. Technology. Experts look at whether there is any technology involved (blockchain, non-blockchain).
+                    <br>Problem. Like in traditional economy, the ICO teams should address specific problems with their product/service.
+                    <br>Product Roadmap that shows the short and long-term strategies and growth.
+                    <br>Competitive analysis indicating project’s commitment to understanding the market environment.
+
+                    <h2 class="vice">BUSINESS STRATEGY</h2>
+                    Market potential and the number of existing user base.
+                    <br>Short-term and long-term business strategy.
+                    <br>Current investments.
+                    <br>Valuation and token distribution showing market cap and the process of emission and pricing of the tokens.
+
+                    <h2 class="vice">RESILIENCE</h2>
+                    Legal understanding and readiness to adapt to changing regulations.
+                    <br>Security, escrow and the list of advisors.
+
+                    <h2>3. Short legal reviews</h2>
+                    Some of the ICOs were also evaluated by our partners - legal experts - who provided short legal review. These legal experts are giving their reviews independently and full legal reviews are considered as paid service provided by legal expert.
+
+                    <h2 class="vice">Final note</h2>
+                    We are always improving our rating methodology by adding new criteria in our assessment algorithm. If you want to contribute, we invite you to join as an expert by sending application here.
+                    <br><br>As we mostly rely on our community, we still strongly suggest to conduct a detailed research before investing or consult with experts privately.
+                    <br><br>It happens that sometimes ICO teams or potential investors don’t agree with the assigned rating. In this case, you should know that it is not in our power to just change it.
+                    <ul>
+                        <li>If you are a part of ICO team, you should put more effort in your ICO presentation and transparency.</li>
+                            <li>If you are a potential investor, you can check ICO analyzer and let us know which information about ICO is misleading or wrong and we will appropriately correct it. If we receive or hear about scam accusations, we will contact the ICO and give them a chance for a fair feedback and put a proper warning message on their ICO profile. If there is no response from ICO team, ICO listing will probably be removed.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include "footer-min.html" %}
+{% endblock %}

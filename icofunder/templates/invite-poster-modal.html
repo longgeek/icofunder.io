@@ -1,0 +1,19 @@
+{% load i18n %}
+{% load base_tags %}
+<div class="modal fade" id="invitePoster" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img src="{{ poster }}" id="invitePosterImg">
+            </div>
+            <div class="modal-footer two-btn">
+                <a class="modal-button modal-button--alpha-warning" href="{{ poster }}" download="{{ poster_uuid }}.jpg">
+                    <div class="modal-button__title">{% trans "下载图片" %}</div>
+                </a>
+                <div class="modal-button modal-button--alpha-warning" data-dismiss="modal" aria-label="Close">
+                    <div class="modal-button__title">{% trans "关闭窗口" %}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

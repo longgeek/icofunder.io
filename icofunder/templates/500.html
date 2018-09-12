@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load base_tags %}
+{% block title %}500 - {% SETTINGS "SITE_DOMAIN" %}{% endblock %}
+{% block content %}
+	<div class="jumbotron jumbotron-main" id="home">
+		<div id="particles-js"></div>
+		<div class="container center-vertically-holder">
+			<div class="center-vertically">
+				<div class="col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3 text-center">
+					<h1 class="scaleReveal">
+                        <strong>HTTP 500</strong>.
+					</h1>
+                    <hr class="bottomReveal">
+                    <p class="bottomReveal">{% trans "内部服务器出现异常，管理员正在处理，请耐心等待。" %}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

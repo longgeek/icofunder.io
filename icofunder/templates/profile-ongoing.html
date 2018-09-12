@@ -1,0 +1,85 @@
+{% load i18n %}
+<div class="row m-b-md">
+    <div class="col-md-6">
+        {% for k in ICOS.ongoing|slice:"::2" %}
+        <dl class="ico-progress time-countdown ongoing">
+            <dt>
+                <img src="/static/images/icos/{{ k.values.0.logo }}" alt="{{ k.values.0.name }}" class="img-responsive img-circle">
+                <a onclick="ico_url_jump('/{{ k.keys.0 }}', '{{ request.LANGUAGE_CODE }}')">{{ k.values.0.name }}</a>
+            </dt>
+            <dd>
+                <a class="total" onclick="ico_url_jump('/{{ k.keys.0 }}', '{{ request.LANGUAGE_CODE }}')">
+                    <div id="ongoing_{{ k.keys.0 }}" class="clock-countdown s"></div>
+                    <div class="clock-countdown n" style="display: none;">
+                        <div class="clock-section">
+                            <b>{{ k.values.0.ended_at }}</b>
+                            <span>{% trans "结束" %}</span>
+                        </div>
+                    </div>
+                </a>
+            </dd>
+        </dl>
+        <script>
+            $(document).ready(function() {
+                /* ---- Countdown ---- */
+                $('#ongoing_{{ k.keys.0 }}').countdown('{{ k.values.0.ended_at }}').on('update.countdown', function(event) {
+                  var $this = $(this).html(event.strftime(''
+                      + '<div class="clock-section"> <b>%-w</b> <span>{% trans "周" %}</span> </div>'
+                      + '<div class="clock-section"> <b>%-d</b> <span>{% trans "天" %}</span> </div>'
+                      + '<div class="clock-section"> <b>%H</b> <span>{% trans "时" %}</span> </div>'
+                      + '<div class="clock-section"> <b>%M</b> <span>{% trans "分" %}</span> </div>'
+                      + '<div class="clock-section"> <b>%S</b> <span>{% trans "秒" %}</span> </div>'));
+                });
+            });
+        </script>
+        {% endfor %}
+    </div>
+    <div class="col-md-6">
+        {% for k in ICOS.ongoing|slice:"1::2" %}
+        <dl class="ico-progress time-countdown ongoing">
+            <dt>
+                <img src="/static/images/icos/{{ k.values.0.logo }}" alt="{{ k.values.0.name }}" class="img-responsive img-circle">
+                <a onclick="ico_url_jump('/{{ k.keys.0 }}', '{{ request.LANGUAGE_CODE }}')">{{ k.values.0.name }}</a>
+            </dt>
+            <dd>
+                <a class="total" onclick="ico_url_jump('/{{ k.keys.0 }}', '{{ request.LANGUAGE_CODE }}')">
+                    <div id="ongoing_{{ k.keys.0 }}" class="clock-countdown s"></div>
+                    <div class="clock-countdown n" style="display: none;">
+                        <div class="clock-section">
+                            <b>{{ k.values.0.ended_at }}</b>
+                            <span>{% trans "结束" %}</span>
+                        </div>
+                    </div>
+                </a>
+            </dd>
+        </dl>
+        <script>
+            $(document).ready(function() {
+                /* ---- Countdown ---- */
+                $('#ongoing_{{ k.keys.0 }}').countdown('{{ k.values.0.ended_at }}').on('update.countdown', function(event) {
+                  var $this = $(this).html(event.strftime(''
+                      + '<div class="clock-section"> <b>%-w</b> <span>{% trans "周" %}</span> </div>'
+                      + '<div class="clock-section"> <b>%-d</b> <span>{% trans "天" %}</span> </div>'
+                      + '<div class="clock-section"> <b>%H</b> <span>{% trans "时" %}</span> </div>'
+                      + '<div class="clock-section"> <b>%M</b> <span>{% trans "分" %}</span> </div>'
+                      + '<div class="clock-section"> <b>%S</b> <span>{% trans "秒" %}</span> </div>'));
+                });
+            });
+        </script>
+        {% endfor %}
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        $(".time-countdown.ongoing dd").mouseenter(function(e) {
+            e.stopPropagation();
+            $(this).find(".clock-countdown.n").show();
+            $(this).find(".clock-countdown.s").hide();
+        })
+        $(".time-countdown.ongoing dd").mouseleave(function(e) {
+            e.stopPropagation();
+            $(this).find(".clock-countdown.n").hide();
+            $(this).find(".clock-countdown.s").show();
+        })
+    })
+</script>

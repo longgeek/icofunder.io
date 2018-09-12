@@ -1,0 +1,45 @@
+{% load i18n %}
+<div class="modal fade" id="icoModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-warning">
+                    <div class="modal-image modal-image--warning"></div>
+                </div>
+                {% url 'profile' as profile_url %}
+                {% url 'disclaimer' as disclaimer_url %}
+                <p>{% blocktrans %}ICO 投资可能导致全部资产损失，并且可能无法转售。您应该充分了解您打算资助的任何产品或业务项目的功能，并在购买前仔细权衡风险与回报。<br><br>请仔细阅读我们的 <a href='{{ disclaimer_url }}' target='_blank'>免责声明</a>。{% endblocktrans %}</p>
+                <hr>
+                <h5 class="heading-1 modal-heading mb20">{% trans "接收代币地址" %}</h5>
+                {% if user_extra.eth_wallet is None %}
+                <p>{% blocktrans %}未设置接收代币地址，请前往 <a href="{{ profile_url }}">个人主页</a> 进行设置。{% endblocktrans %}</p>
+                {% else %}
+                <p>{{ user_extra.eth_wallet }}</p>
+                {% endif %}
+                <hr>
+                <h5 class="heading-1 modal-heading mb20 text-primary">{% trans "众筹钱包地址" %}</h5>
+                <p class="text-primary">{% trans "此地址为您个人专有参与该项目的 ICO 地址。" %}</p>
+                <p class="text-primary bold">{{ address }}</p>
+            </div>
+            <div class="modal-footer two-btn">
+                <div id="invest_copy" class="modal-button modal-button--alpha-warning" data-clipboard-text="{{ address }}">
+                    <div class="modal-button__title">{% trans "复制地址" %}</div>
+                </div>
+                <div class="modal-button modal-button--alpha-warning" data-dismiss="modal" aria-label="Close">
+                    <div class="modal-button__title">{% trans "我已了解" %}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        var invest_clipboard = new ClipboardJS('#invest_copy', {
+            container: document.getElementById('icoModal')
+        });
+        invest_clipboard.on('success', function(e) {
+            $("#invest_copy .modal-button__title").text('{% trans "已复制" %}');
+            e.clearSelection();
+        });
+    });
+</script>

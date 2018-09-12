@@ -1,0 +1,46 @@
+.jumbotron.policy {
+    height: 300px;
+}
+
+.jumbotron.policy #particles-js {
+    border: 1px solid #e6e6e6;
+}
+
+.jumbotron.policy img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 20px;
+}
+
+.jumbotron.policy h2 {
+    font-size: 26px;
+}
+
+.policy-section {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-align: justify;
+}
+
+.policy-section h2 {
+    font-size: 18px;
+    font-weight: 900;
+    margin: 30px 0;
+}
+
+.policy-section h2.vice {
+    font-size: 14px;
+    font-weight: 600;
+    color: inherit;
+}
+
+.policy-section h2:first-child {
+    margin-top: 0;
+}
+
+.policy-section ul {
+    list-style-position: outside;
+    -webkit-padding-start: 20px;
+}
